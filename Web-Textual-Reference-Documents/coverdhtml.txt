@@ -1,0 +1,213 @@
+What is html ? what is the use of it ? simple html .
+headding tags : h1 to h6
+paragragph : <p></p>
+Comments : <!-- hello this is comments -->
+align paragrph : left, right, center
+Line breaks and horizontal rules : <br/>, <hr/>
+fonts (color, size, face) : <font color=red></font>, <font size=1></font>
+font styles : <b></b>, <i></i>, <u></u>
+hyperlinks or anchor : <a hrf="path of the page.html"></a>
+image : <img src="page of the image"></img>
+oredrlist and unorder list : <ol></ol>, <ul> <li type="clircle"></li></ul>
+<center> tag
+differnce between html 4.01 , xhtml 4.01
+Types of doctypes ? 
+<div> division , <span>
+<em>, <strong>, <mark>, <address>
+meta tags 
+<meta name="title" content="this will appear in google search results as a heading "/>
+<meta name="description" content="this will appear in google search results as a paragraph "/>
+<meta name="keyword" content="keyword of the search results"/>
+<meta name="author" content="display owner of the page"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"> : Mobile devices 
+<meta charset="utf-8"> : it will special charcter as a html.
+<meta/> refresh, robots
+text links like : _blank, _self, _parent
+Email links <a href="mailto:abc@gmail.com">send to me</a>
+frameset 
+Iframes
+Multimedia codes : <embed src="" width="100%" height="60"></embed>
+<marquee>
+debrecated elements html4
+ 
+
+
+tables 
+table headings : 
+table Rows :
+Table datd :
+Empty data :
+table width and height :
+Table cellspacing and cell padding
+Table bgcolor
+Table colspan
+table valign 
+
+
+
+Form fields <form action="" method=""></form>
+input type="text"
+size="20" : reset after 20 charcter
+maxlength="10" : Maximum 10 chartecter 
+min="1" max="5"
+Pattern : 
+Placeholder : 
+required : 
+input type="password"
+input type="radio"
+input type="checkbox"
+input type="submit"
+input type="button"
+input type="number"
+input type="tel"
+input type="url"
+input type="date"
+input type="month"
+input type="range"
+input type="search"
+input type="time"
+input type="week"
+type="image"
+text area : <textarea name="message" rows="10" cols="30"></textarea>
+button : <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+dropdown and datalist <seclect><option>1</option></select>, <datalist id="browsers"><option value="Internet Explorer"></datalist>
+disabled
+novalidate : stops the validation 
+autofocus : focus on particular filed
+multiple attribute :
+
+HTML 5 :
+
+Single doctype
+New simatic tags added : header, footer, figure, section, article, nav, 
+aside : Defines content aside from the page content
+Figure : Img, digarams, photos
+header : Defines a header for the document or a section
+main : Defines the main content of a document
+nav : Defines navigation links in the document
+Section : Defines a section in the document
+
+Graphic elements:
+Canvas : <canvas> element is used to draw graphics on a web page, Game application 
+SVG : Scalable Vector Graphics, SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+
+Form elements : 
+<datalist> : Defines pre-defined options for input controls
+The purpose of the <keygen> element is to provide a secure way to authenticate users.
+<output> : element represents the result of a calculation (like one performed by a script).
+
+input elemnts : email, time ,date, calender, month, week, year
+
+Media elements: 
+audio, video
+
+HTML 5 API :
+Geolocation : HTML Geolocation API is used to get the geographical position of a user.
+Local stroage : it will strore the data in local browser.
+Application cache : which means that a web application is cached, and accessible without an internet connection.
+Web workers : A web worker is a JavaScript running in the background, without affecting the performance of the page.
+Drag and drop : when you "grab" an object and drag it to a different location.
+SSE : Sent Events allow a web page to get updates from a server.
+ 
+
+CASCADDING STYLE SHEET COVRED
+
+comments line /* this is comment */
+class : dot  example .pavan{font-family:arial;}
+ID : hass example #mahesh{font-size:20%;}
+we have to use the ID once in page
+
+font-family:verdina;
+font-size:20px;
+font-weight:lighter/normal/bold/bolder/100/200/300;
+font-style:italic/normal;
+color:#fff;
+width:20px;
+height:40px;
+min-width:200px;
+max-width:400px;
+max-height:400px;
+min-height:20px;
+line-height:40px;
+border:1px solid #e4e4e4;
+border-top-color:#ee4e4;
+border-style:solid, dashed, dotted, double, groove, none, outset, ridge;
+border-width:thin, medium, thick, length;
+background-color:#e4e4e4;
+background-image:url(/path of the image);
+background:url(/path of the image) no-repeat 20px fixed ;
+bqackground-repeat:no-repeat/repeat/repeat-x/repeat-y;
+background-attachement:fixed/scroll;
+background-position:20px 20px;
+float:left;
+float:right;
+float:none;
+clear:none/both/left/right;
+text-align:center/left/right;
+list-style-type:none/disc/ circle/ square/lower-roman/upper-roman/lower-alpha/upper-alpha/;
+list-style-image:url(path_to_image.gif, jpg or png);
+display:none;
+display:block;
+display:inline;
+display:inline-block;
+text-decoration:none/underline/overline/line through/blink;
+text-indent:10px; 
+a:link{default vale}
+a:hover{cursor on hover}
+a:visited{page alrady visisted}
+a:active{present page}
+margin:top right bottom left;
+padding:top right bottom left;
+margin:0 auto; (o means top and bottom, auto means left and right and it will display center )
+letter-spacing:5px 
+word-spacing:5px
+position:static,absolute,relative,fixed;
+top,left,right,bottom
+zindex:
+visibility:hidden,visible;
+
+
+CSS3 :
+border-radius:10px ; It will give rounded corners to element.
+-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px; It will suppost for all chrome brosers as well mozilla browsers
+using PIE.htc border-radius will support for IE6-8
+background-repeat:no-repeat,repeat; background-size:x y; Mutltiple image using comma, background-position:right,top;
+background:linear-gradient;
+text-shadow: 10px 20px 30px red; it used for applying shadow to the text. (h-shadow v-shadow blur-radius color;)
+box-shadow:10px 20px 30px green; it used for appplying shadow to the particular element. (h-shadow v-shadow blur-radius color;)
+border-image:path of the image; it used for applying image to the border.
+transform: CSS3 transforms allow you to translate, rotate, scale, and skew elements.
+transition:width 2s;CSS3 transitions allows you to change property values smoothly (from one value to another), over a given duration.
+Animation : animation-name:class; animation-duration:class 4s, @keyfreames class{from{} to{}}
+@font-face{} : used for display custom font in web page.
+media quiries : print, all, screen, tv
+1)	320px to 479px -> Mobile Devices
+@media only screen and (min-width: 320px) and (orientation: portrait) {  }
+2)	480px to 639 -> Tablet 480px to 639px
+3)	640px to 767 -> Tablet 640px to 767px	
+4)	768px to 1024 -> Tablet landscape 
+
+Sprite : sprite is a collection of images put into a single image.
+
+Bootstrap:
+Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+Respond.js : Its enbale media quiries for the IE8 browser.
+html5shiv.js : It enable html5 work in IE6,7,8
+
+Total covered itmes are:
+HTML 4/5
+CSS 2/3
+PSD TO HTML DEVELOPEMENT -- Need more attention
+Manual media quiries
+BOOTSTATP
+
+Pending items from papaiah:
+JQUERY
+
+Pending items pending from rayudu:
+HTML 5 API
+JAVASCRIPT
+
+
+
+

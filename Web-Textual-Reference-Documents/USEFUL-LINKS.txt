@@ -1,0 +1,131 @@
+Custom Tooltip example : 
+http://iamceege.github.io/tooltipster/
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Custom Scroll Bar:
+http://carlofontanos.com/how-to-use-nicescroll-js/
+http://areaaperta.com/nicescroll/demo.html
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Input Masking: 
+http://digitalbush.com/projects/masked-input-plugin/
+https://github.com/digitalBush/jquery.maskedinput
+http://www.cssscript.com/lightweight-pure-javascript-input-mask/
+http://jsfiddle.net/ssking44/SCzVP/
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Date picker / Time:
+https://demo.mobiscroll.com/calendar
+https://demo.mobiscroll.com/datetime/date/
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Custom Radio/Checkbox Buttons:
+http://blog.karenmenezes.com/2014/nov/1/another-pure-css-checkbox-article/
+http://www.cssscript.com/pretty-custom-checkboxes-radio-buttons-with-pure-css-css3-checkbox/
+http://webdesign.tutsplus.com/articles/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Custom select drop down:
+https://silviomoreto.github.io/bootstrap-select/
+http://www.tutorialrepublic.com/codelab.php?topic=faq&file=custom-select-box
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+CSS TO LESS CONVERTER:
+http://www.miyconst.com/Blog/View/14/conver-css-to-less-with-css2less-js
+http://beautifytools.com/css-to-less-converter.php
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Grunt Setup:
+https://scotch.io/tutorials/a-simple-guide-to-getting-started-with-grunt
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Jasmine:
+http://bittersweetryan.github.io/jasmine-presentation/
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+JQUERY METHODS:
+http://framework7.io/docs/dom.html#.Vkr_wPmqqko
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Angular JS: Table sorting and pagination :
+http://code.ciphertrick.com/2015/06/01/search-sort-and-pagination-ngrepeat-angularjs/
+
+Table header fixed and tbody scroll:
+http://jsfiddle.net/f2XYF/8/
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Pseudo classes and support for all browsers:
+http://selectivizr.com/
+http://blog.reybango.com/2010/09/08/start-using-css3-pseudo-classes-in-internet-explorer-6-7-and-8-using-the-selectivizr-javascript-library/
+http://www.webluke.net/2011/06/ie-html5-css3-with-selectivizr-html4shim/
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+CSS3 SELECTORS AND BROWSER SUPPORT:
+http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+http://css3pie.com/
+http://css3pie.com/demos/border-radius/
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+GRAPHS:
+http://www.flotcharts.org/
+http://www.flotcharts.org/flot/examples/
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+CANVAS EXAMPLES:
+https://github.com/arv/explorercanvas
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+HTML 5 browser support/features:
+http://code.tutsplus.com/tutorials/25-html5-features-tips-and-techniques-you-must-know--net-13520
+http://code.tutsplus.com/tutorials/how-to-make-all-browsers-render-html5-mark-up-correctly-even-ie6--net-8669
+https://www.webmechanix.com/advantages-of-html5-and-semantic-markup
+http://code.tutsplus.com/tutorials/html5-and-css3-without-guilt--net-16787
+http://blog.reybango.com/the-big-list-of-javascript-css-and-html-development-tools-libraries-projects-and-books/
+http://tympanus.net/codrops/2011/11/24/top-10-reasons-to-use-html5-right-now/
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Responsive support OR MEDIA query support on IE8:
+Respond.js : http://getbootstrap.com/getting-started/#browsers
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Convert HTML to JOOMLA:
+http://welcometojoomla.com/faqvideo/278-how-to-convert-an-old-html-website-to-a-joomla-powered-site
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+
+
