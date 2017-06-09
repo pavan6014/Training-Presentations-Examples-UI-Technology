@@ -1,0 +1,57 @@
+<div class="container relative-pos hidden-print">
+	<input type="submit" class="btn btn-primary print-cutom-btn absolute-pos" ng-click="print()" value="Print">
+</div>
+<div class="container" ng-class="{hideSettingMargin:$index>1}" data-ng-repeat="detail in lists" data-ng-if="$index%rowCountByCompany == 0">
+	<div class="row extraPadding pageBreak" ng-class="{'visible-print-block':$index>1}">
+		<div class="col-xs-12">
+			<div class="mainHeading text-center">Service Representative Study - Samples Report 3 Samples With Notes</div> 
+			<div class="subHeading text-center">&copy Copyright 2012 AT&T Intellectual Property. All rights reserved</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3 text-right">
+				<div style="position:relative;">
+					<img src="assets/img/att_logo_background.png" class="logo-img-print hidden-print"/>
+					<img src="assets/img/att_logo.png" class="logo-img-print visible-print-block"/>
+				</div>
+			</div> 
+			<div class="col-xs-4 col-md-3 text-right"><b>Company: ATT - Midwest</b></div>
+			<div class="col-xs-5 col-md-3"><b>Date from:01/16 thru: 01/16</b></div>
+		</div>
+		<div class="row"><p></p></div>
+	</div>
+	<div class="row">
+		<div class="tableContainer"> 				
+			<table class="tablePrint">
+				<thead class="tableHeaderBorder">
+					<tr ng-class="{hideSettingVisibility:$index>1}">
+						<th>Flaged</th>
+						<th>Sample Date</th>
+						<th>Employee/Office</th>
+						<th>Occ#</th>
+						<th>Notes</th>
+						<th>Unknown 1</th>
+						<th>Unknown 1</th>
+						<th>Unknown 1</th>
+					</tr>
+				</thead>
+				<tbody data-ng-repeat="listItem in lists.slice($parent.$index,$parent.$index+rowCountPdfPageProfileMarket)">
+					<tr>
+						<td></td>
+						<td>{{listItem.sampleDate}}</td>
+						<td>{{listItem.employeeOffice}}</td>
+						<td>{{listItem.occNo}}</td>
+						<td>{{listItem.notes}}</td>
+						<td>{{listItem.unknown1}}</td>
+						<td>{{listItem.unknown2}}</td>
+						<td>{{listItem.unknown3}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>		
+	<div class="footer text-center" ng-class="{'visible-print-block':($index+rowCountByCompany)/rowCountByCompany<(lists.length/rowCountByCompany)}">
+		<div class="mainHeading">AT&T Proprietary (Restricted)</div>
+		<div class="subHeading">Only for use by authorized individuals or any above-designated team(s)<br>
+		within the AT&T companies and not for general distribution</div>
+	</div>	
+</div>

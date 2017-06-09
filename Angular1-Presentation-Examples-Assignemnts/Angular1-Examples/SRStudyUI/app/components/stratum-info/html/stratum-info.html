@@ -1,0 +1,185 @@
+<section class="results_section">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+			   <h1><span class="fa fa-group"></span> Update Design Stratum Info Table</h1>      
+			</div>
+		</div>
+	</section>
+	
+	<div class="container-custom">
+	<form name="stratumInfoForm" role="form">
+		<div class="row listPage-Row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toolbar_subsections">
+				<div class="toolbar_section">
+					<div class="col-sm-12 col-md-12">
+						<div class="margin-bot-20 margin-top-20">
+							<button ng-controller="ModalDemoCtrl" type="button" id="btnNew" class="btn btn-md btn-primary"  ng-click="popupModalController({},add,'addStratumRecordPU')"><span class="glyphicon glyphicon-new-window button-icon"></span>New</button>
+							<button type="submit" id="btnEdit" class="btn btn-md btn-primary"  ng-click="editStratumData()" ng-disabled="stratumInfoForm.$invalid"><span class="glyphicon glyphicon-edit button-icon"></span>Update</button>
+							<button type="button" id="btnDelete" class="btn btn-md btn-primary" ng-disabled="stratumInfoForm.$invalid || rowSelected == 0" ng-click="popupModalController({},delStratumData,'confirmationDeletePopUP')" ng-controller="ModalDemoCtrl"><span class="glyphicon glyphicon-remove button-icon" ng-click="delStratumData()"></span>Delete</button>
+							<button type="button" id="btnNew" class="btn btn-md btn-primary export-list pull-right" ng-click="exportStratumData()"><span class="glyphicon glyphicon-new-window button-icon"></span>Export</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div ng-show="errorMsg">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<p class="alert alert-danger">{{errorMsg}}</p>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="table-responsive">
+			<toaster-container></toaster-container>
+				<table class="table table-condensed table-hover">
+					<colgroup>
+						<col style="width:2%">
+						<col style="width:11%">
+						<col style="width:11%">
+						<col style="width:13%">
+						<col style="width:11%">
+						<col style="width:11%">
+						<col style="width:11%">
+						<col style="width:11%">
+						<col style="width:11%">
+						<col style="width:11%">
+						<col style="width:11%">
+					</colgroup>
+					<thead>
+					<tr class="table_list_header">
+						<th></th>
+						<th ng-click="sort('company')">Company <span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'company'),'glyphicon-chevron-up':reverse && (sortKey == 'company'),'glyphicon-chevron-down':!reverse && (sortKey == 'company')}"></span></th>
+						<th ng-click="sort('stratum')">Stratum <span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'stratum'),'glyphicon-chevron-up':reverse && (sortKey == 'stratum'),'glyphicon-chevron-down':!reverse && (sortKey == 'stratum')}"></span></th>
+						<th ng-click="sort('marketSegment')">Market Segment <span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'marketSegment'),'glyphicon-chevron-up':reverse && (sortKey == 'marketSegment'),'glyphicon-chevron-down':!reverse && (sortKey == 'marketSegment')}"></span></th>
+						<th>Annual Sample Size</th>
+						<th>Target Valids</th>
+						<th>Classification</th>
+						<th>Logo Name</th>
+						<th>Available Count</th>
+						<th>Latest PDSDate</th>
+						<th>Head Count</th>
+					</tr>
+					</thead>
+					<tbody class="bg_tables"> 
+					<tr class="table_list_row" pagination-id="stratumInfoId" dir-paginate="stratumItem in stratumInfoList |orderBy:sortKey:reverse |itemsPerPage:5">
+						<td>
+							<input type="checkbox" ng-model="stratumItem.editEnable" ng-change="selectCheckbox(stratumItem.editEnable)" ng-disabled="stratumInfoForm.$invalid"/>
+						</td>
+					
+						<td> 
+							<input type="text" class="form-control" name="company{{$index}}" ng-model="stratumItem.designStrInfoCompId.company"  ng-init="stratumItem.designStrInfoCompId.oldCompany=''" ng-focus="stratumItem.designStrInfoCompId.oldCompany = stratumItem.designStrInfoCompId.company" ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Company is required" tooltip-enable="stratumInfoForm.company{{$index}}.$invalid && stratumInfoForm.company{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.company{{$index}}.$invalid && stratumInfoForm.company{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control"  name="stratum{{$index}}" ng-model="stratumItem.designStrInfoCompId.stratum" ng-init="stratumItem.designStrInfoCompId.oldStratum=''" ng-focus="stratumItem.designStrInfoCompId.oldStratum = stratumItem.designStrInfoCompId.stratum" ng-disabled="!stratumItem.editEnable"  maxlength="50" tooltip-placement="bottom" uib-tooltip="Stratum is required" tooltip-enable="stratumInfoForm.stratum{{$index}}.$invalid && stratumInfoForm.stratum{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.stratum{{$index}}.$invalid && stratumInfoForm.stratum{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="marketSegment{{$index}}" ng-model="stratumItem.marketSegment" ng-disabled="!stratumItem.editEnable"  maxlength="50" tooltip-placement="bottom" uib-tooltip="Market Segment is required" tooltip-enable="stratumInfoForm.marketSegment{{$index}}.$invalid && stratumInfoForm.marketSegment{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.marketSegment{{$index}}.$invalid && stratumInfoForm.marketSegment{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="number" class="form-control"  name="annualSampleSize{{$index}}" ng-model="stratumItem.annualSampleSize" ng-disabled="!stratumItem.editEnable" tooltip-placement="bottom" uib-tooltip="Please Enter Annual Sample Size in Number" tooltip-enable="stratumInfoForm.annualSampleSize{{$index}}.$invalid && stratumInfoForm.annualSampleSize{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.annualSampleSize{{$index}}.$invalid && stratumInfoForm.annualSampleSize{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="number" class="form-control" name="targetValids{{$index}}" ng-model="stratumItem.targetValids" ng-disabled="!stratumItem.editEnable" tooltip-placement="bottom" uib-tooltip="Please Enter Target Valids in Number" tooltip-enable="stratumInfoForm.targetValids{{$index}}.$invalid && stratumInfoForm.targetValids{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.targetValids{{$index}}.$invalid && stratumInfoForm.targetValids{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control"  name="classification{{$index}}" ng-model="stratumItem.classification" ng-disabled="!stratumItem.editEnable"  maxlength="15" tooltip-placement="bottom" uib-tooltip="Classification is required" tooltip-enable="stratumInfoForm.classification{{$index}}.$invalid && stratumInfoForm.classification{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.classification{{$index}}.$invalid && stratumInfoForm.classification{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="logoname{{$index}}" ng-model="stratumItem.logoname" ng-disabled="!stratumItem.editEnable"  maxlength="30" tooltip-placement="bottom" uib-tooltip="Classification is required" tooltip-enable="stratumInfoForm.logoname{{$index}}.$invalid && stratumInfoForm.logoname{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.logoname{{$index}}.$invalid && stratumInfoForm.logoname{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td><input type="number" class="form-control" name="availableCount{{$index}}" ng-model="stratumItem.availableCount" ng-disabled="true"/></td>
+						<td><input type="text" ng-required="false" custom-datepicker name="latestPdsDate{{$index}}" ng-model="stratumItem.latestPdsDate" ng-disabled="true"/></td>
+						<td><input type="number" name="headCount{{$index}}" class="form-control"  ng-model="stratumItem.headCount" ng-disabled="true"/></td>
+					</tr>
+					</tbody>
+				</table>
+				
+			</div>
+			<dir-pagination-controls
+								max-size="5"
+								direction-links="true"
+								boundary-links="true"
+								pagination-id="stratumInfoId" class="margin-bot-20">
+			</dir-pagination-controls> 
+		</div>
+		</form>
+	</div>
+</section>
+
+
+	<script type="text/ng-template" id="addStratumRecordPU.html">
+        <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Add New Record to Design Stratum Info Table</h3>
+        </div>
+		<form class="form-horizontal" role="form" name="addNewstratumInfoForm">
+        <div class="modal-body">
+            <div class="col-sm-12">
+					<div class="form-group">
+					  <label class="control-label col-sm-3" >Company<span class="asterisk">*</span></label>
+					  <div class="col-sm-9">
+						<input type="text" class="form-control" ng-model="newStratRec.designStrInfoCompId.company" name="company"
+						maxlength="10" tooltip-placement="bottom" uib-tooltip="Company is required" tooltip-enable="addNewstratumInfoForm.company.$invalid && addNewstratumInfoForm.company.$dirty" tooltip-is-open="addNewstratumInfoForm.company.$invalid && addNewstratumInfoForm.company.$dirty" tooltip-trigger="focus" required>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="control-label col-sm-3" for="tblKey">Stratum<span class="asterisk">*</span></label>
+					  <div class="col-sm-9">
+						<input type="text" class="form-control" id="tblKey" name="stratum" ng-model="newStratRec.designStrInfoCompId.stratum" 
+						maxlength="50" tooltip-placement="bottom" uib-tooltip="Stratum is required" tooltip-enable="addNewstratumInfoForm.stratum.$invalid && addNewstratumInfoForm.stratum.$dirty" tooltip-is-open="addNewstratumInfoForm.stratum.$invalid && addNewstratumInfoForm.stratum.$dirty" tooltip-trigger="focus" required>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="control-label col-sm-3" for="tblKey">Market Segment<span class="asterisk">*</span></label>
+					  <div class="col-sm-9">
+						<input type="text" class="form-control" id="tblKey" name="marketSegment" ng-model="newStratRec.marketSegment" maxlength="50" tooltip-placement="bottom" uib-tooltip="Market Segment is required" tooltip-enable="addNewstratumInfoForm.marketSegment.$invalid && addNewstratumInfoForm.marketSegment.$dirty" tooltip-is-open="addNewstratumInfoForm.marketSegment.$invalid && addNewstratumInfoForm.marketSegment.$dirty" tooltip-trigger="focus" required>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="control-label col-sm-3" for="tblKey">Annual Sample Size<span class="asterisk">*</span></label>
+					  <div class="col-sm-9">
+						<input type="number" class="form-control" id="tblKey" name="annualSampleSize" ng-model="newStratRec.annualSampleSize" tooltip-placement="bottom" uib-tooltip="Please Enter Annual Sample Size in Number" tooltip-enable="addNewstratumInfoForm.annualSampleSize.$invalid && addNewstratumInfoForm.annualSampleSize.$dirty" tooltip-is-open="addNewstratumInfoForm.annualSampleSize.$invalid && addNewstratumInfoForm.annualSampleSize.$dirty" tooltip-trigger="focus" required>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="control-label col-sm-3" for="tblKey">Target Valids<span class="asterisk">*</span></label>
+					  <div class="col-sm-9">
+						<input type="number" class="form-control" id="tblKey" name="targetValids" ng-model="newStratRec.targetValids" tooltip-placement="bottom" uib-tooltip="Please Enter Target Valids in Number" tooltip-enable="addNewstratumInfoForm.targetValids.$invalid && addNewstratumInfoForm.targetValids.$dirty" tooltip-is-open="addNewstratumInfoForm.targetValids.$invalid && addNewstratumInfoForm.targetValids.$dirty" tooltip-trigger="focus" required>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="control-label col-sm-3" for="tblKey">Classification<span class="asterisk">*</span></label>
+					  <div class="col-sm-9">
+						<input type="text" class="form-control" id="tblKey" name="classification" ng-model="newStratRec.classification" maxlength="15" tooltip-placement="bottom" uib-tooltip="Classification is required" tooltip-enable="addNewstratumInfoForm.classification.$invalid && addNewstratumInfoForm.classification.$dirty" tooltip-is-open="addNewstratumInfoForm.classification.$invalid && addNewstratumInfoForm.classification.$dirty" tooltip-trigger="focus" required>
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="control-label col-sm-3" for="tblKey">Logo Name<span class="asterisk">*</span></label>
+					  <div class="col-sm-9">
+						<input type="text" class="form-control" id="tblKey" name="logoname" ng-model="newStratRec.logoname" 
+						maxlength="30" tooltip-placement="bottom" uib-tooltip="Logo Name is required" tooltip-enable="addNewstratumInfoForm.logoname.$invalid && addNewstratumInfoForm.logoname.$dirty" tooltip-is-open="addNewstratumInfoForm.logoname.$invalid && addNewstratumInfoForm.logoname.$dirty" tooltip-trigger="focus" required>
+					  </div>
+					</div>
+			</div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" ng-click="ok()" ng-disabled="addNewstratumInfoForm.$invalid">Add</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+		</form>			
+    </script>
+	
+<script type="text/ng-template" id="confirmationDeletePopUP.html">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+		<h3 class="modal-title">Confirmation</h3>
+	</div>
+	<div class="modal-body">
+		<p>Are you sure you want to delete the selected stratum info table.</p>
+	</div>
+	   <div class="modal-footer">
+		<button class="btn btn-primary" type="button" ng-click="ok()">Delete</button>
+		<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	</div>
+</script>

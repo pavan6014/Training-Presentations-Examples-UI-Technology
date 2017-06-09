@@ -1,0 +1,65 @@
+[{
+	"company": "AIT       ",
+	"lastDteGenerated": "2/24/2016 5:18:10 PM",
+	"lastDateReleased": "2/24/2016 5:35:32 PM",
+	"extractCode": "(Company_Code = 'T3') OR  (Company_Code = 'T1') OR  (Company_Code = 'T5') OR (Company_Code = 'T7') OR  (Company_Code = 'T9')",
+	"status": "Sample Size Exceeds",
+	"stratumDefinition": "Business",
+	"lifelineCompany": 1
+}, {
+	"company": "NewCo ISM",
+	"lastDteGenerated": " ",
+	"lastDateReleased": " ",
+	"extractCode": "(((Company_Code = 'T8') AND State_Code IN( 'TX', 'LA', 'NV', 'NY','MO')) OR ((Company_Code = 'V3') AND State_Code IN( 'AZ', 'TN')) OR ((Company_Code = 'F9') AND State_Code IN ('CO', 'MO', 'TN')) OR ((Company_Code = 'NY') AND State_Code IN('WV')) OR ((Company_Code = 'S4') AND State_Code IN ('ON','TN', 'CO')))",
+	"status": "Problem",
+	"stratumDefinition": "Fix and Assign Stratums",
+	"lifelineCompany": 1
+}, {
+	"company": "Ntl ATTSvc",
+	"lastDteGenerated": "2/24/2016 5:13:13 PM",
+	"lastDateReleased": " ",
+	"extractCode": "((Company_Code = 'Y9') and Substring(Charge_ARC,1,4) = 'H4DY') OR ((Company_Code = 'T8') and Substring(Charge_ARC,1,4) = 'EYDY')",
+	"status": "Sample Generated",
+	"stratumDefinition": "Good",
+	"lifelineCompany": 1
+}, {
+	"company": "Ntl Leg T",
+	"lastDteGenerated": "2/24/2016 5:13:21 PM",
+	"lastDateReleased": " ",
+	"extractCode": "(Company_Code = '1a') AND (State_Code = 'tx' OR State_Code = 'ma' OR State_Code = 'mo' OR State_Code = 'in')",
+	"status": "Samples need assigning",
+	"stratumDefinition": "Good",
+	"lifelineCompany": 1
+}, {
+	"company": "PB        ",
+	"lastDteGenerated": "3/3/2016 8:20:05 AM",
+	"lastDateReleased": " ",
+	"extractCode": "(Company_Code  = 'F9')",
+	"status": "Sample Generated",
+	"stratumDefinition": "Good",
+	"lifelineCompany": 1
+}, {
+	"company": "SE",
+	"lastDteGenerated": " ",
+	"lastDateReleased": " ",
+	"extractCode": "((Company_Code = 'S4' and (Substring(Charge_ARC, 1, 4) IN ( 'BLG6','BLG7','BLDY') ) OR (Company_Code = 'T8') and (Substring(Charge_ARC, 1, 4) IN( 'EYG6','EYG7'))))",
+	"status": "Problem",
+	"stratumDefinition": "Fix and Assign Stratums",
+	"lifelineCompany": 1
+}, {
+	"company": "SWBT      ",
+	"lastDteGenerated": " ",
+	"lastDateReleased": " ",
+	"extractCode": "(Company_Code  = 'V3')",
+	"status": "Problem",
+	"stratumDefinition": "Fix and Assign Stratums",
+	"lifelineCompany": 1
+}, {
+	"company": "Vendor",
+	"lastDteGenerated": " ",
+	"lastDateReleased": " ",
+	"extractCode": "(((Company_Code = '1A') AND State_Code IN ('PH','TX')) OR ((Company_Code = 'F9') AND State_Code IN ('DR','II','JM','ME','PH')) OR ((Company_Code IN( 'S4','T8')) AND State_Code IN( 'II','JM','PH','WV')) OR ((Company_Code = 'T3') AND State_Code IN ('JM')) OR ((Company_Code IN ('T5','T7','T9','V3')) AND State_Code = 'PH') OR ((Company_Code = 'NY') AND State_Code IN ('JM','PH')))",
+	"status": "Problem",
+	"stratumDefinition": "Fix and Assign Stratums",
+	"lifelineCompany": 1
+}]

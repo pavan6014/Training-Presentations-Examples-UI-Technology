@@ -1,0 +1,121 @@
+<section class="product-packages">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+			   <h1><span class=""></span>Product Packages</h1>      
+			</div>
+		</div>
+	</section>
+	
+	<div class="container-custom">
+		<div class="row">
+			<div class="form-group">
+				<div class="col-sm-6">
+				  <label class="control-label">Package</label>
+				  <div class="">
+					<select name="show-filter" class="form-control" ng-model="SelectedPkg" ng-options="pkg.pkgName for pkg in packages track by pkg.pkgId" ng-change="loadAssocProd()">
+							<option value="">Select</option>
+					</select>
+			
+				  </div>
+				</div>
+			   <div class="col-sm-6" ng-show="showAddPackage">
+				  <label class="control-label">Pick Product to be added as a Package</label>
+				  <div class="">
+					<select id="packages-options" class="form-control" ng-model="newPackage" ng-change="addProdAsPkg()" ng-options="pkg.pkgName for pkg in packages_new track by pkg.pkgId">
+						<option value="">Select</option>
+					</select>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="row" ng-show="showPageDuplicateError">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<p class="alert alert-danger" style="margin-bottom: 0;">Package already in the list</p>
+		</div>
+		</div>
+		<div class="row listPage-Row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toolbar_subsections">
+				<div class="toolbar_section margin-bot-20 margin-top-20">
+					<button class="btn btn-primary" type="button" ng-click="popupModalController({'pkgItem':SelectedPkg},passData,'deleteConfirmProduct','deleteProductConfirm')" ng-controller="ModalDemoCtrl">Delete Package</button>
+					<button class="btn btn-primary" type="button" ng-click="addPackage()">Add Package</button>
+					<button class="btn btn-primary" type="button" ng-click="exportPackage()">Export</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" ng-show="showAssocProdTable">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<div class="table-responsive product_table_selection_agent">
+				<toaster-container></toaster-container>
+					<table class="table table-condensed table-hover">
+						<thead>
+							<tr>
+								<th style="width: 80px;">Associated Product</th>
+							</tr>
+						</thead> 
+						<tbody class="bg_tables">
+								<tr pagination-id="assocProds" dir-paginate="prod in assocProds | itemsPerPage:10" ng-init="associateProductSelected[$index]=prod">
+									<td style="width: 80px;" ng-init="prod.addAssocProduct=false">
+									<select name="show-filter" class="form-control" ng-model="associateProductSelected[$index]" ng-options="pkg.prodName for pkg in listAssociatedPkg track by pkg.prodId" ng-change="UpdateAssocProd($index)">
+										<option value="">Select</option>
+									</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<button ng-click="addNewAssociatedProduct()" ng-disabled="!isNewChangeSaved" class="btn btn-primary">Add New <i class="glyphicon glyphicon-plus"></i></button>
+										<button ng-click="saveNewAssociatedProduct()" class="btn btn-primary">Save</button>
+									</td>
+								</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="row" ng-show="duplicateError">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<p class="alert alert-danger">Already in the list</p>
+					</div>
+				</div>		
+				<dir-pagination-controls
+									max-size="10"
+									direction-links="true"
+									boundary-links="true"
+									pagination-id="assocProds" class="margin-top-10">
+				</dir-pagination-controls>
+			</div>
+			
+		</div>
+
+	</div>
+</section>
+
+<script type="text/ng-template" id="deleteConfirmProduct.html">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Confirmation</h3>
+        </div>
+        <div class="modal-body">
+		<p>Are you sure you want to delete the product {{popupData.pkgItem.pkgName}}</p>
+        </div>
+		   <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">Ok</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+		
+</script>
+
+<script type="text/ng-template" id="saveEmptyConfirm.html">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Confirmation</h3>
+        </div>
+        <div class="modal-body">
+		<p>You are tried assign the null value to a variable that is not variant data type</p>
+        </div>
+		   <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">Ok</button>
+            <button class="btn btn-warning" type="button" ng-click="help()">Help</button>
+			<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+		
+</script>

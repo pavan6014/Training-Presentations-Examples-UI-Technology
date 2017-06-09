@@ -1,0 +1,479 @@
+[
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "AIT",
+
+         "stratum": "Business"
+
+      },
+
+      "marketSegment": "Business",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 398,
+
+      "availableCount": 398,
+
+      "annualSampleSize": 756,
+
+      "targetValids": 252,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - Midwest"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "AIT",
+
+         "stratum": "Cons Retention"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 582,
+
+      "availableCount": 582,
+
+      "annualSampleSize": 540,
+
+      "targetValids": 180,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - Midwest"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "AIT",
+
+         "stratum": "Cons UVG-Lang"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 184,
+
+      "availableCount": 184,
+
+      "annualSampleSize": 531,
+
+      "targetValids": 177,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - Midwest"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "NewCo ISM",
+
+         "stratum": "Consumer"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 3713,
+
+      "availableCount": 3713,
+
+      "annualSampleSize": 819,
+
+      "targetValids": 273,
+
+      "classification": "Vendor",
+
+      "logoname": "NewCo ISM"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "Ntl ATTSvc",
+
+         "stratum": "Cons Retention"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 158,
+
+      "availableCount": 158,
+
+      "annualSampleSize": 405,
+
+      "targetValids": 135,
+
+      "classification": "ATT Svcs",
+
+      "logoname": "ATT Svcs - National"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "Ntl Leg T",
+
+         "stratum": "Cons Retention"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 412,
+
+      "availableCount": 412,
+
+      "annualSampleSize": 774,
+
+      "targetValids": 258,
+
+      "classification": "Leg T",
+
+      "logoname": "Leg T - National"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "PB",
+
+         "stratum": "Business"
+
+      },
+
+      "marketSegment": "Business",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 192,
+
+      "availableCount": 192,
+
+      "annualSampleSize": 504,
+
+      "targetValids": 168,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - West"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "PB",
+
+         "stratum": "Cons Retention"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 257,
+
+      "availableCount": 257,
+
+      "annualSampleSize": 648,
+
+      "targetValids": 216,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - West"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "PB",
+
+         "stratum": "Cons UVG-Lang"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 371,
+
+      "availableCount": 371,
+
+      "annualSampleSize": 891,
+
+      "targetValids": 297,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - West"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "SE",
+
+         "stratum": "Business"
+
+      },
+
+      "marketSegment": "Business",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 114,
+
+      "availableCount": 114,
+
+      "annualSampleSize": 180,
+
+      "targetValids": 60,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - Southeast"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "SE",
+
+         "stratum": "Cons Retention"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 721,
+
+      "availableCount": 721,
+
+      "annualSampleSize": 513,
+
+      "targetValids": 171,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - Southeast"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "SE",
+
+         "stratum": "Cons UVG-Lang"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 456,
+
+      "availableCount": 456,
+
+      "annualSampleSize": 801,
+
+      "targetValids": 267,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - Southeast"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "SWBT",
+
+         "stratum": "Business"
+
+      },
+
+      "marketSegment": "Business",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 102,
+
+      "availableCount": 102,
+
+      "annualSampleSize": 549,
+
+      "targetValids": 183,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - Southwest"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "SWBT",
+
+         "stratum": "Cons Retention"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 552,
+
+      "availableCount": 552,
+
+      "annualSampleSize": 981,
+
+      "targetValids": 327,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - Southwest"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "SWBT",
+
+         "stratum": "Cons UVG-Lang"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 281,
+
+      "availableCount": 281,
+
+      "annualSampleSize": 405,
+
+      "targetValids": 135,
+
+      "classification": "TELCO",
+
+      "logoname": "ATT - Southwest"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "Vendor",
+
+         "stratum": "Business"
+
+      },
+
+      "marketSegment": "Business",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 208,
+
+      "availableCount": 208,
+
+      "annualSampleSize": 900,
+
+      "targetValids": 300,
+
+      "classification": "Vendor",
+
+      "logoname": "Vendor Call Centers"
+
+   },
+
+   {
+
+      "designStrInfoCompId": {
+
+         "company": "Vendor",
+
+         "stratum": "Consumer"
+
+      },
+
+      "marketSegment": "Consumer",
+
+      "latestPdsDate": "2016-02-20",
+
+      "headCount": 9547,
+
+      "availableCount": 9547,
+
+      "annualSampleSize": 675,
+
+      "targetValids": 225,
+
+      "classification": "Vendor",
+
+      "logoname": "Vendor Call Centers"
+
+   }
+
+]

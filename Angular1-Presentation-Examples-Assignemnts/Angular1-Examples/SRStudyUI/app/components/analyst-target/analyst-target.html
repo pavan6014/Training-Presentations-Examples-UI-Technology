@@ -1,0 +1,97 @@
+<div>
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="fa fa-bar-chart"></span> Analyst Target</h1>      
+            </div>
+		</div>
+	</section>
+
+	<div class="container container-custom">	
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="table-responsive table_selection_agent">          
+					<table class="table table-bordered table-condensed table-matrix table-hover">
+						<thead>
+							<tr>
+								<th>2016 SRS Call Assignments</th>
+								<th colspan={{company.stratums.length}} ng-repeat="company in assignments.companies">{{company.companyName}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>   
+								<td>Febuary</td>  
+								<td ng-repeat = "stratum in sortedData">
+										{{stratum.stratumName}}
+								</td>
+								<td>Total</td>
+								<td>TELCO Total</td>
+								<td>ATT Svc Total</td>
+								<td>Leg T Total</td>
+								<td>NewCo ISM</td>
+								<td>Vendor</td>
+								<td>Bus</td>
+								<td>Con</td>
+								<td>Vndr</td>
+								<td>Cons UVG</td>
+								<td>Cons Ret</td>
+								<td>Cons Vendor</td>
+									
+							</tr>
+							<tr ng-repeat = 'analyst in assignments.analysts'>
+								<td>{{analyst.analystName}}</td>
+								<td ng-repeat = 'target in analyst.target track by $index'>
+									<input type="text" ng-model="analyst.target[$index]" style="width:35px" ng-class="{greyBackground:target==-1}"/>
+								</td>
+								<td>{{analyst.target | getTotal}}</td>
+								<td ng-repeat="(key,value) in sumColumns">{{analyst.target | getSum:key:sumColumns}}</td>	
+							</tr>
+							<tr>
+								<td>Total</td>  
+								<td ng-repeat = "stratum in sortedData">
+										{{assignments.analysts | getColumnTotal:$index}}
+								</td>
+								<td>{{assignments.analysts | getSumColumnAll}}</td>
+								<td ng-repeat="(key,value) in sumColumns">{{assignments.analysts | getSumColumn:key:sumColumns}}</td>	
+								<td>Bus</td>
+							</tr>
+							<tr>   
+								<td></td>  
+								<td ng-repeat = "stratum in sortedData">
+										
+								</td>
+								<td></td>
+								<td colspan={{grandTotal1}} style="text-align: center;">{{assignments.analysts | getGrandTotal:sumColumnsSubSet1}}</td>
+								<td colspan={{grandTotal2}} style="text-align: center;">{{assignments.analysts | getGrandTotal:sumColumnsSubSet2}}</td>
+								<td colspan={{grandTotal3}} style="text-align: center;">{{assignments.analysts | getGrandTotal:sumColumnsSubSet3}}</td>
+								<td style="text-align: center;">{{assignments.analysts | getGrandTotal:sumColumnsSubSet5}}</td>								
+							</tr>
+							<tr>   
+								<td>Statistcian min</td>  
+								<td ng-repeat = "stratum in sortedData">
+										{{stratum.statMin}}
+								</td>
+								<td></td>
+								<td ng-repeat="(key,value) in sumColumnsSubSet1">{{assignments.analysts | getSumColumn:key:sumColumnsSubSet1}}</td>
+								<td ng-repeat="(key,value) in sumColumnsSubSet4">{{assignments.analysts | getSumColumn:key:sumColumnsSubSet4}}</td>
+								<td colspan={{grandTotal4}} style="text-align: center;">{{assignments.analysts | getGrandTotal:sumColumnsSubSet6}}</td>	
+							</tr>
+							<tr>
+							<td></td>
+							<td ng-repeat = "stratum in sortedData">
+							</td>
+							<td></td>
+							<td ng-repeat="(key,value) in sumColumnsSubSet1">
+							</td>
+							<td colspan={{grandTotal3}} style="text-align: center;">{{assignments.analysts | getGrandTotal:sumColumnsSubSet4}}</td>	
+							<td ng-repeat="(key,value) in sumColumnsSubSet3">
+							</td>							
+							<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>

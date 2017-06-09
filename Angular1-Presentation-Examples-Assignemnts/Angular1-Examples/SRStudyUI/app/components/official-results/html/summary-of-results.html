@@ -1,0 +1,140 @@
+<div class="container relative-pos hidden-print">
+	<input type="submit" class="btn btn-primary print-cutom-btn absolute-pos" ng-click="print()" value="Print">
+</div>
+
+<div class="container" data-ng-repeat="detail in summaryOfResultsData.data.resultsDetails" data-ng-if="$index%rowCountPdfPageSummary == 0">
+	<div class="row extraPadding pageBreak" ng-class="{'visible-print-block':$index>0}">
+		<div class="col-xs-12">
+			<div class="head-text text-center">Service Representative Study Results - Report 1</div> 		
+			<div class="head-text text-center">Summary of Results Calculations - {{summaryOfResultsData.data.sampleMonthRequested}}</div> 			
+			<div class="subHeading text-center">&copy Copyright 2012 AT&T Intellectual Property. All rights reserved</div>			 			
+		</div>
+	</div>
+	<div class="row" ng-class="{'visible-print-block':$index>0}">
+		<div class="col-xs-3">
+			<div style="position:relative;">
+				<img src="assets/img/att_logo_background.png" class="logo-img-print hidden-print"/>
+				<img src="assets/img/att_logo.png" class="logo-img-print visible-print-block"/>
+			</div>
+		</div> 
+		<div class="col-xs-4 col-md-3 text-right"><b>Company: {{summaryOfResultsData.data.company}}</b></div>			
+	</div>
+	<div class="row agent_selection_table_row">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">			
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" > 				
+				<table>
+					<thead class="tableHeaderBorderBottom">
+						<tr>
+							<th>{{detail.parts[0].key}}</th>																		
+						</tr>
+					</thead>				
+					<tbody>
+						<tr data-ng-repeat="details in detail.parts[0].value">
+							<td>{{details.productName}}: </td><td>{{details.productValue}}</td>
+						</tr>
+						<tr class="tableHeaderBorder"><td>Total: </td> <td>{{detail.parts[0].total}}</td></tr>					
+					</tbody>
+				</table>
+			</div>			
+		</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">			
+			<div > 				
+				<table>
+					<thead class="tableHeaderBorderBottom">
+						<tr>
+							<th>{{detail.parts[1].key}}</th>																		
+						</tr>
+					</thead>				
+					<tbody>
+						<tr data-ng-repeat="details in detail.parts[1].value">
+							<td>{{details.productName}}: </td><td>{{details.productValue}}</td>
+						</tr>
+						<tr class="tableHeaderBorder"><td>Total: </td> <td>{{detail.parts[1].total}}</td></tr>
+						<tr><td>Difference(Total-Allocated Total): </td><td>{{detail.parts[1].difference}}</td></tr>	
+						<tr><td>Allocated(Total): </td><td>{{detail.parts[1].difference}}</td></tr>
+						<tr><td>Allocated at Occ level: </td><td>{{detail.parts[1].allocatedAtOccLevel}}</td></tr>	
+						<tr><td>Allocated at Sample level: </td><td>{{detail.parts[1].allocatedAtSampleLevel}}</td></tr>							
+					</tbody>
+				</table>
+			</div>			
+		</div>			
+	</div>
+	<div class="row">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">			
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"  > 				
+				<table>
+					<thead class="tableHeaderBorderBottom">
+						<tr>
+							<th>{{detail.parts[2].key}}</th>																		
+						</tr>
+					</thead>				
+					<tbody>
+						<tr data-ng-repeat="details in detail.parts[2].value">
+							<td>{{details.productName}}: </td><td>{{details.productValue}}</td>
+						</tr>											
+					</tbody>
+				</table>
+			</div>			
+		</div>
+	</div>
+	<div class="row agent_selection_table_row">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">			
+			<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" > 				
+				<table>
+					<thead class="tableHeaderBorderBottom">
+						<tr>
+							<th>{{detail.parts[3].key}}</th>																		
+						</tr>
+					</thead>				
+					<tbody>
+						<tr data-ng-repeat="details in detail.parts[3].value">
+							<td>{{details.productName}}: </td><td>{{details.productValue}}</td>
+						</tr>		
+						<tr class="tableHeaderBorder"><td>Total: </td> <td>{{detail.parts[3].total}}</td></tr>
+					</tbody>
+				</table>
+			</div>			
+		</div>
+	</div>
+	<div class="row agent_selection_table_row">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">			
+			<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" > 				
+				<table>
+					<thead class="tableHeaderBorderBottom">
+						<tr>
+							<th>{{detail.parts[4].key}}</th>																		
+						</tr>
+					</thead>				
+					<tbody>
+						<tr data-ng-repeat="details in detail.parts[4].value">
+							<td>{{details.productName}}: </td><td>{{details.productValue}}</td>
+						</tr>		
+						<tr class="tableHeaderBorder"><td>Total: </td> <td>{{detail.parts[4].total}}</td></tr>
+					</tbody>
+				</table>
+			</div>			
+		</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">			
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" > 				
+				<table>
+					<thead class="tableHeaderBorderBottom">
+						<tr>
+							<th>{{detail.parts[5].key}}</th>																		
+						</tr>
+					</thead>				
+					<tbody>
+						<tr data-ng-repeat="details in detail.value">
+							<td>{{details.productName}}: </td><td>{{details.productValue}}</td>
+						</tr>		
+						<tr class="tableHeaderBorder"><td>Total: </td> <td>{{detail.parts[5].total}}</td></tr>
+					</tbody>
+				</table>
+			</div>			
+		</div>
+	</div>
+	<div class="footer text-center" ng-class="{'visible-print-block':($index+rowCountPdfPageSummary)/rowCountPdfPageSummary<(summaryOfResultsData.data.resultsDetails.length/rowCountPdfPageSummary)}">
+		<div class="mainHeading">AT&T Proprietary (Restricted)</div>
+		<div class="subHeading">Only for use by authorized individuals or any above-designated team(s)<br>
+		within the AT&T companies and not for general distribution</div>
+	</div>	
+</div>

@@ -1,0 +1,99 @@
+<section class="agent_selection_section">
+	<div class="row agent_selection_form_row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h3>Agent Selection</h3>
+			<form class="form-horizontal margin-bot-20" role="form" name="agentSelectionForm" novalidate>
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-4 col-lg-4" for="sampleCompany">Sample Company :</label>
+							<div class="col-sm-7 col-md-6 col-lg-5">
+								<select id="sampleCompany" class="form-control" data-ng-model="sampledCompany" data-ng-options="company for company in sampleCompanyList">
+									<option value="">All</option>
+									<!-- <option data-ng-repeat="company in sampleCompanyList">{{company}}</option>
+									<option data-ng-selected="sampledCompany == all" data-ng-value="all">ALL</option> -->
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-4 col-lg-4" for="sampleStrantum">Sample Stratum :</label>
+							<div class="col-sm-7 col-md-6 col-lg-5">
+								<select id="sampleStrantum" class="form-control" data-ng-model="sampledStratum" data-ng-options="stratum for stratum in sampleStratumList">
+									<option value="">All</option>
+									<option data-ng-repeat="stratum in sampleStratumList">{{stratum}}</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-7 col-md-6 col-lg-5 col-sm-push-5 col-md-push-4 col-lg-push-4">
+								<button class="btn btn-md btn-primary" data-ng-click="getAgents()">Get Agents</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-4 col-lg-4" for="sampleMonth">Sample Month :</label>
+							<div class="col-sm-7 col-md-6 col-lg-5">
+								<input type="date" class="form-control" id="sampleMonth" data-ng-model="sampleMonth" placeholder="Enter sample month" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-4 col-lg-4" for="currentDate">Current Date :</label>
+							<div class="col-sm-7 col-md-6 col-lg-5">
+								<input type="date" class="form-control" id="currentDate" data-ng-model="currentDate" placeholder="Enter current date" disabled>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-4 col-lg-4" for="stratumIdentifier">Stratum Identifier :</label>
+							<div class="col-sm-7 col-md-6 col-lg-5">
+								<input type="text" class="form-control" name="agentSelectionName" id="stratumIdentifier" data-ng-model="stratumIdentifier" data-ng-minlength="2" placeholder="Enter Strantum Identifier" ng-required="isStartSampleBtnClicked" ng-class="{'ng-invalid':isStartSampleBtnClicked && agentSelectionForm.agentSelectionName.$invalid}">
+								<span data-ng-show="isStartSampleBtnClicked && agentSelectionForm.agentSelectionName.$invalid" class="text_error small"><b>Enter stratum identifier to start the sample recording session.</b></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="row agent_selection_table_row bg_tables" data-ng-show="isAgentTableVisible">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<span data-ng-show="!isAgentSelected && isStartSampleBtnClicked" class="text_error small"><b>Please select sample to start the sample recording session</b></span>
+			<div class="table-responsive table_selection_agent">          
+				<table class="table table-condensed table-hover">
+					<thead>
+						<tr>
+							<th>Company</th>
+							<th>Stratum</th>
+							<th>Office</th>
+							<th>Employee Name</th>
+							<th>Count</th>
+							<th>Recording Source</th>
+							<th>Supervisor</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-ng-repeat="agent in agentList.slice((navigation.currentPage-1)*navigation.rowPerPage) | limitTo:navigation.rowPerPage" data-ng-class="{'selected_agent' : (selectedAgentIndex == $index)}" data-ng-click="selectAgent(agent, $index)">
+							<td>{{agent.company}}</td>
+							<td>{{agent.stratum}}</td>
+							<td>{{agent.office}}</td>
+							<td>{{agent.employeeName}}</td>
+							<td>{{agent.count}}</td>
+							<td>{{agent.recordingSource}}</td>
+							<td>{{agent.supervisor}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="row margin-bot-20" data-ng-show="isAgentTableVisible">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<button class="btn btn-md btn-primary pull-left" data-ng-click="previousPage()" data-ng-disabled="navigation.currentPage == 1">Prev</button>
+					<button class="btn btn-md btn-primary pull-right" data-ng-click="startSample()">Start Sample</button>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<button class="btn btn-md btn-primary pull-left">Training Mode</button>
+					<button class="btn btn-md btn-primary pull-right" data-ng-click="nextPage()" data-ng-disabled="navigation.currentPage >= navigation.totalNumOfPage">Next</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

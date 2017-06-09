@@ -1,0 +1,141 @@
+<section class="update-products anchor-list">
+    <section class="row pg-title-divider">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="page-header">
+                <h1><span class=""></span>Update Area Code</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-custom">
+        <div>
+            <div class="row listPage-Row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toolbar_subsections">
+                    <div class="toolbar_section">
+                        <div class="col-sm-4 col-md-4">
+                            <div class="btn-toolbar" ng-controller="ModalDemoCtrl">
+                                <button ng-controller="ModalDemoCtrl" type="button" id="btnNew" class="btn btn-md btn-primary" ng-click="popupModalController({},addNewProduct,'addProductModal')"><span class="glyphicon glyphicon-new-window button-icon"></span>Add New Record</button>
+                                <button type="button" id="btnNew" class="btn btn-md btn-primary" ng-click="exportAreaCode()"><span class="glyphicon glyphicon-new-window button-icon"></span>Export</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="table-responsive table_selection_agent">
+                    <toaster-container></toaster-container>
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr class="table_list_header">
+                                <th class="min-width-100">Area Code</th>
+                                <th class="min-width-100">State</th>
+                                <th class="min-width-100">Company</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg_tables">
+                            <tr data-ng-repeat="areaCode in areaCodeLists">
+                                <td>{{areaCode.areacode}}</td>
+                                <td>{{areaCode.state}}</td>
+                                <td>{{areaCode.company}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--<dir-pagination-controls max-size="5" direction-links="true" boundary-links="true" pagination-id="productListId" class="margin-bot-20">
+                </dir-pagination-controls>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/ng-template" id="addProductModal.html">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+        <h4 class="modal-title">Add New Product</h4>
+    </div>
+    <form class="form-horizontal" role="form" name="AddNewProduct" strategy="focusedAndDirtyOrSubmitted" focus-error="true" xt-form novalidate>
+        <div class="modal-body">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="control-label col-sm-4 col-md-4 col-lg-4" for="areaCode">Area Code :<span class="asterisk">*</span></label>
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        <input type="text" class="form-control" name="areaCode" value="" ng-model="newProductList.productNumber" xt-validation-tooltip placement="bottom" msg-required="Please enter Area Code." required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4 col-md-4 col-lg-4" for="state">State:<span class="asterisk">*</span></label>
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        <input type="text" class="form-control" name="state" value="" ng-model="newProductList.productName" xt-validation-tooltip placement="bottom" msg-required="Please enter State." required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4 col-md-4 col-lg-4" for="company">Company:<span class="asterisk">*</span></label>
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        <input type="text" class="form-control" naem="company" value="" ng-model="newProductList.singleButtonNumber" xt-validation-tooltip placement="bottom" msg-required="Please enter company." required>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" ng-disabled="AddNewProduct.$invalid || AddNewProduct_1.$invalid" ng-click="ok()">Save</button>
+            <button class="btn btn-warning" type="button" data-dismiss="modal" ng-click="cancel()">Cancel</button>
+        </div>
+    </form>
+</script>
+
+
+
+<!--<script type="text/ng-template" id="updateProductCompany.html">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Update Product Companies</h3>
+        </div>
+        <div class="modal-body">
+            <div class="col-sm-12">
+				<form class="form-horizontal" role="form">
+						<div class="form-group">
+						  <label class="control-label col-sm-4" for="productNumber">Product Number:</label>
+						</div>
+						<div class="form-group">
+						  <label class="control-label col-sm-4" for="productName">Product Name:</label>
+						</div>
+						<div class="form-group ">
+							<button class="btn btn-primary update_save_btn" type="button" ng-click="ok()">Save</button>
+						</div>
+						
+						<div class="table-responsive table_selection_agent">
+					     <table class="table table-condensed table-hover table-head-fixed">
+						<thead>
+						  <tr>
+							<th>Company</th>
+							<th>Valid for Company</th>
+							<th>Valid for Customer Company</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td>
+							</td>
+							<td><input type="checkbox" /></td>
+							<td><input type="checkbox" /></td>
+							
+						  </tr>
+						   <tr>
+							<td></td>
+							<td><input type="checkbox" /></td>
+							<td><input type="checkbox" /></td>
+						  </tr>
+						  <tr>
+							<td></td>
+							<td><input type="checkbox" /></td>
+							<td><input type="checkbox" /></td>
+						  </tr>
+						</tbody>
+					  </table>
+				    </div>
+				</form>
+			</div>
+        </div>
+</script>-->

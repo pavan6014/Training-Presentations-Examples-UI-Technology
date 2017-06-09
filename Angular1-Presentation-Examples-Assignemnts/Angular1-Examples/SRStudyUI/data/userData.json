@@ -1,0 +1,24 @@
+ [
+		{
+			"name": "Meghna",
+			"flagStatus": true
+		},{
+			"name": "Priyanka",
+			"flagStatus": false
+		},{
+			"name": "Papaiah",
+			"flagStatus": true
+		},{
+			"name": "Geetha",
+			"flagStatus": false
+		},{
+			"name": "Karteek",
+			"flagStatus": true
+		},{
+			"name": "Theeran",
+			"flagStatus": false
+		},{
+			"name": "Krishna",
+			"flagStatus": true
+		}
+	]

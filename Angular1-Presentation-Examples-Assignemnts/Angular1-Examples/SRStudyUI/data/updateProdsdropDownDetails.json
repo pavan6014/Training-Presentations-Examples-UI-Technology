@@ -1,0 +1,7 @@
+{
+	"regulatoryType":["A","C","CP","JWTS","NCPT","TA","TB","TYPE","X"],
+	"regulatoryDesc":["Affiliate","Common","NCPT","TelcoA","TelcoB","TelcoC","Order Typing","TYPE","Non Work"],
+	"singleButtonNumber":["1","2","3","4"],
+	"resBusFlag":["Res","Bus","Both"],
+	"quanTityFlag":["0","1","2","None"]
+}

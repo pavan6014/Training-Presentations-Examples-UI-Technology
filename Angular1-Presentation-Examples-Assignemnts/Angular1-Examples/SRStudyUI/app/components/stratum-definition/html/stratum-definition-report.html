@@ -1,0 +1,140 @@
+<section class="results_section">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+			   <h1><span class="fa fa-group"></span>Update Design Stratum Definitions</h1>      
+			</div>
+		</div>
+	</section>
+	
+	<div class="container-custom">
+	<form name="stratumDefReportForm" role="form">
+		<div class="row listPage-Row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toolbar_subsections">
+				<div class="toolbar_section">
+					<div class="col-sm-12 col-md-12">
+						<div class="margin-bot-20 margin-top-20">
+							<button ng-controller="ModalDemoCtrl" type="button" id="btnNew" class="btn btn-md btn-primary"  ng-click="popupModalController({},add,'addStratumRecordPU')"><span class="glyphicon glyphicon-new-window button-icon"></span>New</button>
+							<button type="submit" id="btnEdit" class="btn btn-md btn-primary"  ng-click="editStratumData()"><span class="glyphicon glyphicon-edit button-icon"></span>Edit</button>
+							<button type="button" id="btnDelete" class="btn btn-md btn-primary" ng-click="popupModalController({},delStratumData,'confirmationDeletePopUP')" ng-controller="ModalDemoCtrl"><span class="glyphicon glyphicon-remove button-icon" ng-click="delStratumData()"></span>Delete</button> 
+							<button type="button" id="btnNew" class="btn btn-md btn-primary export-list pull-right" ng-click="exportStratumData()"><span class="glyphicon glyphicon-new-window button-icon"></span>Export</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div ng-show="errorMsg">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<p class="alert alert-danger">{{errorMsg}}</p>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="table-responsive">
+			<toaster-container></toaster-container>
+				<table class="table table-condensed table-hover">
+					<colgroup>
+						<col style="width:2%">
+						<col ng-repeat="(thead,tvalue) in tbHeaders" style="width:{{colPercent}}%">					
+					</colgroup>
+					<thead>
+					<tr class="table_list_header">
+						<th></th>						
+						<th ng-repeat="(thead,tvalue) in tbHeaders" ng-click="sort(thead)">{{tvalue}} <span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != thead),'glyphicon-chevron-up':reverse && (sortKey == 'company'),'glyphicon-chevron-down':!reverse && (sortKey == thead)}"></span></th>						
+					</tr>
+					</thead>
+					<tbody class="bg_tables"> 
+					<tr class="table_list_row" pagination-id="stratumInfoId" dir-paginate="stratumItem in stratumInfoList |orderBy:sortKey:reverse |itemsPerPage:5">
+						<td>
+							<input type="checkbox" ng-model="stratumItem.editEnable" ng-change="selectCheckbox(stratumItem.editEnable)" />
+						</td>					
+						<td> 
+							<input type="text" class="form-control" name="company" ng-model="stratumItem.stratumDefCompId.company"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Company is required" tooltip-enable="stratumInfoForm.company{{$index}}.$invalid && stratumInfoForm.company{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.company{{$index}}.$invalid && stratumInfoForm.company{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td> 
+							<input type="text" class="form-control" name="rc" ng-model="stratumItem.stratumDefCompId.arc"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Rc is required" tooltip-enable="stratumInfoForm.rc.$invalid && stratumInfoForm.rc.$dirty" tooltip-is-open="stratumInfoForm.rc.$invalid && stratumInfoForm.rc.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td> 
+							<input type="text" class="form-control" name="stratum" ng-model="stratumItem.stratum"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Stratum is required" tooltip-enable="stratumInfoForm.stratum.$invalid && stratumInfoForm.stratum.$dirty" tooltip-is-open="stratumInfoForm.stratum.$invalid && stratumInfoForm.stratum.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td> 
+							<input type="text" class="form-control" name="remarks" ng-model="stratumItem.remarks"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Remarks is required" tooltip-enable="stratumInfoForm.remarks.$invalid && stratumInfoForm.remarks.$dirty" tooltip-is-open="stratumInfoForm.remarks.$invalid && stratumInfoForm.remarks.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td> 
+							<input type="text" class="form-control" name="language" ng-model="stratumItem.language"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Language is required" tooltip-enable="stratumInfoForm.language.$invalid && stratumInfoForm.language.$dirty" tooltip-is-open="stratumInfoForm.language.$invalid && stratumInfoForm.language.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td> 
+							<input type="text" class="form-control" name="oldArc" ng-model="stratumItem.oldArc"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Old Arc is required" tooltip-enable="stratumInfoForm.oldArc.$invalid && stratumInfoForm.oldArc.$dirty" tooltip-is-open="stratumInfoForm.oldArc.$invalid && stratumInfoForm.oldArc.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td> 
+							<input type="text" class="form-control" name="office" ng-model="stratumItem.office"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Office is required" tooltip-enable="stratumInfoForm.office.$invalid && stratumInfoForm.office.$dirty" tooltip-is-open="stratumInfoForm.office.$invalid && stratumInfoForm.office.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td> 
+							<input type="text" class="form-control" name="recordingType" ng-model="stratumItem.recordingType"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Recording Type is required" tooltip-enable="stratumInfoForm.recordingType.$invalid && stratumInfoForm.recordingType.$dirty" tooltip-is-open="stratumInfoForm.recordingType.$invalid && stratumInfoForm.recordingType.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td> 
+							<input type="text" class="form-control" name="newArc" ng-model="stratumItem.newArc"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="New Arc is required" tooltip-enable="stratumInfoForm.newArc.$invalid && stratumInfoForm.newArc.$dirty" tooltip-is-open="stratumInfoForm.newArc.$invalid && stratumInfoForm.newArc.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td> 
+							<input type="text" class="form-control" name="jobTitleCode" ng-model="stratumItem.stratumDefCompId.jobTitleCode"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Job Title Code is required" tooltip-enable="stratumInfoForm.jobTitleCode.$invalid && stratumInfoForm.jobTitleCode.$dirty" tooltip-is-open="stratumInfoForm.jobTitleCode.$invalid && stratumInfoForm.jobTitleCode.$dirty" tooltip-trigger="focus" required/>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				
+			</div>
+			<dir-pagination-controls
+								max-size="5"
+								direction-links="true"
+								boundary-links="true"
+								pagination-id="stratumInfoId" class="margin-bot-20">
+			</dir-pagination-controls> 
+		</div>
+		</form>
+	</div>
+</section>
+
+
+	<script type="text/ng-template" id="addStratumRecordPU.html">
+        <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Add New Record to Stratum Definition Report </h3>
+        </div>
+		<form class="form-horizontal" role="form" name="addNewstratumInfoForm">
+        <div class="modal-body">
+            <div class="col-sm-12">
+					<div class="form-group" ng-repeat="(thead,tvalue) in tbHeaders" ng-form="addPopupCellForm">
+					  <label class="control-label col-sm-3" >{{tvalue}}<span class="asterisk">*</span></label>
+					  <div class="col-sm-9">
+						<input  ng-if="tbHeadersType[thead]=='text'" type="text" ng-class="{'form-control':tbHeadersType[thead]!='date'}" ng-model="newStratRec[thead]" name="thead"
+						maxlength="10" tooltip-placement="bottom" uib-tooltip="{{tvalue}} is required" tooltip-enable="addPopupCellForm.{{thead}}.$invalid && addPopupCellForm.{{thead}}.$dirty" tooltip-is-open="addPopupCellForm.{{thead}}.$invalid && addNewstratumInfoForm.company.$dirty" tooltip-trigger="focus" required>
+						<select ng-if="tbHeadersType[thead]=='select'" class="form-control" data-ng-model="newStratRec[thead]" data-ng-options="company for company in selectData[thead]" name="thead"
+						tooltip-placement="bottom" uib-tooltip="{{tvalue}} is required" tooltip-enable="addPopupCellForm.{{thead}}.$invalid && addPopupCellForm.{{thead}}.$dirty" tooltip-is-open="addPopupCellForm.{{thead}}.$invalid && addNewstratumInfoForm.company.$dirty" tooltip-trigger="focus" required>
+									<option value="">Select</option>
+									<!-- <option data-ng-repeat="company in sampleCompanyList">{{company}}</option>
+									<option data-ng-selected="sampledCompany == all" data-ng-value="all">ALL</option> -->
+						</select>
+					  </div>
+					</div>
+			</div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" ng-click="ok()" ng-disabled="addNewstratumInfoForm.$invalid">Add</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+		</form>			
+    </script>
+	
+<script type="text/ng-template" id="confirmationDeletePopUP.html">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+		<h3 class="modal-title">Confirmation</h3>
+	</div>
+	<div class="modal-body">
+		<p>Are you sure you want to delete the selected stratum definition table.</p>
+	</div>
+	   <div class="modal-footer">
+		<button class="btn btn-primary" type="button" ng-click="ok()">Delete</button>
+		<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	</div>
+</script>

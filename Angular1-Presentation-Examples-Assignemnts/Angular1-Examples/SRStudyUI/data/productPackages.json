@@ -1,0 +1,68 @@
+{
+	"packages":[
+			{
+				"pkgName":"ATM/DIA/FrameRelay PKG",
+				"pkgId":"538",
+				"assocProducts":[
+					{
+						"prodName":"ATM Telco Fil",
+						"prodId":"850"
+					},
+					{
+						"prodName":"Frm Relay Telco Fill",
+						"prodId":"854"
+					},
+					{
+						"prodName":"Frm Relay Telco CS",
+						"prodId":"853"
+					},
+					{
+						"prodName":"DIA - Dedtcd Inet CS",
+						"prodId":"859"
+					},
+					{
+						"prodName":"Associated Product 1",
+						"prodId":"900"
+					},
+					{
+						"prodName":"Associated Product 2",
+						"prodId":"901"
+					},
+					{
+						"prodName":"Associated Product 3",
+						"prodId":"902"
+					}
+				]
+			},{
+			"pkgName":"Ethernet PKG",
+			"pkgId":"544",
+			"assocProducts":[
+				{
+					"prodName":"ATM Telco Fil",
+					"prodId":"850"
+				},
+				{
+					"prodName":"Frm Relay Telco Fill",
+					"prodId":"854"
+				},
+				{
+					"prodName":"Frm Relay Telco CS",
+					"prodId":"853"
+				}
+			]
+			},{
+			"pkgName":"BVoIP/VDNA/IPFlex PKG",
+			"pkgId":"539",
+			"assocProducts":[
+				{
+					"prodName":"ATM Telco Fil",
+					"prodId":"850"
+				},
+				{
+					"prodName":"Frm Relay Telco Fill",
+					"prodId":"854"
+				}
+			]
+			}
+	]
+}

@@ -1,0 +1,64 @@
+<div class="container relative-pos hidden-print">
+	<input type="submit" class="btn btn-primary print-cutom-btn absolute-pos" ng-click="print()" value="Print">
+</div>
+<div class="container" ng-class="{hideSettingMarginProductSecs:$index>1}" data-ng-repeat="detail in productSecsReportDetails.productSecsDetails" data-ng-if="$index%rowCountPdfPageProfileMarket == 0">
+	<div class="row extraPadding pageBreak" ng-class="{'visible-print-block':$index>1}" >
+		<div class="col-xs-12">
+			<div class="head-text text-center"><b>Service Representative Study - Data Analysis Report 6</b></div> 
+			<div class="subHeading text-center">&copy Copyright 2012 AT&T Intellectual Property. All rights reserved</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3 ">
+				<div style="position:relative;">
+					<img src="assets/img/att_logo_background.png" class="logo-img-print hidden-print"/>
+					<img src="assets/img/att_logo.png" class="logo-img-print visible-print-block"/>
+				</div>
+			</div>  
+			<div class="col-xs-12 col-md-12 text-center"><b>Products with seconds > 300</b></div>
+			<!-- <div class="col-xs-5 col-md-3"><b>Sample Month requested: {{auditReportDetails.sampleMonthRequested}}</b></div> -->
+		</div>
+	</div>
+	<div class="row extraPadding" ng-class="{'visible-print-block':$index>1}">
+		<div class="showSelection text-center">Data from: Jan 2016 thru: Jan 2016</div>
+	</div>
+	<div class="col-xs-4 col-md-4" ng-class="{hideSettingVisibility:$index>1}"><b>Company: {{sampledCompany}}</b></div>
+	<div class="col-xs-4 col-md-4"></div>
+	<!-- <div class="col-xs-4 col-md-4"><b>Description: {{pickDesc}}</b></div> --><br><br>
+	<div class="row">
+		<div class="tableContainer"> 				
+			<table class = "tablePrint col-md-12 col-xs-12" >
+				<thead class="tableHeaderBorder">
+					<tr ng-class="{hideSettingVisibility:$index>1}">
+						<th>Product</th>
+						<th>OT</th>
+						<th>Disp</th>
+						<th>Secs</th>
+						<th>Comments</th>
+						<th>Stratum</th>
+						<th>Analyst</th>
+						<th>Employee</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-ng-repeat="detail in productSecsReportDetails.productSecsDetails.slice($parent.$index,$parent.$index+rowCountPdfPageProfileMarket)" >
+						<td>{{detail.Product}}</td>
+						<td>{{detail.OT}}</td>
+						<td>{{detail.Disp}}</td>
+						<td>{{detail.Secs}}</td>
+						<td>{{detail.Comments}}</td>
+						<td>{{detail.Stratum}}</td>
+						<td>{{detail.Analyst}}</td>
+						<td>{{detail.Employee}}</td>
+						<td>{{detail.Date}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>		
+	<div class="footer text-center" ng-class="{'visible-print-block':($index+rowCountPdfPageProfileMarket)/rowCountPdfPageProfileMarket<(productSecsReportDetails.productSecsDetails.length/rowCountPdfPageProfileMarket)}">
+		<div class="mainHeading">AT&T Proprietary (Restricted)</div>
+		<div class="subHeading">Only for use by authorized individuals or any above-designated team(s)<br>
+		within the AT&T companies and not for general distribution</div>
+	</div>	
+</div>

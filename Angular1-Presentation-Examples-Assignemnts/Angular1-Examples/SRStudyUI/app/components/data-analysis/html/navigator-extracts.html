@@ -1,0 +1,113 @@
+<div class="container container-custom">
+	<div class="row extraPadding">
+		<div class="col-xs-3">
+				<div>
+					<img src="assets/img/att_logo_background.png" class="logo hidden-print"/>
+					<img src="assets/img/att_logo.png" class="logo visible-print-block"/>
+				</div> 
+		</div>	
+		<div class="col-xs-6">
+			<div class="mainHeading text-center">Service Rep Study - Navigator Extracts</div> 
+			<div class="subHeading text-center">Connected to: abc</div>
+			<div class="subHeading text-center">Database: abc</div>
+			<div class="subHeading text-center">SrAdmin Version#: abc</div>
+		</div>				
+	</div>
+	<div class="row extraPadding">
+		<div class="col-xs-4 col-md-3 text-right tableSubLabel"><b>Company: abc</b></div>
+	</div>
+	<form class="form-horizontal" name="navigatorExtractsForm" role="form" novalidate>		
+		<section class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<div class="form-group">
+					<label class="control-label col-sm-5 col-md-5 col-lg-5" for="company">Company</label>
+					<div class="col-sm-7 col-md-7 col-lg-7">
+						<select id="sampleCompany" class="form-control" name="sampleCompany" data-ng-model="sampledCompany" data-ng-options="company for company in sampleCompanyList" tooltip-enable="navigatorExtractsForm.sampleCompany.$invalid && (navigatorExtractsForm.sampleCompany.$touched || submitted)"  tooltip-trigger="mouseenter" required>
+							<option value="">Select</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<div class="form-group">
+					<label class="control-label col-sm-5 col-md-5 col-lg-5" for="start-month">Beginning Month</label>
+					<div class="col-sm-7 col-md-7 col-lg-7">
+						<input type="date" custom-datepicker ng-model="begMonth" name="begMonth" id="beg-month" uib-tooltip="Beginning month is required" tooltip-enable="navigatorExtractsForm.begMonth.$invalid && (navigatorExtractsForm.begMonth.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true">
+					</div>
+				</div>
+			</div>					
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<div class="form-group">
+					<label class="control-label col-sm-5 col-md-5 col-lg-5" for="end-month">Ending Month</label>
+					<div class="col-sm-7 col-md-7 col-lg-7">
+						<input type="date" custom-datepicker ng-model="endMonth" name="endMonth" id="end-month" uib-tooltip="End month is required" tooltip-enable="navigatorExtractsForm.endMonth.$invalid && (navigatorExtractsForm.endMonth.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true">
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10 ">
+				<p name="errorMsg" ng-model="errorMsg" ng-show="begMonth > endMonth" class="alert alert-danger">The begining month must be earlier than Ending month.</p> 			
+			</div>
+		</div>
+		<section class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 margin-right-50">
+				<div class="form-group"> 
+					<div class="filters-list">
+							<div class="well well-lg">
+							<form name="activeInactiveForm">
+								<fieldset>
+								  <legend class="lg_value">Extract Type</legend>
+									<div class="radio">
+										<label><input type="radio" for="business" name="extractType" data-ng-model="extractType" id="business" value="business" />Business</label>
+									</div>
+									<div class="radio">
+										<label><input type="radio" for="consumer" name="extractType" data-ng-model="extractType" id="consumer" value="consumer"/>Consumer</label>
+									</div>
+									<div class="radio">
+										<label><input type="radio" for="all" name="extractType" data-ng-model="extractType" id="all" value="all"/>General-All Others</label>
+									</div>
+								</fieldset>
+						   </form>						
+							</div>
+						</div>					
+					
+					
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<div class="form-group"> 
+					<div class="filters-list">
+							<div class="well well-lg">
+							<form name="activeInactiveForm">
+								<fieldset>
+								  <legend class="lg_value">Navigator Result Choices</legend>
+									<div class="radio">
+										<label><input type="radio" for="resultChoice" name="resultChoice" data-ng-change="applyfilter(false)" data-ng-model="resultChoice" id="resultChoice" />DISPOSITION - Product Secs + Occ Common + Sample Common + Order Typing (All Time) / (All Occs) - MONTHLY BREAKDOWN</label>
+									</div>											
+								</fieldset>
+						   </form>						
+							</div>
+						</div>					
+					
+					
+				</div>
+			</div>
+		</section>
+		<section class="row">			
+			<input type="checkbox" id="areaCode" ng-model="areaCode" ng-checked="company"/>
+			<label for="areaCode">Include-Area Code/State/Region/Prefix</label>				
+		</section>
+		<section class="row">			
+			<input type="checkbox" id="company" ng-model="company" />
+			<label for="company">All Companies/ All Stratums</label>				
+		</section>
+		<section class="row">
+			<div class="col-sm-offset-4 col-sm-1" >
+					<div class="btn-toolbar">
+						<button type="button" id="btnNew" class="btn btn-md btn-primary" ng-click="exportProductData()"><span class="glyphicon glyphicon-new-window button-icon"></span>Run Query</button>
+					</div>
+			</div>
+		</section>	
+	</form>
+</div>

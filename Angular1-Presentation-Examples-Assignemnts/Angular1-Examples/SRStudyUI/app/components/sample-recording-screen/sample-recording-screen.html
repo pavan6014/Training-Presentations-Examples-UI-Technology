@@ -1,0 +1,330 @@
+<section class="sample_recording_screen_section">
+	<div class="row sample_recording_form_row">
+		<div class="col-sm-6"></div>
+		<div class="col-sm-2"><label style="font-size:24px;">Occ: {{occuranceCounter}}</label></div>
+		<div class="col-sm-2"><label style="font-size:24px;">Call Qty: {{recordingCounter}}</label></div>
+		<div class="col-sm-2"><button class="btn btn-md btn-success pull-right" data-ng-click="showSampleDetailsPopUp();correctProd = false">Submit</button></div>
+		<div class="col-xs-4 col-sm-5 col-md-5 col-lg-6 col_left">
+			<!-- <div class="analyst_info text-uppercase">{{selectedAgentDataObj.company}} - {{selectedAgentDataObj.office}}<br>
+			{{selectedAgentDataObj.employeeName}}, {{selectedAgentDataObj.stratumIdentifier}}
+			</div> --><div class="analyst_info text-uppercase">{{sampleObj.company}} - {{sampleObj.office}}<br>
+			{{sampleObj.employeeName}},{{stratumIdentifier}} 
+			</div>
+			<div class="row left_second_row" >
+				<div class="col-sm-12 col-md-12 col-lg-12 btn_align">
+					<div class="form-group start_btn">
+						<button class="btn btn-md btn-success pull-left" data-ng-disabled="!isStrtBtnActv" data-ng-click="startListeningNewRecording();correctProd = false">Start</button>
+					</div>
+				</div>
+				<div class="row areacode_prefix_wrapper">
+					<div class="col-xs-12 col-sm-12 col-md-12">
+						<div class="form-group">
+							<label class="control-label" for="areaCode">Area Code</label>
+							<div class="areacode_dropdown" > 
+							<!-- use autocomplete or typehead or datalist --> 
+								
+								<select  id="areaCode" name="areaCode" style="width: 90px;"  class="form-control no-raduis-right prefixColorBefore" data-ng-model="selectedAreaCode" data-ng-change="textChange('areaCode');correctProd = false;" data-ng-options="area as (area.areacode + ' | ' + area.state + ' |' + area.company ) for area in areaCodeList" data-ng-disabled="disableTillStartFlag" required>
+									<option value="">Select</option>
+								</select>
+								
+								<!-- <input list="testList" type="" ng-model="SelectedDoctor" ng-change="LoadSessionData(SelectedDoctor)" />
+								<datalist id="testList">
+									<option ng-repeat="x1 in names" value="{{x1.drname}}">
+								</datalist> -->
+								<input type="text" style="width: 50px;" class="form-control no-raduis" data-ng-model="selectedAreaCode.state" disabled>
+								<input type="text" class="form-control no-raduis-left" style="width: 100px;" data-ng-model="selectedAreaCode.company" disabled>
+							</div>							
+						</div>
+					
+						<div class="form-group">
+							<label class="control-label" for="prefix">Prefix</label>
+							<input type="text" id="prefix"  style="width: 70px;" data-ng-change="textChange('prefix');correctProd = false;" data-ng-model="prefix" class="form-control prefixColorBefore" placeholder="Prefix" >
+						</div>
+						<p class="text_error" ng-show="((isEmptyObject(selectedAreaCode)) || (prefix=='') || prefix.length<3) && validate">{{validationMsg}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-8 col-sm-7 col-md-7 col-lg-6 col_right">
+		<!-- {{occurenceList | json}} -->
+			<div class="row">
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-7">
+					<div style="display: inline-block">
+						<div class="form-group">
+							<!-- <button ng-controller="ModalDemoCtrl" class="btn btn-md btn-primary" ng-click="popupModalController({},add,'callQtyPopUp')">Call Qty</button> -->
+							<button class="btn btn-md btn-primary " data-ng-click="validateOccurence();correctProd = false;">Validate</button>
+							<button class="btn btn-md btn-primary " data-ng-disabled="!enableEditBtn" data-ng-click="editSample();correctProd = false;">Edit</button>
+							<button class="btn btn-md btn-primary " style="padding:6px 10px;" data-ng-disabled="isStrtBtnActv" data-ng-click="deleteCurrentOccurence();correctProd = false;">Delete</button>
+						</div>
+						<div class="text-right">
+							<div class="form-group">
+								<select id="occurenceList" style="width: 151px;" class="form-control call_occurance" data-ng-model="occurence" data-ng-change="onChangeOfOccurence(occurence);correctProd = false;" data-ng-options="occurenceObj as (occurenceObj.occurenceNumber +' | '+ occurenceObj.flagged +' | '+ occurenceObj.orderType)  for occurenceObj in occurenceList">
+									<option value="">Select</option>
+								</select>
+								<ul class="pagination pull-right">
+									<li><a data-ng-disabled="!isSampleEditEnabled" data-ng-click="prevOccurence();correctProd = false;"><span class="glyphicon glyphicon-menu-left"></span></a></li>
+									<li><a data-ng-disabled="!isSampleEditEnabled" data-ng-click="nextOccurence();correctProd = false;"><span class="glyphicon glyphicon-menu-right"></span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-5">
+					<div class="margin-top-40"></div>
+					<div class="form-group text-right">
+						<button class="btn btn-md btn-danger" data-ng-disabled="isStrtBtnActv" data-ng-click="startOfflineActivity(true);correctProd = false;">Stop</button>
+						<button class="btn btn-md btn-warning" data-ng-click="changeOccurenceStatus();correctProd = false;">Pending</button>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="text_error" ng-show="correctProd && (selectedProdName=='' || !selectedProdName)">Please select product</label>
+				<label ng-show="correctProd && selectedProdName!='' && selectedProdName">Correcting {{selectedProdName}}</label><br>
+				<button class="btn btn-md btn-primary" ng-click="correctProd = true">Correct</button>
+				<button class="btn btn-md btn-primary" data-ng-click="showNoteTextArea();correctProd = false;">Note</button>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-5 col-md-4 col-lg-4">
+					<button class="btn btn-md btn-primary pull-left btn_buffer" id="btnBufferCounter" data-ng-click="startBufferTime(true);correctProd = false;">Buffer</button>
+					<input type="text" class="form-control buffer_counter" id="bufferCounter" data-ng-model="bufferTime" placeholder="">
+				</div>
+				<div class="col-xs-6 col-sm-7 col-md-8 col-lg-8">
+					<div id="radioGroup" class="radio_box" ng-class="{'border-yellow':!disableTillStartFlag&&(!selectedOccurenceDetails.orderType||selectedOccurenceDetails.orderType=='Offline')}" >
+						<div class="wrap">
+							<label for="n">N</label>
+							<input type="radio" name="m" data-ng-model="selectedOccurenceDetails.orderType" value="N" id="n" tooltip-placement="auto" ng-click="getDispositionList();correctProd = false;" uib-tooltip="New" data-ng-disabled="disableTillStartFlag" />
+						</div>
+						<div class="wrap">
+							<label for="tf">TF</label>
+							<input type="radio" name="m"  data-ng-model="selectedOccurenceDetails.orderType"  value="TF" id="tf" tooltip-placement="auto" ng-click="getDispositionList();correctProd = false;" uib-tooltip="To/From" data-ng-disabled="disableTillStartFlag" />
+						</div>
+						<div class="wrap">
+							<label for="c">C</label>
+							<input type="radio" name="m" data-ng-model="selectedOccurenceDetails.orderType" value="C" id="c" tooltip-placement="auto" ng-click="getDispositionList();correctProd = false;" uib-tooltip="Change" data-ng-disabled="disableTillStartFlag" />
+						</div>
+						<div class="wrap">
+							<label for="d">D</label>
+							<input type="radio" name="m" data-ng-model="selectedOccurenceDetails.orderType" value="D" id="d" tooltip-placement="auto" ng-click="getDispositionList();correctProd = false;" uib-tooltip="Disconnect" data-ng-disabled="disableTillStartFlag" />
+						</div>
+						<div class="wrap">
+							<label for="r">R</label>
+							<input type="radio" name="m" data-ng-model="selectedOccurenceDetails.orderType"  value="R" id="r" tooltip-placement="auto" ng-click="getDispositionList();correctProd = false;" uib-tooltip="Record" data-ng-disabled="disableTillStartFlag" />
+						</div>
+						<div class="wrap">
+							<label for="s">S</label>
+							<input type="radio" name="m" data-ng-model="selectedOccurenceDetails.orderType"  value="S" id="s" tooltip-placement="auto" ng-click="getDispositionList();correctProd = false;" uib-tooltip="Supercedure" data-ng-disabled="disableTillStartFlag" />
+						</div>
+						<div class="wrap">
+							<label for="inq">Inq</label>
+							<input type="radio" name="m" data-ng-model="selectedOccurenceDetails.orderType" id="inq" value="INQ" tooltip-placement="auto" ng-click="getDispositionList();correctProd = false;" uib-tooltip="Inquiry" data-ng-disabled="disableTillStartFlag" />
+						</div>
+					</div>
+					<div id="checkboxGroup">
+						<div class="checkbox_wrap" >
+							<label for="winbcak">Winback</label>
+							<input type="checkbox" name="" id="winbcak" value=""/>
+						</div>
+					</div>
+				<p class="text_error" ng-show="(!selectedOccurenceDetails.orderType||selectedOccurenceDetails.orderType=='Offline') && validate">{{validationMsgOrderType}}</p>
+			    </div>
+
+			</div>
+		</div>
+	</div>
+	<div class="row product_activity_collection bg_tables">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 show-grid1" >
+			<div class="row" style="margin: 0;margin-right: -10px;">
+				<div class="col-xs-3 col-md-3 col_a_p_list">
+					<div data-ng-repeat="productAndActivityObj in productAndActivityCommonList.colOneCommonData" class="product_activity_list">
+						<span class="p_a_header" data-ng-click="onClickOfProductGroup()">{{productAndActivityObj.listHeader}}</span>
+						<ul class="list-unstyled">
+							<li class="common_a_p_li" data-ng-repeat="productAndActivity in productAndActivityObj.listData" data-ng-click="selectProductAndActivity(productAndActivity, productAndActivityObj.listHeader, productAndActivityObj.listType)" tooltip-placement="auto" uib-tooltip={{productAndActivity.desc}}>{{productAndActivity.listName}}</li>
+						</ul>
+					</div>
+					<div data-ng-repeat="productAndActivityObj in productAndActivityList.colOneData" class="product_activity_list">
+						<span class="p_a_header" data-ng-click="onClickOfProductGroup()">{{productAndActivityObj.listHeader}}</span>
+						
+						<ul class="list-unstyled">
+							<li data-ng-repeat="productAndActivity in productAndActivityObj.listData" data-ng-click="selectProductAndActivity(productAndActivity, productAndActivityObj.listHeader, productAndActivityObj.listType)" tooltip-placement="auto" uib-tooltip={{productAndActivity.desc}}>{{productAndActivity.listName}}</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-3 col-md-3 col_a_p_list">
+					<div data-ng-repeat="productAndActivityObj in productAndActivityList.colTwoData" class="product_activity_list">
+						<span class="p_a_header" data-ng-click="onClickOfProductGroup()">{{productAndActivityObj.listHeader}}</span>
+						<ul class="list-unstyled">
+							<li data-ng-repeat="productAndActivity in productAndActivityObj.listData" data-ng-click="selectProductAndActivity(productAndActivity, productAndActivityObj.listHeader, productAndActivityObj.listType)" tooltip-placement="auto" uib-tooltip={{productAndActivity.desc}}>{{productAndActivity.listName}}</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-3 col-md-3 col_a_p_list">
+					<div data-ng-repeat="productAndActivityObj in productAndActivityList.colThreeData" class="product_activity_list">
+						<span class="p_a_header" data-ng-click="onClickOfProductGroup()">{{productAndActivityObj.listHeader}}</span>
+						<ul class="list-unstyled">
+							<li data-ng-repeat="productAndActivity in productAndActivityObj.listData | productfilter : 'listName'" data-ng-click="selectProductAndActivity(productAndActivity, productAndActivityObj.listHeader, productAndActivityObj.listType)" tooltip-placement="auto" uib-tooltip={{productAndActivity.desc}}>{{productAndActivity.listName}}</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-3 col-md-3 col_a_p_list">
+					<div data-ng-repeat="productAndActivityObj in productAndActivityList.colFourData" class="product_activity_list">
+						<span class="p_a_header" data-ng-click="onClickOfProductGroup()">{{productAndActivityObj.listHeader}}</span>
+						<ul class="list-unstyled">
+							<li data-ng-repeat="productAndActivity in productAndActivityObj.listData | productfilter : 'listName'" data-ng-click="selectProductAndActivity(productAndActivity, productAndActivityObj.listHeader, productAndActivityObj.listType)"  tooltip-placement="auto" uib-tooltip={{productAndActivity.desc}}>{{productAndActivity.listName}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 show-grid2" >
+			<div class="row" style="margin: 0;margin-left: -10px;">
+				<div class="col-md-12" style="margin-bottom:5px;">
+				<!-- {{selectedOccurenceDetails | json}} -->
+					<div ng-show="errorMsg">
+						<p class="text_error">{{errorMsg}}</p>
+					</div>
+					<div class="table-responsive table_selected_product_activity" data-ng-show="selectedOccurenceDetails.listenedCallDetailsList.length > 0">          
+						<table class="table tabel-condensed">
+							<thead>
+								<tr>
+									<th>Off/On</th>
+									<th class="th_product_activity">Product/Activity</th>
+									<th class="th_p_a_version">Version</th>
+									<th>Disposition</th>
+									<th>Secs</th>
+									<th>Prior</th>
+									<th>Qty</th>
+									<th>OT</th>
+								</tr>
+							</thead>
+							<tbody product-activity-timer-parent dispositionlist="dispositionlist">
+								<tr product-activity-timer selectedprod="selectedprod" selectedOccurenceDetails="selectedOccurenceDetails" selectedOccurence="selectedOccurence" allProductAndActivityList="allProductAndActivityList" stopAndResetBufferTime="stopAndResetBufferTime" bufferTime="bufferTime" isSelected="isSelected" alertDisposition="selectedOccurence.alertDisposition" data-ng-repeat="selectedOccurence in selectedOccurenceDetails.listenedCallDetailsList" ng-class="{'selected_row': isSelected}"></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin: 0; margin-left: -10px;">
+				<div class="col-md-6" style="height: 248px;">
+					<div class="">
+						<textarea  style="width:100%; background: #FF0; height:221px" data-ng-model="selectedOccurenceDetails.notes" data-ng-show="isNoteVisible || selectedOccurenceDetails.notes.length > 0" placeholder="Note for current Occurence :"></textarea>
+					</div>
+				</div>
+				<div class="col-md-6" style="height: 248px;">
+					<div class="" data-ng-repeat="selectedOccurence in selectedOccurenceDetails.listenedCallDetailsList" data-ng-if="selectedOccurence.listHeader == 'Unknown'">
+						<textarea  style="width:100%; background: #FF0; height:70px" data-ng-model="selectedOccurence.notesForUndefined" placeholder="Note for {{selectedOccurence.listData}} :"> </textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Sample details Modal -->
+	<div id="sampleDetailsModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-ng-click="goToDashboard()">&times;</button>
+					<h4 class="modal-title">SR STUDY - Sample Information</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label class="control-label col-sm-4">Sample Date</label>
+							<div class="col-sm-8">
+								<p class="form-control-static" >{{sampleObj.sampleDate}}</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-4">Employee Name:</label>
+							<div class="col-sm-8"> 
+								<p class="form-control-static">{{sampleObj.employeeName}}</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-4">Office:</label>
+							<div class="col-sm-8"> 
+								<p class="form-control-static">{{sampleObj.office}}</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-4">Stratum:</label>
+							<div class="col-sm-8"> 
+								<p class="form-control-static">{{sampleObj.stratum}}</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-4">Sample Status:</label>
+							<div class="col-sm-8"> 
+								<p class="form-control-static text-danger">{{sampleObj.status}}</p>
+							</div>
+						</div>
+						<!-- <div class="form-group"> 
+							<div class="col-sm-offset-4 col-sm-8">
+							  <div class="checkbox">
+								<label><input type="checkbox"> Deskside Call (HeadSet)</label>
+							  </div>
+							</div>
+						</div> -->
+						<div class="form-group"> 
+							<h4 style="padding-left: 6%">Summary of Sample Timing</h4>
+							<label class="control-label col-sm-4">Work Start Time:</label>
+							<div class="col-sm-8"> 
+								<p class="form-control-static">{{startTime}}</p>
+							</div>
+							<label class="control-label col-sm-4">Work Stop Time:</label>
+							<div class="col-sm-8"> 
+								<p class="form-control-static">{{stopTime}}</p>
+							</div>
+							<label class="control-label col-sm-4">Total Work Seconds:</label>
+							<div class="col-sm-8"> 
+								<p class="form-control-static">{{totalWorkSeconds}}</p>
+							</div>
+						</div>
+						<div class="form-group"> 
+							<div class="col-sm-offset-4 col-sm-8">
+							  <button type="submit" class="btn btn-primary" data-dismiss="modal" data-ng-click="goToActivies()">Go to Activities</button>
+							  <button type="submit" class="btn btn-primary" data-ng-click="goToDashboard()">Go to Dashboard</button>
+							  <button type="submit" class="btn btn-warning" data-ng-click="deleteSelectedSample()">Delete Sample</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div id="deleteConfirmDialog" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-md">
+			<!-- Modal content-->
+			<div class="modal-content">
+				 <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+					<h3 class="modal-title">Confirm Delete</h3>
+				</div>
+				<div class="modal-body">
+					<p>This will delete this occurence and return  to the last occurrence timed !'</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary" type="button" ng-click="confirmDelOccurence()">ok</button>
+					<button class="btn btn-default cancel" type="button" data-dismiss="modal">cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/ng-template" id="callQtyPopUp.html">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Call Qty Confirmation</h3>
+        </div>
+        <div class="modal-body">
+			<p>Number of Calls for this session = {{recordingCounter}}</p>
+        </div>
+		<div class="modal-footer">
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+		
+</script>	

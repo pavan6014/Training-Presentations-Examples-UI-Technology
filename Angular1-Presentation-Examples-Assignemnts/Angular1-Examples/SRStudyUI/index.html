@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="attApp" id="attApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title> AT&T </title>
+
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet/less" type="text/css" href="assets/libs/bootstrap/less/bootstrap.less" />
+		<link rel="stylesheet/less" type="text/css" href="assets/css/app.less" /> -->
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="assets/libs/jquery/css/jquery-ui.min.css" />
+    <link href="assets/css/app.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/toaster.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/angular-block-ui.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+</head>
+
+<body data-ng-controller="attParentController" class="att_parent_container">
+    <div class="bg-body">
+        <header class="att_header" ng-hide="hideheader">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" class="att_logo_wrapper"><span class="att_primary_logo"></span>
+								<span class="logo_title"></span>
+							</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard" style="font-size:28px;"></span><span class="main_nav">Dashboard</span></a></li>
+                        <li class="active"><a href="" class="dropdown dropdown-toggle main_nav2" data-toggle="dropdown"><span class="glyphicon glyphicon-tasks" style="font-size:28px;"></span><span class="main_nav">Sample Recording</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/agentSelection" class="nav_link">Start New sample</a></li>
+                                <li><a href="#/sample-correction" class="">Select Existing Sample</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a class="main_nav3" href="#/analyst-reports"><span class="glyphicon glyphicon-book" style="font-size:28px;"></span><span class="main_nav">Reports</span></a></li>
+                        <li class="active"><a class="dropdown dropdown-toggle main_nav4" data-toggle="dropdown" href=""><span class="fa fa-bar-chart" style="font-size:31px;"></span><span class="main_nav">Results</span></a>
+                            <ul class="dropdown-menu sub-dropdown">
+                                <li><a href="#/results-screen" class="nav_link">Home</a></li>
+                                <li><a href="#" class="nav_link">Summary of Results</a></li>
+                                <li><a href="#/official-results" class="nav_link">Official Results</a></li>
+                                <li><a href="#/data-analysis" class="nav_link">Data Analysis</a></li>
+                                <li><a href="" class="nav_link">Navigator Extracts</a></li>
+                                <li><a href="#/audit-reports" class="nav_link">Audit Reports</a></li>
+                                <li><a href="#/analyst-sample-reports">Analyst and Sample Reports</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a class="dropdown dropdown-toggle main_nav5" data-toggle="dropdown" href=""><span class="glyphicon glyphicon-wrench" style="font-size:28px;"></span><span class="main_nav">Maintenance</span></a>
+                            <ul class="dropdown-menu sub-dropdown">
+                                <li><a href="#/maintenance-items" class="nav_link">Home</a></li>
+                                <li><a href="#/update-products" class="nav_link">Update Products</a></li>
+                                <li><a href="#/update-workstation-product-lists" class="nav_link">Update Workstation Product Lists</a></li>
+                                <li><a href="#/product-packages" class="nav_link">Update Packages</a></li>
+                                <li><a href="" class="nav_link">Add/ Maintain Stratum Info</a></li>
+                                <li><a href="" class="nav_link">Update Area Code</a></li>
+                                <li><a href="" class="nav_link">Update Access and Analyst Information</a></li>
+                                <li><a href="#/update-security-access" class="nav_link">Update Security Access</a></li>
+                                <li><a href="" class="nav_link">Delete Company</a></li>
+                                <li><a href="#/list-of-values" class="nav_link">List Of Values</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a class="dropdown dropdown-toggle main_nav6" data-toggle="dropdown" href=""><span class="fa fa-group" style="font-size:31px;"></span><span class="main_nav">Change Management</span></a>
+                            <ul class="dropdown-menu sub-dropdown">
+								<li><a href="#/change-management" class="nav_link">Home</a></li>
+								 <li><a href="#/update-analyst" class="nav_link">Update Analyst Samples</a></li>
+								<li><a href="" class="nav_link">Update Master Table</a></li>
+								<li><a href="" class="nav_link">Database Update Report</a></li>
+								<li><a href="" class="">Exit</a></li> 
+                            </ul>
+                        </li>
+                        <li class="active"><a href="" data-toggle="dropdown" class="dropdown dropdown-toggle main_nav7"><span class="glyphicon glyphicon-info-sign" style="font-size:28px;"></span><span class="main_nav"> Help</span ></a>
+                            <ul class="dropdown-menu sub-dropdown">
+                                <li><a href="" class="">Manage Files</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-right user_point">
+                        <li class="att_user ng-hide"><b>Welcome ! {{user.firstName}} {{user.lastName}}</b></li>
+                        <li class="active"><a href="" class="setting_icon dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog " style="font-size:28px;"></span></a>
+                            <ul class="dropdown-menu setting_dropdown">
+                                <li><a href="" class="nav_link"><span class="glyphicon glyphicon-user sub-setting"></span> Profile Id-{{user.analystId}}</a></li>
+                                <li><a href="" class="nav_link"><span class="glyphicon glyphicon-signal sub-setting"></span> {{user.connection}}</a></li>
+                                <li><a href="#" class="logout"><span class="glyphicon glyphicon-off sub-setting"></span> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+		 <loading></loading>
+        <section data-ng-view class="container-fluid"></section>
+        <footer class="att_footer text-center" data-ng-class="{'fixed_footer_bottom':isFooterFixed}" ng-hide="hidefooter">
+            <p class="text-center small" style="font-size:12px; margin-bottom: 0">AT&T Proprietary (Restricted)</p>
+            <p class="" style="font-size:11px; margin-bottom: 0"> Only for use by authorized individuals or any above-designated team(s) within the AT&T companies and not for general distribution</p>
+        </footer>
+    </div>
+    <script src="assets/libs/jquery/js/jquery.js"></script>
+    <script src="assets/libs/jquery/js/jquery-ui.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/libs/bootstrap/js/less.min.js"></script> -->
+    <script src="assets/libs/angular/angular.js"></script>
+    <script src="assets/libs/angular/angular-route.js"></script>
+    <script src="assets/libs/angular/ui-bootstrap-tpls-1.2.4.js"></script>
+    <script src="assets/libs/angular/angular-ui-switch.js"></script>
+    <script src="assets/libs/angular/ng-sticky.js"></script>
+    <script src="assets/libs/angular/angular-pagination.js"></script>
+    <script src="assets/libs/angular/angular-messages.js"></script>
+	<script src="assets/libs/angular/angular-block-ui.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/libs/angular/date.js"></script>
+
+    <script src="assets/libs/angular/angular-animate.min.js"></script>
+    <script src="assets/libs/angular/toaster.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.route.js"></script>
+    <script src="app/shared/JSONtoCSVConvertor-service.js"></script>
+
+
+
+    <script src="app/shared/att-parent-controller.js"></script>
+    <script src="app/components/agent-selection/agent-selection-controller.js"></script>
+    <script src="app/components/agent-selection/agent-selection-service.js"></script>
+    <script src="app/components/sample-recording-screen/sample-recording-screen-controller.js"></script>
+    <script src="app/components/sample-recording-screen/sample-recording-screen-service.js"></script>
+    <script src="app/components/sample-generation-screen/controller/sample-generation-screen-controller.js"></script>
+    <script src="app/components/sample-generation-screen/sample-generation-screen-service.js"></script>
+    <script src="app/components/maintenance-items/maintenance-items-controller.js"></script>
+    <script src="app/components/maintenance-items/maintenance-items-service.js"></script>
+    <script src="app/shared/shared-directive.js"></script>
+    <script src="app/shared/att-popup-controller.js"></script>
+    <script src="app/shared/normalizeDate-service.js"></script>
+    <script src="app/components/results-screen/results-screen-service.js"></script>
+    <script src="app/components/results-screen/results-screen-controller.js"></script>
+    <script src="app/components/assignment-matrix/assignment-matrix-controller.js"></script>
+    <script src="app/components/process-logs/process-logs-controller.js"></script>
+    <script src="app/components/audit-reports/controller/audit-reports-controller.js"></script>
+    <script src="app/components/audit-reports/controller/audit-reports-details-controller.js"></script>
+    <script src="app/components/audit-reports/service/audit-reports-service.js"></script>
+    <script src="app/components/audit-reports/service/audit-reports-details-service.js"></script>
+    <script src="app/components/sample-correction/sample-correction-controller.js"></script>
+    <script src="app/components/sample-correction/sample-correction-service.js"></script>
+    <script src="app/components/compute-results/compute-results-controller.js"></script>
+    <script src="app/components/compute-results/compute-results-service.js"></script>
+    <script src="app/components/process-logs/process-logs-service.js"></script>
+    <script src="app/components/update-products/update-products-controller.js"></script>
+    <script src="app/components/list-of-values/list-of-valuesController.js"></script>
+    <script src="app/components/list-of-values/list-of-valuesService.js"></script>
+    <script src="app/components/update-products/update-products-service.js"></script>
+    <script src="app/components/update-workstation-product-lists/update-workstation-product-lists-controller.js"></script>
+    <script src="app/components/update-workstation-product-lists/update-workstation-product-lists-service.js"></script>
+    <script src="app/components/stratum-info/controller/stratum-info-controller.js"></script>
+    <script src="app/components/stratum-info/stratum-info-service.js"></script>
+    <script src="app/components/product-packages/product-packages-controller.js"></script>
+    <script src="app/components/product-packages/product-packages-service.js"></script>
+    <script src="app/components/product-packages/filter/filter-getproductbyid.js"></script>
+    <script src="app/components/update-products/update-products-controller.js"></script>
+    <script src="app/components/update-products/update-products-service.js"></script>
+    <script src="app/components/sample-generation-screen/controller/sample-generation-report-controller.js"></script>
+    <script src="app/components/stratum-info/controller/stratum-info-report-controller.js"></script>
+    <script src="app/components/universe-extract/universe-extract-controller.js"></script>
+    <script src="app/components/universe-extract/universe-extract-service.js"></script>
+    <script src="app/components/job-key-table/job-key-tableService.js"></script>
+    <script src="app/components/job-key-table/job-key-tableController.js"></script>
+    <script src="app/components/official-results/official-results-service.js"></script>
+    <script src="app/components/official-results/official-results-controller.js"></script>
+    <script src="app/components/official-results/official-results-details-controller.js"></script>
+    <script src="app/components/data-analysis/controller/data-analysis-controller.js"></script>
+    <script src="app/components/data-analysis/controller/data-analysis-reports-details-controller.js"></script>
+    <script src="app/components/data-analysis/data-analysis-service.js"></script>
+    <script src="app/components/update-security-access/update-security-access-controller.js"></script>
+    <script src="app/components/update-security-access/update-security-access-service.js"></script>
+    <script src="app/components/admin-reports/service/sample-statusby-company-report-service.js"></script>
+    <script src="app/components/admin-reports/controller/sample-statusby-company-report-controller.js"></script>
+    <script src="app/components/analyst-reports/analyst-reports-controller.js"></script>
+    <script src="app/components/analyst-reports/analyst-reports-service.js"></script>
+    <script src="app/components/analyst-reports/assigned-agents-month-Company(1)/assigned-agents-month-company-controller.js"></script>
+    <script src="app/components/analyst-reports/assigned-agents-month-Company(1)/assigned-agents-month-company-service.js"></script>
+    <script src="app/components/dashboard/dashboard-controller.js"></script>
+    <script src="app/components/dashboard/dashboard-service.js"></script>
+    <script src="app/components/stratum-definition/stratum-definition-service.js"></script>
+    <script src="app/components/stratum-definition/controller/stratum-definition-controller.js"></script>
+    <script src="app/components/stratum-definition/controller/stratum-definition-report-controller.js"></script>
+    <script src="app/components/analyst-target/analyst-target.js"></script>
+    <script src="app/components/analyst-target/analyst-target-service.js"></script>
+    <script src="app/shared/filter/filter-getSum.js"></script>
+    <script src="app/components/analyst-sample-reports/analyst-sample-reports-controller.js"></script>
+    <script src="app/components/analyst-sample-reports/analyst-sample-reports-details-controller.js"></script>
+    <script src="app/components/analyst-sample-reports/analyst-sample-report-service.js"></script>
+    <script src="app/components/sample-recording-screen/filter/product-list-filter.js"></script>
+    <script src="app/components/update-area-code/controller/update-area-code-controller.js"></script>
+    <script src="app/components/update-area-code/service/update-area-code-service.js"></script>
+    <script src="app/components/change-management/change-management-controller.js"></script>
+	<script src="app/components/change-management/change-management-service.js"></script>
+	<script src="app/components/change-management/update-analyst-controller.js"></script>
+	<script src="app/shared/errorHandling-service.js"></script>
+	<!-- <script src="app/components/change-management/update-analyst-service.js"></script> -->
+</body>
+</body>
+
+</html>

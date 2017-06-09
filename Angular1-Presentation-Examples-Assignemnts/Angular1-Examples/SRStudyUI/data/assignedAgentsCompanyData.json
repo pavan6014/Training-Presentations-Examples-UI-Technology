@@ -1,0 +1,59 @@
+{
+	"company": "ATT - Midwest",
+	"sampleMonthRequested": "1/1/2016",
+	"auditFrom": {
+		"date": "1/14/2016",
+		"refId": "52141546",
+		"id": "52"
+	},
+
+
+	"assigendAgents": [{
+			"stratum": "Business",
+			"rc": "MY8LTDC00",
+			"employeeInfo": "BOLLING THERISSA C Customer Advocate RM.FL2",
+
+			"managementInfo": [
+			{
+				"supervisior": "karteek",
+				"phone":"12345"
+			},
+			{
+				"supervisior": "karteek",
+				"phone":"12345"
+			}
+			] 
+		}, {
+			"stratum": "Business",
+			"rc": "MY8LTDC00",
+			"employeeInfo": "BOLLING THERISSA C Customer Advocate RM.FL2",
+			"managementInfo": [
+			{
+				"supervisior": "karteek",
+				"phone":"12345"
+			}]
+		}, {
+			"stratum": "Business",
+			"rc": "MY8LTDC00",
+			"employeeInfo": "BOLLING THERISSA C Customer Advocate RM.FL2",
+			"managementInfo": "Supervisior"
+		}, {
+			"stratum": "Business",
+			"rc": "MY8LTDC00",
+			"employeeInfo": "BOLLING THERISSA C Customer Advocate RM.FL2",
+			"managementInfo": "Supervisior"
+		}, {
+			"stratum": "Business",
+			"rc": "MY8LTDC00",
+			"employeeInfo": "BOLLING THERISSA C Customer Advocate RM.FL2",
+			"managementInfo": "Supervisior"
+		}, {
+			"stratum": "Business",
+			"rc": "MY8LTDC00",
+			"employeeInfo": "BOLLING THERISSA C Customer Advocate RM.FL2",
+			"managementInfo": "Supervisior"
+		}
+
+	]
+
+}

@@ -1,0 +1,401 @@
+{
+	"company": "ATT - Midwest",
+	"sampleMonthRequested": "1/1/2016",
+	"auditFrom": {
+		"date": "1/14/2016",
+		"refId": "52141546",
+		"id": "52"
+	},
+	"auditTo": {
+		"date": "1/20/2016",
+		"refId": "52201738",
+		"id": "52"
+	},
+	"reportDetails": [{
+		"key": "C",
+		"value": [{
+				"name": "Access Ln Con CS",
+				"subParts": [{
+						"key": "S",
+						"value": 0
+					},{
+						"key": "SN",
+						"value": 0
+					},{
+						"key": "S0",
+						"value": 0
+					}, {
+						"key": "Removal",
+						"value": 166
+					}, {
+						"key": "TF",
+						"value": 0
+					}, {
+						"key": "Inquiry",
+						"value": 842
+					}, {
+						"key": "Post Sale",
+						"value": 0
+					},{
+						"key": "NS",
+						"value": 0
+					},{
+						"key": "NSN",
+						"value": 0
+					},{
+						"key": "NS0",
+						"value": 0	
+					}, {
+						"key": "Referred",
+						"value": 28
+					}, {
+						"key": "Blank",
+						"value": 0
+					}]
+			}]
+	},
+	{
+		"key": "D",
+		"value": [{
+				"name": "Access Ln Con CS",
+				"subParts": [{
+						"key": "S",
+						"value": 0
+					},{
+						"key": "SN",
+						"value": 0
+					},{
+						"key": "S0",
+						"value": 0
+					}, {
+						"key": "Removal",
+						"value": 400
+					}, {
+						"key": "TF",
+						"value": 0
+					}, {
+						"key": "Inquiry",
+						"value": 0
+					}, {
+						"key": "Post Sale",
+						"value": 0
+					},{
+						"key": "NS",
+						"value": 0
+					},{
+						"key": "NSN",
+						"value": 0
+					},{
+						"key": "NS0",
+						"value": 0	
+					}, {
+						"key": "Referred",
+						"value": 178
+					}, {
+						"key": "Blank",
+						"value": 0
+					}]
+			}]
+	},
+	{
+		"key": "Inq",
+		"value": [{
+				"name": "Access Ln Con CS",
+				"subParts": [{
+						"key": "S",
+						"value": 0
+					},{
+						"key": "SN",
+						"value": 0
+					},{
+						"key": "S0",
+						"value": 0
+					}, {
+						"key": "Removal",
+						"value": 0
+					}, {
+						"key": "TF",
+						"value": 0
+					}, {
+						"key": "Inquiry",
+						"value": 959
+					}, {
+						"key": "Post Sale",
+						"value": 0
+					},{
+						"key": "NS",
+						"value": 0
+					},{
+						"key": "NSN",
+						"value": 0
+					},{
+						"key": "NS0",
+						"value": 0	
+					}, {
+						"key": "Referred",
+						"value": 967
+					}, {
+						"key": "Blank",
+						"value": 0
+					}]
+			}]
+	},
+	{
+		"key": "C",
+		"value": [{
+				"name": "Access Ln Con CS",
+				"subParts": [{
+						"key": "S",
+						"value": 0
+					},{
+						"key": "SN",
+						"value": 0
+					},{
+						"key": "S0",
+						"value": 0
+					}, {
+						"key": "Removal",
+						"value": 166
+					}, {
+						"key": "TF",
+						"value": 0
+					}, {
+						"key": "Inquiry",
+						"value": 842
+					}, {
+						"key": "Post Sale",
+						"value": 0
+					},{
+						"key": "NS",
+						"value": 0
+					},{
+						"key": "NSN",
+						"value": 0
+					},{
+						"key": "NS0",
+						"value": 0	
+					}, {
+						"key": "Referred",
+						"value": 28
+					}, {
+						"key": "Blank",
+						"value": 0
+					}]
+			}]
+	},
+	{
+		"key": "D",
+		"value": [{
+				"name": "Access Ln Con CS",
+				"subParts": [{
+						"key": "S",
+						"value": 0
+					},{
+						"key": "SN",
+						"value": 0
+					},{
+						"key": "S0",
+						"value": 0
+					}, {
+						"key": "Removal",
+						"value": 400
+					}, {
+						"key": "TF",
+						"value": 0
+					}, {
+						"key": "Inquiry",
+						"value": 0
+					}, {
+						"key": "Post Sale",
+						"value": 0
+					},{
+						"key": "NS",
+						"value": 0
+					},{
+						"key": "NSN",
+						"value": 0
+					},{
+						"key": "NS0",
+						"value": 0	
+					}, {
+						"key": "Referred",
+						"value": 178
+					}, {
+						"key": "Blank",
+						"value": 0
+					}]
+			}]
+	},
+	{
+		"key": "Inq",
+		"value": [{
+				"name": "Access Ln Con CS",
+				"subParts": [{
+						"key": "S",
+						"value": 0
+					},{
+						"key": "SN",
+						"value": 0
+					},{
+						"key": "S0",
+						"value": 0
+					}, {
+						"key": "Removal",
+						"value": 0
+					}, {
+						"key": "TF",
+						"value": 0
+					}, {
+						"key": "Inquiry",
+						"value": 959
+					}, {
+						"key": "Post Sale",
+						"value": 0
+					},{
+						"key": "NS",
+						"value": 0
+					},{
+						"key": "NSN",
+						"value": 0
+					},{
+						"key": "NS0",
+						"value": 0	
+					}, {
+						"key": "Referred",
+						"value": 967
+					}, {
+						"key": "Blank",
+						"value": 0
+					}]
+			}]
+	},
+	{
+		"key": "C",
+		"value": [{
+				"name": "Access Ln Con CS",
+				"subParts": [{
+						"key": "S",
+						"value": 0
+					},{
+						"key": "SN",
+						"value": 0
+					},{
+						"key": "S0",
+						"value": 0
+					}, {
+						"key": "Removal",
+						"value": 166
+					}, {
+						"key": "TF",
+						"value": 0
+					}, {
+						"key": "Inquiry",
+						"value": 842
+					}, {
+						"key": "Post Sale",
+						"value": 0
+					},{
+						"key": "NS",
+						"value": 0
+					},{
+						"key": "NSN",
+						"value": 0
+					},{
+						"key": "NS0",
+						"value": 0	
+					}, {
+						"key": "Referred",
+						"value": 28
+					}, {
+						"key": "Blank",
+						"value": 0
+					}]
+			}]
+	},
+	{
+		"key": "D",
+		"value": [{
+				"name": "Access Ln Con CS",
+				"subParts": [{
+						"key": "S",
+						"value": 0
+					},{
+						"key": "SN",
+						"value": 0
+					},{
+						"key": "S0",
+						"value": 0
+					}, {
+						"key": "Removal",
+						"value": 400
+					}, {
+						"key": "TF",
+						"value": 0
+					}, {
+						"key": "Inquiry",
+						"value": 0
+					}, {
+						"key": "Post Sale",
+						"value": 0
+					},{
+						"key": "NS",
+						"value": 0
+					},{
+						"key": "NSN",
+						"value": 0
+					},{
+						"key": "NS0",
+						"value": 0	
+					}, {
+						"key": "Referred",
+						"value": 178
+					}, {
+						"key": "Blank",
+						"value": 0
+					}]
+			}]
+	},
+	{
+		"key": "Inq",
+		"value": [{
+				"name": "Access Ln Con CS",
+				"subParts": [{
+						"key": "S",
+						"value": 0
+					},{
+						"key": "SN",
+						"value": 0
+					},{
+						"key": "S0",
+						"value": 0
+					}, {
+						"key": "Removal",
+						"value": 0
+					}, {
+						"key": "TF",
+						"value": 0
+					}, {
+						"key": "Inquiry",
+						"value": 959
+					}, {
+						"key": "Post Sale",
+						"value": 0
+					},{
+						"key": "NS",
+						"value": 0
+					},{
+						"key": "NSN",
+						"value": 0
+					},{
+						"key": "NS0",
+						"value": 0	
+					}, {
+						"key": "Referred",
+						"value": 967
+					}, {
+						"key": "Blank",
+						"value": 0
+					}]
+			}]
+	}]
+}

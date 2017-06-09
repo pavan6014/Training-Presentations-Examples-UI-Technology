@@ -1,0 +1,20 @@
+{
+	"orderType":{
+		"TF": ["POSTA","POSTB","POSTC","POSTD"],
+		"N": ["POSTC","POSTD"],
+		"C": ["POSTA","POSTB","POSTC"],
+		"D": ["POSTA","POSTB"],
+		"R": ["POSTA","POSTB","POSTC","POSTE"],
+		"S": ["POSTA","POSTB"],
+		"INQ": ["POSTE","POSTF","POSTG"]
+	}
+}
+		
+
+
+		
+		
+	
+
+
+

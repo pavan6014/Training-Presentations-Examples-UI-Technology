@@ -1,0 +1,196 @@
+<div class="process-logs">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="fa fa-bar-chart"></span> Process Logs</h1>      
+            </div>
+		</div>
+	</section>
+	<div class="container container-custom">
+		<section class="form-section margin-bot-20">
+			<form class="form-horizontal" role="form" name="processLogsForm" novalidate>
+				<div class="row margin-top-20">
+					<div class="col-lg-4 col-xs-4 col-sm-4 col-md-4">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-5 col-lg-5" for="processId">Batch Process Id</label>
+							<div class="col-sm-7 col-md-7 col-lg-7">
+								<input type="text" class="form-control" ng-model="processReqObj.processId" id="processId">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-xs-4 col-sm-4 col-md-4">
+						<div class="form-group">
+							<label class="control-label col-sm-6 col-md-6 col-lg-6" for="processId">Batch Process Name</label>
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<input type="text" class="form-control" ng-model="processReqObj.processName" id="processId">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-xs-4 col-sm-4 col-md-4">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-5 col-lg-5" for="user">User</label>
+							<div class="col-sm-7 col-md-7 col-lg-7">
+								<input type="text" class="form-control" ng-model="processReqObj.user" id="user">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					
+					<div class="col-lg-4 col-xs-4 col-sm-4 col-md-4">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-5 col-lg-5" for="status">Status</label>
+							<div class="col-sm-7 col-md-7 col-lg-7">
+								<input type="text" class="form-control" ng-model="processReqObj.status" id="status">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-xs-4 col-sm-4 col-md-4">
+						<div class="form-group">
+							<label class="control-label col-sm-6 col-md-6 col-lg-6" for="start-month">Beginning Month</label>
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								 <input type="text" custom-datepicker ng-model="processReqObj.startMonth" id="start-month">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-xs-4 col-sm-4 col-md-4">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-5 col-lg-5" for="end-month">Ending Month</label>
+							<div class="col-sm-7 col-md-7 col-lg-7">
+								<input type="text" custom-datepicker ng-model="processReqObj.endMonth" id="end-month">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+						<button type="submit" class="btn btn-primary pull-right" value="search" ng-click="filterProcessLogs()">Search</button>
+					</div>
+				</div>
+			</form>	
+		</section>
+	
+		<div class="row" ng-hide="true">
+			<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 margin-bot-20">
+				<form class="input-group col-md-4">
+					<div class="input-group-btn">
+						 <select class="form-control width-100" ng-model="filterOption" >
+							<span class="caret"></span>
+							<option value="">Select</option>
+							<option value="processId">Batch Process Id</option>
+							<option value="processName">Batch Process Name</option>
+							<option value="user">Submitted by User</option>
+							<option value="status">Status</option>
+						</select> 
+					</div>
+					<input type="text" ng-model="filterText" class="form-control" placeholder="Search Text..">
+					<div class="input-group-btn">
+						<button ng-click="filterProcessLogs()" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+					</div>
+				</form>
+			</div><!-- /.col-lg-6 -->
+		</div>
+
+		<div class="row">	
+			<div class="table-responsive table_selection_agent col-xs-12 col-sm-12 col-md-12"> 
+				<table class="table table-condensed table-hover">
+					<thead>
+						<tr>
+							<th>Batch Process Id</th>
+							<th>Batch Process Name</th>
+							<th>Submitted by User Id</th>
+							<th>Submitted Date and Time</th>
+							<th>Start Date and Time</th>
+							<th>End Date and Time</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr pagination-id="paginate1" dir-paginate="request in requesttable|itemsPerPage:5">
+							<td>{{request.id}}</td>
+							<td>{{request.name}}</td>
+							<td>{{request.userid}}</td>
+							<td>{{request.submitdate}}</td>
+							<td>{{request.startdate}}</td>
+							<td>{{request.enddate}}</td>
+							<td>{{request.status}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<div>
+					<dir-pagination-controls
+									max-size="5"
+									direction-links="true"
+									boundary-links="true"
+									pagination-id="paginate1">
+					</dir-pagination-controls>
+				</div>
+			</div> 
+		</div>
+		<div class="row">
+			<div class="table-responsive table_selection_agent col-xs-12 col-sm-12 col-md-12"> 
+				<table class="table table-condensed table-hover">
+					<thead>
+						<tr>
+							<th>Batch Process Id</th>
+							<th>Process Log Id</th>
+							<th>Procedure/Function Name</th>
+							<th>Process Log Description</th>
+							<th>Date and Time</th>
+						</tr>
+						
+					</thead>
+					<tbody>
+						<tr pagination-id="paginate2" dir-paginate="logs in processlogtable|itemsPerPage:5 | filter:processlogtableSearch">
+							<td>{{logs.batchid}}</td>
+							<td>{{logs.processid}}</td>
+							<td>{{logs.name}}</td>
+							<td>{{logs.description}}</td>
+							<td>{{logs.date}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<div>
+					<dir-pagination-controls
+									max-size="5"
+									direction-links="true"
+									boundary-links="true"
+									pagination-id="paginate2">
+					</dir-pagination-controls>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="table-responsive table_selection_agent col-xs-12 col-sm-12 col-md-12">
+				<table class="table table-condensed table-hover">
+					<thead>
+						<tr>
+							<th>Batch Process Id</th>
+							<th>Error Id</th>
+							<th>Error Level</th>
+							<th>Error Description</th>
+							<th>Created Date and Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr pagination-id="paginate3" dir-paginate="logs in errorlog|itemsPerPage:5 | filter:errorlogSearch">
+							<td>{{logs.processid}}</td>
+							<td>{{logs.errorid}}</td>
+							<td>{{logs.level}}</td>
+							<td>{{logs.description}}</td>
+							<td>{{logs.date}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<div>
+					<dir-pagination-controls
+									max-size="5"
+									direction-links="true"
+									boundary-links="true"
+									pagination-id="paginate3">
+					</dir-pagination-controls>
+				</div>
+			</div> 
+		</div>	
+	</div>
+</div>

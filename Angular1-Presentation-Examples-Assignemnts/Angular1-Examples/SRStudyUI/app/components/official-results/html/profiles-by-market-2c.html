@@ -1,0 +1,68 @@
+<div class="container relative-pos hidden-print">
+	<input type="submit" class="btn btn-primary print-cutom-btn absolute-pos" ng-click="print()" value="Print">
+</div>
+
+<div class="container" ng-class="{hideSettingMarginProfileMarket:$index>1}" data-ng-repeat="detail in profileDetails.data.segmentDetails" data-ng-if="$index%rowCountPdfPageOrderType == 0">
+	<div class="row extraPadding pageBreak" ng-class="{'visible-print-block':$index>1}">
+		<div class="col-xs-12">
+			<div class="head-text text-center">Service Representative Study Results - Official Results 2c</div> 
+			<div class="head-text text-center">Profiles by Market Segment - (Excludes NCPT, Includes Billing) (Weighted Ratios)</div> 			
+			<div class="subHeading text-center">&copy Copyright 2012 AT&T Intellectual Property. All rights reserved</div>
+			<div class="head-text text-center">Data from: {{profileDetails.data.auditFrom.date}} thru: {{profileDetails.data.auditTo.date}}</div> 
+			<div class="head-text text-center">Market Segment: Business </div> 
+		</div>
+		<div class="row">
+			<div class="col-xs-3">
+				<div style="position:relative;">
+					<img src="assets/img/att_logo_background.png" class="logo-img-top hidden-print"/>
+					<img src="assets/img/att_logo.png" class="logo-img-top visible-print-block"/>
+				</div>
+			</div> 
+			<div class="col-xs-4 col-md-3 text-right"><b>Company: {{profileDetails.data.company}}</b></div>			
+		</div>
+	</div>	
+	<div class="row">
+		<div class="tableContainer"> 				
+			<table class="tablePrint tablePrintProfileMarket">
+				<thead class="tableHeaderBorder">
+					<tr ng-class="{hideSettingVisibility:$index>1}">
+						<th>Product Name</th>
+						<th>Product Secs</th>
+						<th>Allocated Occ Common</th>
+						<th>Allocated Sample Common</th>
+						<th>Allocated JWTS Common</th>
+						<th>Allocated Order Writing Secs</th>
+						<th>Total Secs</th>
+						<th>Weighted Product Ratio</th>						
+					</tr>
+				</thead>
+				<tbody data-ng-repeat="profileDetail in profileDetails.data.segmentDetails.slice($parent.$index,$parent.$index+rowCountPdfPageOrderType)">
+					<tr><td><strong>{{profileDetail.key}}</strong></td></tr>
+					<tr data-ng-repeat="detail in profileDetail.value" >
+						<td>{{detail.productName}}</td>
+						<td>{{detail.productSecs}}</td>
+						<td>{{detail.allocatedOcc}}</td>
+						<td>{{detail.allocatedSample}}</td>
+						<td>{{detail.allocatedJWTS}}</td>
+						<td>{{detail.allocatedOrder}}</td>
+						<td>{{detail.totalSecs}}</td>
+						<td>{{detail.weightedProductRatio}}</td>						
+					</tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td>
+					<td>{{profileDetail.key}} Total=</td><td>{{profileDetail.total}}</td></tr>
+				</tbody>
+				<tbody>				
+					<tr ng-class="{invisible:($index+rowCountPdfPageOrderType)/rowCountPdfPageOrderType<(profileDetails.data.segmentDetails.length/rowCountPdfPageOrderType)}">
+						<td><b class="tableSubLabel">Business Total (rounded)=</b></td>
+						<td data-ng-repeat="(key, value) in profileDetails.data.ReportTotals">{{value}}</td>											
+					</tr>				
+				</tbody>
+			</table>
+		</div>
+	</div>		
+	<div class="footer text-center" ng-class="{'visible-print-block':($index+rowCountPdfPageOrderType)/rowCountPdfPageOrderType<(profileDetails.data.segmentDetails.length/rowCountPdfPageOrderType)}">
+		<div class="mainHeading">AT&T Proprietary (Restricted)</div>
+		<div class="subHeading">Only for use by authorized individuals or any above-designated team(s)<br>
+		within the AT&T companies and not for general distribution</div>
+	</div>	
+</div>

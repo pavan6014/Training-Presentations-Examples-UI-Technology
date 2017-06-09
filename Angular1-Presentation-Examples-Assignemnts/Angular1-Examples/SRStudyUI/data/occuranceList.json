@@ -1,0 +1,491 @@
+[{
+	"flagged": "NO",
+	"occurenceNumber": 1,
+	"notes": "",
+	"orderType": "Offline",
+	"isOtApplied": false,
+	"listenedCallDetailsList": [{
+		"listHeader": "Offline",
+		"listType": "activity",
+		"listData": "offline",
+		"version": "select",
+		"diposition": "",
+		"time": 6,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}],
+	"areaDetails": {
+		"areacode": "912",
+		"state": "GA",
+		"company": "SE"
+	},
+	"prefix": "111"
+}, {
+	"flagged": "NO",
+	"occurenceNumber": 2,
+	"notes": "",
+	"orderType": "TF",
+	"isOtApplied": false,
+	"listenedCallDetailsList": [{
+		"listHeader": "Common Time",
+		"listType": "activity",
+		"listData": "Greeting/Closing",
+		"version": "select",
+		"diposition": "",
+		"time": 9,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Internet (non UV)",
+		"listType": "product",
+		"listData": "Inet Wireless Modem Fill",
+		"version": "select",
+		"diposition": "",
+		"time": 4,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}],
+	"areaDetails": {
+		"areacode": "913",
+		"state": "KS",
+		"company": "SW"
+	},
+	"prefix": "222"
+}, {
+	"flagged": "NO",
+	"occurenceNumber": 3,
+	"notes": "",
+	"orderType": "Offline",
+	"isOtApplied": false,
+	"listenedCallDetailsList": [{
+		"listHeader": "Offline",
+		"listType": "activity",
+		"listData": "offline",
+		"version": "select",
+		"diposition": "",
+		"time": 13,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}],
+	"areaDetails": {
+		"areacode": "914",
+		"state": "NY",
+		"company": "Out21ATT"
+	},
+	"prefix": "333"
+}, {
+	"flagged": "NO",
+	"occurenceNumber": 4,
+	"notes": "",
+	"orderType": "N",
+	"isOtApplied": false,
+	"listenedCallDetailsList": [{
+		"listHeader": "Common Time",
+		"listType": "activity",
+		"listData": "Greeting/Closing",
+		"version": "select",
+		"diposition": "",
+		"time": 5,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Internet (non UV)",
+		"listType": "product",
+		"listData": "Inet Wireless Modem Fill",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Other Services",
+		"listType": "product",
+		"listData": "ATT WLS Devices Fill",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Quad, Triple, Dble Play",
+		"listType": "product",
+		"listData": "ATT Wireless cell Ofr",
+		"version": "select",
+		"diposition": "",
+		"time": 11,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}],
+	"areaDetails": {
+		"areacode": "915",
+		"state": "TX",
+		"company": "SW"
+	},
+	"prefix": "444"
+}, {
+	"flagged": "NO",
+	"occurenceNumber": 5,
+	"notes": "",
+	"orderType": "Offline",
+	"isOtApplied": false,
+	"listenedCallDetailsList": [{
+		"listHeader": "Offline",
+		"listType": "activity",
+		"listData": "offline",
+		"version": "select",
+		"diposition": "",
+		"time": 11,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}],
+	"areaDetails": {
+		"areacode": "916",
+		"state": "CA",
+		"company": "W"
+	},
+	"prefix": "555"
+}, {
+	"flagged": "NO",
+	"occurenceNumber": 6,
+	"notes": "",
+	"orderType": "N",
+	"isOtApplied": false,
+	"listenedCallDetailsList": [{
+		"listHeader": "Common Time",
+		"listType": "activity",
+		"listData": "Greeting/Closing",
+		"version": "select",
+		"diposition": "",
+		"time": 11,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Quad, Triple, Dble Play",
+		"listType": "product",
+		"listData": "Double Play Fill",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Quad, Triple, Dble Play",
+		"listType": "product",
+		"listData": "Triple Play Ofr",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Quad, Triple, Dble Play",
+		"listType": "product",
+		"listData": "Quad Play CS",
+		"version": "select",
+		"diposition": "",
+		"time": 1,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Other Services",
+		"listType": "product",
+		"listData": "ATT WLS Devices Fill",
+		"version": "select",
+		"diposition": "",
+		"time": 1,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Common Time",
+		"listType": "activity",
+		"listData": "Other Common",
+		"version": "select",
+		"diposition": "",
+		"time": 3,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}],
+	"areaDetails": {
+		"areacode": "917",
+		"state": "NY",
+		"company": "Out21ATT"
+	},
+	"prefix": "666"
+}, {
+	"flagged": "NO",
+	"occurenceNumber": 7,
+	"notes": "",
+	"orderType": "Offline",
+	"isOtApplied": false,
+	"listenedCallDetailsList": [{
+		"listHeader": "Offline",
+		"listType": "activity",
+		"listData": "offline",
+		"version": "select",
+		"diposition": "",
+		"time": 16,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}],
+	"areaDetails": {
+		"areacode": "918",
+		"state": "OK",
+		"company": "SW"
+	},
+	"prefix": "777"
+}, {
+	"flagged": "NO",
+	"occurenceNumber": 8,
+	"notes": "",
+	"orderType": "N",
+	"isOtApplied": false,
+	"listenedCallDetailsList": [{
+		"listHeader": "Common Time",
+		"listType": "activity",
+		"listData": "Greeting/Closing",
+		"version": "select",
+		"diposition": "",
+		"time": 10,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Internet (non UV)",
+		"listType": "product",
+		"listData": "Inet Wireless Modem Ofr",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Internet (non UV)",
+		"listType": "product",
+		"listData": "Inet Wireless Modem Fill",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Internet (non UV)",
+		"listType": "product",
+		"listData": "Inet DSL Direct dry Ofr",
+		"version": "select",
+		"diposition": "",
+		"time": 1,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Quad, Triple, Dble Play",
+		"listType": "product",
+		"listData": "Quad Play CS",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Billing",
+		"listType": "product",
+		"listData": "Payment Arrangements",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Billing",
+		"listType": "product",
+		"listData": "DTV Payment Arrg",
+		"version": "select",
+		"diposition": "",
+		"time": 1,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Quad, Triple, Dble Play",
+		"listType": "product",
+		"listData": "Quad Play Ofr",
+		"version": "select",
+		"diposition": "",
+		"time": 2,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}],
+	"areaDetails": {
+		"areacode": "919",
+		"state": "NC",
+		"company": "SE"
+	},
+	"prefix": "888"
+}, {
+	"flagged": "NO",
+	"occurenceNumber": 9,
+	"notes": "",
+	"orderType": "Offline",
+	"isOtApplied": false,
+	"listenedCallDetailsList": [{
+		"listHeader": "Offline",
+		"listType": "activity",
+		"listData": "offline",
+		"version": "select",
+		"diposition": "",
+		"time": 30,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}],
+	"areaDetails": {
+		"areacode": "920",
+		"state": "WI",
+		"company": "MW"
+	},
+	"prefix": "999"
+}, {
+	"flagged": "NO",
+	"occurenceNumber": 10,
+	"notes": "",
+	"orderType": "N",
+	"isOtApplied": false,
+	"listenedCallDetailsList": [{
+		"listHeader": "Common Time",
+		"listType": "activity",
+		"listData": "Greeting/Closing",
+		"version": "select",
+		"diposition": "",
+		"time": 15,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Access",
+		"listType": "product",
+		"listData": "Access Ln Con Ofr",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Common Time",
+		"listType": "activity",
+		"listData": "Other Common",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Other Services",
+		"listType": "product",
+		"listData": "ATT WLS Devices Fill",
+		"version": "select",
+		"diposition": "",
+		"time": 1,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Access",
+		"listType": "product",
+		"listData": "CA Lifeline Service",
+		"version": "select",
+		"diposition": "",
+		"time": 1,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Quad, Triple, Dble Play",
+		"listType": "product",
+		"listData": "IPDSL Inet Fill",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Other Services",
+		"listType": "product",
+		"listData": "ATT WLS Devices Ofr",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Quad, Triple, Dble Play",
+		"listType": "product",
+		"listData": "ATT Wireless cell CS",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Billing",
+		"listType": "product",
+		"listData": "DTV Past Due",
+		"version": "select",
+		"diposition": "",
+		"time": 0,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Quad, Triple, Dble Play",
+		"listType": "product",
+		"listData": "IPDSL Inet Ofr",
+		"version": "select",
+		"diposition": "",
+		"time": 2,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}, {
+		"listHeader": "Inside Wire",
+		"listType": "product",
+		"listData": "IW and Jacks Install CS Fill",
+		"version": "select",
+		"diposition": "",
+		"time": 2,
+		"prior": "",
+		"quantity": "",
+		"ot": false
+	}],
+	"areaDetails": {
+		"areacode": "928",
+		"state": "AZ",
+		"company": "Out21ATT"
+	},
+	"prefix": "987"
+}]

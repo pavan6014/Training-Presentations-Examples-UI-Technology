@@ -1,0 +1,96 @@
+<div class="compute-results">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="fa fa-bar-chart"></span> Results</h1>      
+            </div>
+		</div>
+	</section>
+	<div class="container container-custom">
+		
+		<div class="row">
+			<form class="form-horizontal" role="form" name="computeResults" novalidate>
+				<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 pull-right">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-5 col-lg-5" for="company">Company</label>
+							<div class="col-sm-7 col-md-7 col-lg-7">	
+								<select id="company" name="company" class="form-control" data-ng-model="sampledCompany" data-ng-options="company for company in sampleCompanyList" uib-tooltip="Company is required" tooltip-enable="computeResults.company.$invalid && (computeResults.company.$touched || submitted)"  tooltip-trigger="mouseenter" required>
+									<option value="">All</option>								
+								</select>
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" >
+						<div class="form-group">
+							<label class="control-label col-sm-6 col-md-6 col-lg-6" for="month">Sample Month</label>
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<input type="date" custom-datepicker ng-model="month" id="month" name="month" uib-tooltip="Month is required" tooltip-enable="computeResults.month.$invalid && (computeResults.month.$touched || submitted)"  tooltip-trigger="mouseenter">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="table-responsive table_selection_agent">
+				<p><b>Months with results from Analysts</b></p>
+				<table class="table table-condensed table-hover table-head-fixed">
+					<thead>
+						<tr>
+							<th class="text-center">Months</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat = "month in analystsResults"><td class="text-center">{{month}}</td></tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="table-responsive table_selection_agent">
+				<p><b>Months with Computed Results</b></p>
+				<table class="table table-condensed table-hover table-head-fixed">
+					<thead>
+						<tr>
+							<th class="text-center"> Months </th>
+							<th class="text-center"> Locked </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="months in computedResults">
+							<td class="text-center">{{months.months}}</td>
+							<td class="text-center"><input type="checkbox" value="months.locked" ng-checked="months.locked"/></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+				
+			</div>
+			<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 pull-right">
+				<div class="subsection-container margin-top-30">
+					<div class="subsection-header">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<p>Compute Results</u></p>
+						</div>
+					</div>
+					<div class="subsection-body pad10">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">	
+								<p>Last Run Date</p>
+								<input type="submit" class="btn btn-primary margin10 margin-right-22" value="Run" ng-click="run()"/>	
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<p class="margin-left-20">04/12/2016</p>
+								<input type="submit" class="btn btn-primary margin10" value="View Results" ng-click="viewResults()"/>	
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+			</form>
+		</div>
+		
+	</div>
+</div>
+

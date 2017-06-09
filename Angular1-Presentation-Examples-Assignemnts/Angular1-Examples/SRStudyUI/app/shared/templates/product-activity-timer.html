@@ -1,0 +1,42 @@
+<td class="switch_selected_a_p">
+	<switch name="onOff" id="switchSelectedAP"  on="" off="" data-ng-change="switchOnOff()" data-ng-model="selectedOccurence.switchStatus"></switch>
+</td>
+<td>
+	<select class="form-control" data-ng-model="selectedOccurence.listData" data-ng-change="onChangeOfActivity(selectedOccurence.listData, '{{selectedOccurence.listData}}');refreshVersionList(selectedOccurence.listData);"  data-ng-disabled="selectedOccurence.listData == 'offline'">
+		<option value="" ng-if="selectedOccurence.listData != 'offline'">select</option>
+		<option  ng-if="selectedOccurence.listData == 'offline'" value="offline" data-ng-selected="true">{{selectedOccurence.listData}}</option>
+		<option ng-if="selectedOccurence.listData != 'offline'" data-ng-repeat="pa in allProductAndActivityList">{{pa.listName}}</option>
+	</select>
+	<!-- <input list="testList" class="form-control" data-ng-model="selectedOccurence.listData" data-ng-change="onChangeOfActivity(selectedOccurence.listData, '{{selectedOccurence.listData}}')"  data-ng-disabled="selectedOccurence.listData == 'offline'"/>
+    <datalist id="testList">
+		<option value="select" data-ng-show="selectedOccurence.listData != 'offline'">select</option>
+		<option data-ng-show="selectedOccurence.listData == 'offline'" value="offline" data-ng-selected="true">{{selectedOccurence.listData}}</option>
+		<option data-ng-show="selectedOccurence.listData != 'offline'" data-ng-repeat="pa in allProductAndActivityList">{{pa}}</option>
+    </datalist> -->
+</td>
+<td>
+	<select class="form-control" data-ng-model="selectedOccurence.version" ng-class="{'alert-missingValue':selectedOccurence.highlightVersion}"  data-ng-disabled="selectedOccurence.listData == 'offline' || versionList.length==0" data-ng-change="onChangeOfVersion(selectedOccurence,'{{selectedOccurence.version}}')">
+		<option value="select" selected="true">select</option>
+			<option ng-if="selectedOccurence.listData != 'offline' && versionList.length!=0" data-ng-repeat="pa in versionList">{{pa}}</option>
+	</select>
+</td>
+<td>
+	<!--<input type="text" class="form-control" data-ng-model="selectedOccurence.diposition" value="" name=""  data-ng-disabled="selectedOccurence.listData == 'offline'">-->
+	<select class="form-control" ng-change="validateDispositionSelected()" ng-focus="clearDispositionList()" ng-class="{'alert-missingValue':alertDisposition || selectedOccurence.alertDisposition}" data-ng-model="selectedOccurence.diposition" data-ng-disabled="selectedOccurence.listData == 'offline' ">
+		<option value={{selectedOccurence.diposition}} ng-if="alertDisposition">{{selectedOccurence.diposition}}</option>
+		<option value="" ng-if="!alertDisposition">select</option>
+		<option ng-repeat="disp in dispositionlist" value={{disp}}>{{disp}}</option>
+	</select>	
+</td>
+<td>
+	<input type="text" class="form-control" data-ng-model="selectedOccurence.time" value="" name=""  data-ng-disabled="selectedOccurence.listData == 'offline'">
+</td>
+<td>
+	<input type="text" class="form-control" data-ng-model="selectedOccurence.prior" value="" name=""  data-ng-disabled="selectedOccurence.listData == 'offline'">
+</td>
+<td>
+	<input type="text" class="form-control" data-ng-model="selectedOccurence.quantity" value="" name=""  data-ng-disabled="selectedOccurence.listData == 'offline'">
+</td>
+<td>
+	<input type="checkbox" class="" data-ng-model="selectedOccurence.ot" value="" name=""  data-ng-disabled="selectedOccurence.listData == 'offline'">
+</td>

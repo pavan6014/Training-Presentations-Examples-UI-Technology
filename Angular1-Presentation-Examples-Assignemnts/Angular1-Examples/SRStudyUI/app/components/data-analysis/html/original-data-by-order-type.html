@@ -1,0 +1,90 @@
+<div class="container relative-pos hidden-print">
+	<input type="submit" class="btn btn-primary print-cutom-btn absolute-pos" ng-click="print()" value="Print">
+</div>
+<div class="container" ng-class="{hideSettingMarginOriginalData:$index>1}" data-ng-repeat="detail in originalDataByOrderTypeDetails.reportDetails" data-ng-if="$index%rowCountPdfPageOrderType == 0">
+	<div class="row extraPadding pageBreak" ng-class="{'visible-print-block':$index>1}">
+		<div class="col-xs-12">
+			<div class="mainHeading text-center">Service Representative Study - Data Analysis Report 1</div> 
+			<div class="subHeading text-center">&copy Copyright 2012 AT&T Intellectual Property. All rights reserved</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">
+				<div style="position:relative;">
+					<img src="assets/img/att_logo_background.png" class="logo-img-print hidden-print"/>
+					<img src="assets/img/att_logo.png" class="logo-img-print visible-print-block"/>
+				</div> 
+			</div>  
+			<div class="col-xs-12 col-md-12 text-center"><b>Original Data By Disposition</b></div>
+			<!-- <div class="col-xs-5 col-md-3"><b>Sample Month requested: {{auditReportDetails.sampleMonthRequested}}</b></div> -->
+		</div>
+	</div>
+	<div class="row extraPadding" ng-class="{'visible-print-block':$index>1}">
+		<div class="showSelection text-center">Data from: Jan 2016 thru: Jan 2016</div>
+	</div>
+	<div ng-class="{'visible-print-block':$index>1}">
+		<div class="col-xs-4 col-md-3 text-right tableSubLabel"><b>Company: {{originalDataByOrderTypeDetails.company}}</b></div>
+		<div class="col-xs-6 col-md-4"><b>Service Rep Study - Data Analysis Report 1</b></div>
+		<div class="col-xs-3 col-md-3 text-right"><b>Description: {{originalDataByOrderTypeDetails.pickDesc}}</b></div>
+	</div>
+	
+	<div class="row">
+		<div class="tableContainer"> 				
+			<table class="tablePrintDisplay">
+				<thead>
+					<tr ng-class="{hideSettingVisibility:$index>1}" class="tableHeaderBorder">
+						<th>Product</th>
+						<th colspan="3" style="text-align:center;">Sale</th>
+						<th>Removal</th>
+						<th>TF</th>
+						<th>Inquiry</th>
+						<th>Post Sale</th>
+						<th colspan="3" style="text-align:center;">No Sale</th>
+						<th>Referred</th>
+						<th>Blank</th>
+						<th>Total</th>						
+					</tr>
+					<tr ng-class="{hideSettingVisibility:$index>1}">
+						<th></th>												
+						<th>S</th>
+						<th>SN</th>
+						<th>SO</th>	
+						<th></th><th></th>	<th></th>	<th></th>
+						<th>NS</th>
+						<th>NSN</th>
+						<th>NSO</th>	
+						<th></th><th></th>	<th></th>						
+					</tr>
+				</thead>
+				<tbody data-ng-repeat="detail in originalDataByOrderTypeDetails.reportDetails.slice($parent.$index,$parent.$index+rowCountPdfPageOrderType)">
+					<tr style="border-bottom: 0px; ">
+						<td><b class="tableLabel">Order Type: {{detail.key}}</b></td>
+					</tr>	
+					<tr style="border-bottom: 0px" data-ng-repeat="detailsArray in detail.value">
+						<td>{{detailsArray.name}}</td>				
+						<td data-ng-repeat="details in detailsArray.subParts">{{details.value}}
+						</td>
+						<td>{{getTotal(detailsArray.subParts)}}</td>					
+					</tr>
+					<tr>
+						<td><b class="tableSubLabel">Total for Order Type: {{detail.key}}</b></td>
+						<td data-ng-repeat="subPartDetails in detail.value[$index].subParts">{{getRowTotal(detail, $index)}}</td>	
+						<td>{{getTotalForGroup(detail, detail.key)}}</td>						
+					</tr>					
+				</tbody>
+				<tbody>
+					<tr ng-class="{invisible:($index+rowCountPdfPageOrderType)/rowCountPdfPageOrderType<(originalDataByOrderTypeDetails.reportDetails.length/rowCountPdfPageOrderType)}">
+						<td><b class="tableSubLabel">Grand Total:</b></td>
+						<td data-ng-repeat="subPartDetails in originalDataByOrderTypeDetails.reportDetails[0].value[0].subParts">{{getGrandTotal(originalDataByDispReportDetails.reportDetails, subPartDetails.key)}}</td>
+						<td>{{getGrandTotalFinal(originalDataByOrderTypeDetails.reportDetails)}}</td>					
+					</tr>				
+				</tbody>
+				
+			</table>
+		</div>
+	</div>		
+	<div class="footer text-center" ng-class="{'visible-print-block':($index+rowCountPdfPageOrderType)/rowCountPdfPageOrderType<(originalDataByOrderTypeDetails.reportDetails.length/rowCountPdfPageOrderType)}">
+		<div class="mainHeading">AT&T Proprietary (Restricted)</div>
+		<div class="subHeading">Only for use by authorized individuals or any above-designated team(s)<br>
+		within the AT&T companies and not for general distribution</div>
+	</div>	
+</div>

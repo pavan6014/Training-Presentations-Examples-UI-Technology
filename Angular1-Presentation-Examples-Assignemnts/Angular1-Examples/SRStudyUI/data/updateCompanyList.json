@@ -1,0 +1,21 @@
+[{
+	"companyName": "AIT",
+	"isValidForComp": true,
+	"isValidForCustComp": false
+}, {
+	"companyName": "Ntl ATTSvc",
+	"isValidForComp": true,
+	"isValidForCustComp": true
+}, {
+	"companyName": "Ntl Leg T",
+	"isValidForComp": false,
+	"isValidForCustComp": true
+}, {
+	"companyName": "PB",
+	"isValidForComp": false,
+	"isValidForCustComp": false
+}, {
+	"companyName": "Vendor",
+	"isValidForComp": false,
+	"isValidForCustComp": false
+}]

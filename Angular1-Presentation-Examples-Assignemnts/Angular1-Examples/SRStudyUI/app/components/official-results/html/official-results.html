@@ -1,0 +1,121 @@
+<div class="official-results">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="fa fa-bar-chart"></span> Official Results</h1>      
+            </div>
+		</div>
+	</section>
+	
+	<div class="container container-custom">
+	<form class="form-horizontal" role="form" name="officialResultsForm" novalidate>
+			<section class="row">					
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label col-sm-5 col-md-5 col-lg-5" for="start-month">Beginning Month</label>
+						<div class="col-sm-7 col-md-7 col-lg-7">
+							<input type="date" custom-datepicker ng-model="begMonth" id="beg-month" name="begMonth" uib-tooltip="Beginning month is required" tooltip-enable="officialResultsForm.begMonth.$invalid && (officialResultsForm.begMonth.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true">
+						</div>							
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label col-sm-5 col-md-5 col-lg-5" for="end-month">Ending Month</label>
+						<div class="col-sm-7 col-md-7 col-lg-7">
+							<input type="date" custom-datepicker ng-model="endMonth" id="end-month" name="endMonth" uib-tooltip="End month is required" tooltip-enable="officialResultsForm.endMonth.$invalid && (officialResultsForm.endMonth.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true">
+							
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label col-sm-5 col-md-5 col-lg-5" for="sampleCompany">Company</label>
+						<div class="col-sm-7 col-md-7 col-lg-7">
+							<select id="sampleCompany" name="sampleCompany" class="form-control" data-ng-model="sampledCompany" data-ng-options="company for company in sampleCompanyList" uib-tooltip="Company required" tooltip-enable="officialResultsForm.sampleCompany.$invalid && (officialResultsForm.sampleCompany.$touched || submitted)"  tooltip-trigger="mouseenter" required>
+								<option value="">All</option>								
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label col-sm-5 col-md-5 col-lg-5" for="sampleStrantum">Stratum</label>
+						<div class="col-sm-7 col-md-7 col-lg-7">
+							<select id="sampleStrantum" name="sampleStrantum" class="form-control" data-ng-model="sampledStratum" data-ng-options="stratum for stratum in sampleStratumList" uib-tooltip="Stratum required" tooltip-enable="officialResultsForm.sampleStrantum.$invalid && (officialResultsForm.sampleStrantum.$touched || submitted)"  tooltip-trigger="mouseenter" required>
+								<option value="">All</option>								
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10 ">
+					<p name="errorMsg" ng-model="errorMsg" ng-show="begMonth > endMonth" class="alert alert-danger">The begining month must be earlier than Ending month.</p> 
+		
+				</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Summary Of Results</p>
+						<input type="submit" class="btn pull-right btn-primary margin10" value="Launch" ng-click="getOfficialResultsReport('summary-of-results')"/>
+					</div>
+				</div>		
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">		
+				<div class="subsection-container">	
+					<div class="subsection-header">
+						<p>Profiles By Market - excl NCPT[2c]</p>
+						<input type="submit" class="btn pull-right btn-primary margin10" value="Launch" ng-click="getOfficialResultsReport('profiles-by-market-2c')"/>
+					</div>
+				</div>		
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Profiles By Market - excl NCPT(Select Stratum)[2d]</p>
+						<input type="submit" class="btn pull-right btn-primary margin10" value="Launch" ng-click="getOfficialResultsReport('profiles-by-market-2d')"/>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>ULTS[11]</p>
+						<input type="submit" class="btn pull-right btn-primary margin10" value="Launch" ng-click="getOfficialResultsReport('ults')"/>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>ULTS[12]</p>
+						<input type="submit" class="btn pull-right btn-primary margin10" value="Launch" ng-click="getOfficialResultsReport('ults-12')"/>						
+					</div>
+				</div>			
+			</div>
+		</section>	
+		</form>
+		<!-- <section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">		
+				<div class="subsection-container">
+					<div class="subsection-header">
+							<p>Sample Generation</p>
+							<a class="btn pull-right btn-primary margin10" href="">Launch</a>
+					</div>
+				</div>				
+			</div>
+		</section> -->
+		
+	</div>
+</div>

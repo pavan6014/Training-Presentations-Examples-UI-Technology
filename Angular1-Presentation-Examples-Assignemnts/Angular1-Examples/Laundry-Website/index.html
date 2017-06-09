@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html data-ng-app="handyApp">
+<head>
+  <title>Handy Cleaners</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="images/favicon.png" type="images/png">
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+  <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css"> 
+  <!--Fontawesome-->
+  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/mainstyles.css">
+ 
+</head>
+<body>
+
+<!--#Navbar-->
+<section class="header logo" id="header" data-spy="affix">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-6 col-lg-4">
+        <img src="images/logo.png" alt="Handy Cleaners Logo" class="img-responsive img" width="140" height="140">
+      </div>
+      <div class="col-lg-8 col-xs-12 col-sm-12 col-md-12"> 
+          <div class="navbar" role="navigation" id="navbar">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">Menu
+                <!--  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>  -->                      
+                </button>
+                <a class="navbar-brand" href="#"></a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#home" class="scrollTop">Home</a></li>
+                  <li><a class="page-scroll" href="#about-us">About Us</a></li>
+                  <!--<li class="dropdown"><a class="page-scroll dropdown-toggle" data-toggle="dropdown" href="#">Price List</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#laundry">Laundry</a></li>
+                      <li><a href="#drycleaning">Dry Cleaning</a></li>
+                    </ul>
+                  </li>-->
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Price List
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#laundry">Laundry</a></li>
+                      <li><a href="#drycleaning">Dry Cleaning</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="page-scroll" href="#services">Services</a></li>
+                  <li><a class="page-scroll" href="#how-it-works">How it works</a></li>
+                  <li><a class="page-scroll" href="#faq">FAQ</a></li>
+                  <li><a class="page-scroll" href="#contact">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<!--#Navbar-->
+
+<!--#Home page-->
+<div class="home" id="home"  style="background-image: url(images/background2.jpg);background-size: cover;background-attachment: fixed;">
+  <div class="container" data-ng-controller="FormCtrl">
+    <div class="row">
+
+      <div class="col-xs-12 col-md-12 col-sm-12 col-lg-5 form">
+        <h4 class="text-center">Give Your Garments Today!<br>Free Pick-Up &amp; Drop</h4>
+         <form name="myForm" ng-submit="Submit()" novalidate action="emial" method="POST">
+     
+           <!-- NAME -->
+           <div class="form-group" ng-class="{ 'has-error' : myForm.name.$invalid && (myForm.name.$dirty)}">
+            <input type="text" name="name" class="form-control" ng-model="user.name" maxlength="20" placeholder="Your Full Name**" ng-required="true">
+           </div>
+
+          <!-- CONTACTNO -->
+           <div class="form-group" ng-class="{ 'has-error' : myForm.contactno.$invalid && (myForm.contactno.$dirty) }">
+           <input type="text" name="contactno" class="form-control" ng-model="user.contactno" placeholder="Your Contact No" ng-pattern="/^[789]\d{9}$/" maxlength="10" ng-required="true">
+           </div>
+
+          <div class="form-group" data-ng-class="{ 'has-error': (submitted && myForm.requirement.$dirty) || (myForm.requirement.$invalid) }">
+          <select  class="form-control" name="requirement">
+            <option value="">Please Select option</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Residential">Residential</option>
+          </select>
+          </div>
+
+          <div class="form-group">
+              <textarea class="form-control" name="inputMessage" rows="3" cols="3" maxlength="100" placeholder="Your Message(max 100 Characters)"></textarea>
+          </div>
+
+          <div>
+            <center><button class="btn btn-primary" name="button">Submit</button></center>
+          </div>
+        
+        </form>
+       
+      </div>
+      <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6"></div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-offset-1">
+        
+          <center><h4 id="text">Schedule a pick up<br>Call us @ 7032 477 215</h4></center>
+     
+        <img src="images/pickup1.png" class="img-responsive img1" alt="Pick-Up & Deliver">
+        <div class="row">
+          <center><span id="text2"><b>Pick up will be scheduled from<br>Monday to Saturday between
+          8AM to 7PM</b></span></center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+var frmvalidator= new Validator("myForm");
+frmvalidator.EnableMsgsTogether();
+  
+frmvalidator.addValidation("name","req","Please provide your name");
+  
+frmvalidator.addValidation("contactno","req","Please provide your phone number");
+
+frmvalidator.addValidation("contactno","numeric","Please valid phone number only.");
+
+</script>
+
+<!--#home page-->
+
+<!--#About US-->
+<section id="about-us" style="background-image: url(images/bg.jpg);background-size: cover;background-attachment: fixed;">
+  <!--<div ng-include="handyAboutus"> </div>-->
+  <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="about">
+            <img src="images/aboutus.png" alt="About Us" class="img-responsive abtimg">
+          </div>
+        </div>
+
+      <div class="row">
+        <div class="col-sm-6"  style="background-image: url(images/bg.jpg);background-size: cover;">
+                <p>Handy cleaners incorporated in the year 2017 by Mrs. Radhika Yenuganti - MCA is the Managing Director along with partner Mr. Narendra Babu – Diploma in Hotel Management passed out from Indo American Institute who has a total of 15 years experience in the hospitality industry and handled laundry operations in India and abroad as well.</p>
+
+              <p>Exclusive laundry is located at Dasaripalem, and machines installed from Mega laundry equipments who are experts in manufacturing machines since last 10 years and supplied to major hotel chains.</p>
+              
+              <p>Laundry is located at 15 km distance from heart of Guntur city and shop is located in the city limits an ideal location for household people to drop and pick up the garments. Pick up service is available to cater the immediate requirements of the hotels and other commercial business units. Customers may opt for the free pick-up and delivery service from their house as well.</p>
+        </div>
+
+        <div class="col-sm-6"  style="background-image: url(images/bg.jpg);background-size: cover;">
+              <center><h3>Why We</h3></center>
+              <p> With the growth of Urbanization, washing of clothes has turned out to be a commercial proposition and led to the establishment of modern dry cleaning units in the cities as well in big towns. The services of these units are very prompt and efficient. The occupation includes all types of washing, handling delicate garments and dry cleaning. The occupation has changed with the passage of time.</p>
+              
+              <p>The laundering services in the past were rendered by dhobis who used to collect clothes, wash and iron them and deliver the clothes back to their customers. Nowadays the customers themselves go to deliver and collect clothes from nearby laundry shop located in the vicinity.</p>
+        </div>
+      </div>
+  </div>
+</section>
+<!--#About Us-->
+
+<!--#Pricelist -->
+<section id="pricelist"  style="background-image: url(images/bg.jpg);background-size: cover;">
+<center><h3>Price-List</h3></center>
+<div class="line col-centered"></div>
+ <!--#Laundry-->
+ <div class="container" id="laundry">
+    <h4>Laundry</h4>
+
+    <ul class="nav nav-tabs nav-justified" id="navtab1">
+    
+      <li class="active"><a data-toggle="tab" href="#menu1" style="color: #000080;">Men's Wear</a></li>
+      <li><a data-toggle="tab" href="#menu2" style="color: #000080;">Women's Wear</a></li>
+      <li><a data-toggle="tab" href="#menu3" style="color: #000080;">Household</a></li>
+      <li><a data-toggle="tab" href="#menu4" style="color: #000080;">Kid's Wear</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="menu1" class="tab-pane fade in active"  data-ng-controller="menswearCtrl">
+        <table class="table table-striped table-hover">
+            <caption>Men's-Wear</caption>
+                <thead>
+                <tr>
+                  <th class="bg-success">Item</th>
+                  <th class="bg-success">Wash</th>
+                  <th class="bg-success">Iron</th>
+                  <th class="bg-success">Wash-Iron</th>
+                  <th class="bg-success">Starch-Iron</th>
+                  <th class="bg-success">Wash-Starch-Iron</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr data-ng-repeat="mprice in menspricelist">
+                    <td class="id1"> {{ mprice.a }} </td>
+                    <td class="id1"> {{ mprice.b }} </td>
+                    <td class="id1"> {{ mprice.c }} </td>
+                    <td class="id1"> {{ mprice.x }} </td>
+                    <td class="id1"> {{ mprice.y }} </td>
+                    <td class="id1"> {{ mprice.z }} </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <div id="menu2" class="tab-pane fade"  data-ng-controller="womenswearCtrl">
+        <table class="table table-striped table-hover">
+            <caption>Women's-Wear</caption>
+                <thead>
+                <tr>
+                  <th class="bg-success">Item</th>
+                  <th class="bg-success">Wash</th>
+                  <th class="bg-success">Iron</th>
+                  <th class="bg-success">Wash-Iron</th>
+                  <th class="bg-success">Starch-Iron</th>
+                  <th class="bg-success">Wash-Starch-Iron</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-ng-repeat="wprice in womenspricelist">
+                    <td class="id1"> {{ wprice.i }} </td>
+                    <td class="id1"> {{ wprice.j }} </td>
+                    <td class="id1"> {{ wprice.k }} </td>
+                    <td class="id1"> {{ wprice.l }} </td>
+                    <td class="id1"> {{ wprice.m}} </td>
+                    <td class="id1"> {{ wprice.n}} </td>
+                  </tr>
+                </tbody>
+            </table>
+      </div>
+      <div id="menu3" class="tab-pane fade" data-ng-controller="householdCtrl" >
+        <table class="table table-striped table-hover">
+         <caption>Household</caption>
+              <thead>
+              <tr>
+                <th class="bg-success">Item</th>
+                <th class="bg-success">Wash</th>
+                <th class="bg-success">Iron</th>
+                <th class="bg-success">Wash-Iron</th>
+                <th class="bg-success">Starch-Iron</th>
+                <th class="bg-success">Wash-Starch-Iron</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-ng-repeat="hprice in housepricelist">
+                  <td class="id1"> {{ hprice.d }} </td>
+                  <td class="id1"> {{ hprice.e }} </td>
+                  <td class="id1"> {{ hprice.p }} </td>
+                  <td class="id1"> {{ hprice.f }} </td>
+                  <td class="id1"> {{ hprice.g }} </td>
+                  <td class="id1"> {{ hprice.h}} </td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+      <div id="menu4" class="tab-pane fade">
+        <p>Upto  &#x20a8; 5 per piece</p>
+      </div>
+    </div>
+</div>
+ <!--#Laundry-->
+
+<!--DryCLeaning-->
+<div class="container" id="drycleaning">
+  <h4>Dry Cleaning</h4>
+  <ul class="nav nav-tabs nav-justified">
+  
+    <li class="active"><a data-toggle="tab" href="#menu5" style="color: #000080;">Men's Wear</a></li>
+    <li><a data-toggle="tab" href="#menu6" style="color: #000080;">Women's Wear</a></li>
+    <li><a data-toggle="tab" href="#menu7" style="color: #000080;">Household</a></li>
+    <li><a data-toggle="tab" href="#menu8" style="color: #000080;">Kid's Wear</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="menu5" class="tab-pane fade in active"  data-ng-controller="dmenswearCtrl">
+      <table class="table table-striped table-hover">
+          <caption>Men's-Wear</caption>
+              <thead>
+              <tr>
+                <th class="bg-success">Men's Wear</th>
+                <th class="bg-success">Dry Cleaing</th>
+                
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-ng-repeat="dmprice in dmenspricelist">
+                  <td class="id2"> {{ dmprice.aa }} </td>
+                  <td class="id2"> {{ dmprice.bb }} </td>
+                  
+                </tr>
+              </tbody>
+          </table>
+    </div>
+    <div id="menu6" class="tab-pane fade"  data-ng-controller="dwomenswearCtrl">
+      <table class="table table-striped table-hover">
+          <caption>Women's-Wear</caption>
+              <thead>
+              <tr>
+                <th class="bg-success">Women's Wear</th>
+                <th class="bg-success">Dry Cleaning</th>
+                
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-ng-repeat="dwprice in dwomenspricelist">
+                  <td class="id2"> {{ dwprice.ii }} </td>
+                  <td class="id2"> {{ dwprice.jj }} </td>
+                 
+                </tr>
+              </tbody>
+          </table>
+    </div>
+    <div id="menu7" class="tab-pane fade" data-ng-controller="dhouseholdCtrl" >
+      <table class="table table-striped table-hover">
+       <caption>Household</caption>
+            <thead>
+            <tr>
+              <th class="bg-success">Household</th>
+              <th class="bg-success">Dry Cleaning</th>
+             
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-ng-repeat="dhprice in dhousepricelist">
+                <td class="id2"> {{ dhprice.dd }} </td>
+                <td class="id2"> {{ dhprice.ee }} </td>               
+              </tr>             
+            </tbody>         
+      </table>
+    </div> 
+    <div id="menu8" class="tab-pane fade">
+      <table class="table table-responsive table-striped table-hover">
+        <caption>Kid's Wear</caption>
+          <tr>
+              <th class="bg-success">Kid's Wear</th>
+              <th class="bg-success">Dry Cleaning</th>
+          </tr>
+          <tr>
+              <td class="id2">Upto 5 years</td>
+              <td class="id2">Per Piece 50 Rs</td>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!--DryCleaning-->
+
+</section>
+<!--#Pricelist -->
+
+<!--#Service-->
+<section id="services" style="background-image: url(images/bg.jpg);background-size: cover;">
+  <div class="container">
+     <h3  class="text-center">Services</h3>
+       <div class="row">
+          <div class="col-lg-6 col-sm-6 col-xs-12 col-md-6">
+              <img id="img-service" src="images/our-services.png" class="img-responsive image-center">
+          </div>
+          <div class="col-lg-6 col-sm-6 col-xs-12 col-md-6 col-center">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="text-center">WASHING</h4>
+                  <p class="para">Handy cleaners work on the principal goal of achieving high end results with the strength of team work and dignity of respect towards individual work.</p>
+                  <p class="para">Each garment is carefully observed and pre treatment is carried on to remove stains and personal supervision is undertaken by Laundry manager. All chemicals used are eco friendly and machines ensure that the garments look fresh followed by professional ironing to make them wrinkle free and presentable.</p>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h4 class="text-center">DRY CLEANING</h4>
+                    <p class="para">It is a process that undergo to clean the delicate clothes and utmost care will be taken to retain the splendor brilliance of each garment.</p>
+                    <p class="para">Mainly for cleaning sensitive textiles (i.e., wool, silk rayon, linen) and removing certain stains and dust by skilled professionals to minimize the potential for adverse effects.</p>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4 class="text-center">PICK UP &amp; DELIVERY</h4>
+                      <p class="para">Our dedicated team will collect the garments from your door step and deliver them back to your place. Procedure shall be followed to mark the number of garments on sheet and only cash is accepted as mode of payment on return of clothes.</p>
+                </div>
+          </div> 
+       </div>
+  </div>
+</section>
+<!--#Service-->
+
+<!--#How it works-->
+<section id="how-it-works" style="background-image: url(images/bg.jpg);background-size: cover;">
+  <div class="container">
+    <div class="row text-center">
+      <h3 class="text-center">How it Works</h3>
+      <div class="line col-centered"></div>
+      <div class="col-lg-3 col-sm-3 col-xs-12 col-md-3 hworks">
+      <h4>Place Order</h4>
+        <img  src="images/placeorder.png" class="img-responsive img-thumbnail img2" alt="Place Order">&nbsp;&nbsp;<span><img src="images/arrow.png" width="60" height="40" class="hidden-xs hidden-sm hidden-md"></span>
+        <div class="htext">Place an Order at www.handycleaners.in.</div>
+      </div>
+      <div class="col-lg-3 col-sm-3 col-xs-12 col-md-3 hworks">
+      <h4>Pick-Up</h4>
+        <img src="images/pick.png" class="img-responsive img-thumbnail img2" alt="Pick-Up">&nbsp;&nbsp;<span><img src="images/arrow.png" width="60" height="40" class="hidden-xs hidden-sm hidden-md"></span>
+        <div class="htext">We will give a call and pick up clothes at your convenience from your home.</div>
+      </div>
+      <div class="col-lg-3 col-sm-3 col-xs-12 col-md-3 hworks">
+      <h4>Washing</h4>
+        <img src="images/washing.png" class="img-responsive img-thumbnail img2 hworks" alt="Washing">&nbsp;&nbsp;<span><img src="images/arrow.png" width="60" height="40" class="hidden-xs hidden-sm hidden-md"></span>
+        <div class="htext">Crisp,clean, as good as new, we wash dry clean and iron your clothes.We will re-clean for free if your not satisfied with the quality for free</div>
+      </div>
+      <div class="col-lg-3 col-sm-3 col-xs-12 col-md-3">
+      <h4>Deliver</h4>
+        <img src="images/delivery.png" class="img-responsive img-thumbnail img2 hworks" alt="Deliver">
+        <div class="htext">We will deliver your clothes on time as requested.</div>
+      </div>      
+    </div>
+  </div>
+</section>
+<!--#How it works-->
+
+<!--#FAQ-->
+<section id="faq" style="background-image: url(images/bg.jpg);background-size: cover;">
+  <div class="container">
+    <div class="row">
+      <h3 class=" text-center">FAQ</h3>
+      <div class="line col-centered"></div>
+     <!-- <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 faqqstns">-->
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default panel-text panel1">
+              <div class="panel-heading">
+                <h5 class="panel-title">
+                  <a href="#collapse1" data-toggle="collapse" data-parent="#accordion" class="a-text"> Why should I sent my clothes for Laundry to Handy Cleaners?<span class="pull-right">+</span></a>
+                </h5>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                  We all use various clothes for the different occasions and personality is judged by the garments you wear. It is important to keep them look fresh and our experts will take utmost care for the clothes.
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="panel panel-default panel1">
+              <div class="panel-heading">
+                <h5 class="panel-title">
+                  <a href="#collapse2" data-toggle="collapse" data-parent="#accordion" class="a-text"> What is Laundry and Dry Cleaning? How they are different?<span class="pull-right">+</span></a>
+                </h5>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  In simple words water is used for Laundry process and organic dry cleaning compound or white petrol for the dry cleaning method depending on the fabric material.
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="panel panel-default panel1">
+              <div class="panel-heading">
+                <h5 class="panel-title">
+                  <a href="#collapse3" data-toggle="collapse" data-parent="#accordion" class="a-text">How do I identify the garment selection for cleaning process? <span class="pull-right">+</span></a>
+                </h5>
+              </div>
+              <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Garments can be segregate by the fabric and can be identified by label marked on each piece. We will carry the cleaning process and each cloth item will be pre treated for any stains or other marks.
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="panel panel-default panel1">
+              <div class="panel-heading">
+                <h5 class="panel-title">
+                  <a href="#collapse4" data-toggle="collapse" data-parent="#accordion" class="a-text"> How do I request a pick up?<span class="pull-right">+</span></a>
+                </h5>
+              </div>
+              <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">
+                  You can either schedule a pick-up through this site - www.handycleaners.in (our apps are on the way) or you can call us at  7032 477 215.
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="panel panel-default panel1">
+              <div class="panel-heading">
+                <h5 class="panel-title">
+                  <a href="#collapse5" data-toggle="collapse" data-parent="#accordion" class="a-text">What is the mode of payment?<span class="pull-right">+</span></a>
+                </h5>
+              </div>
+              <div id="collapse5" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Cash is acceptable from all customers and online transfer can be done including the card payment at our store outlet.
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="panel panel-default panel1">
+              <div class="panel-heading">
+                <h6 class="panel-title">
+                  <a href="#collapse6" data-toggle="collapse" data-parent="#accordion" class="a-text">Who should the grievance addressed to be?<span class="pull-right">+</span></a>
+                </h6>
+              </div>
+              <div id="collapse6" class="panel-collapse collapse">
+                <div class="panel-body">
+                   Please write us to handycleaners9@gmail.com or reach us our customer care @  7032 477 215.
+                </div>
+              </div>
+            </div>
+
+        <!--</div>-->
+      </div>
+     </div>
+  </div>
+</section>
+<!--#FAQ-->
+
+<!--#Contact US-->
+<div id="contact">
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <h3>Contact Us</h3>
+        <div class="line col-centered"></div>
+        <!--<p><h4><strong>Directors:</strong> Radhika. Yenuganti &amp;  Narendra Babu (Managing Partner)</h4></p>-->
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <h4 class="contact-text">Office Address</h4>
+          <address class="address-text">
+            Handy Cleaners<br>
+            D.No: 116F<br>
+            Dasaripalem Village<br>
+            Guntur Rural Mandal<br>
+            Guntur District<br>
+            Phone No:  7032 477 215<br>
+            Website - www.handyclearners.in<br>
+            Email - handycleaners9@gmail.com
+          </address>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <h4 class="contact-text">Shop Address</h4>
+         <address class="address-text">
+            Handy Cleaners<br>
+            D.No: 116F<br>
+            Dasaripalem Village<br>
+            Guntur Rural Mandal<br>
+            Guntur District<br>
+            Phone No:  7032 477 215<br>
+            Website - www.handyclearners.in<br>
+            Email - handycleaners9@gmail.com
+          </address> 
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <h4 class="contact-text">Follow Us on</h4>
+          <a href="#"><i class="fa fa-facebook-official fa-3x icons" aria-hidden="true" id="fb-icon"></i></a>&nbsp;&nbsp;
+          <a href="#"><i class="fa fa-google-plus-official fa-3x icons" aria-hidden="true" id="google-icon"></i></a>&nbsp;&nbsp;
+          <a href="#"><i class="fa fa-linkedin-square fa-3x icons" aria-hidden="true" id="linkedin-icon"></i></a>
+        </div>
+      </div>
+    </div>
+  </div><div class="text-center address-text"><b>Opening hours - 9:00am to 6:00pm</b></div>
+</div>
+
+<div class="footer-bottom">
+      <center>All rights reserved by © Handy Cleaners</center>
+</div>
+<!--#Contact US-->
+ <!--Bootstrap-->
+  <script type="text/javascript" src="js/jquery-3.1.1.js"></script>  
+  <script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
+  
+  <!--Angular-->
+  <script type="text/javascript" src="lib/angular/angular.js"></script>
+  <script type="text/javascript" src="lib/angular/angular-messages.js"></script>
+  <script type="text/javascript" src="app/app.js"></script>
+  <script language="JavaScript" src="js/gen_validatorv4.js" type="text/javascript" xml:space="preserve"></script>
+<script>
+function scrollNav() {
+  $('.navbar-nav a').click(function(){  
+    //Toggle Class
+	$(".navbar-nav").find(".active").removeClass("active");
+	$(this).parent().addClass("active");
+	
+	// Old Code
+    /*$(".active").removeClass("active");      
+    $(this).closest('li').addClass("active");
+    var theClass = $(this).attr("class");
+    $('.'+theClass).parent('li').addClass('active');*/
+	
+    //Animate
+    $('html, body').stop().animate({
+        scrollTop: $( $(this).attr('href') ).offset().top 
+    }, 1000);
+    return false;
+  });
+  $('.scrollTop a').scrollTop();
+}
+scrollNav();
+</script>
+</body>
+</html>

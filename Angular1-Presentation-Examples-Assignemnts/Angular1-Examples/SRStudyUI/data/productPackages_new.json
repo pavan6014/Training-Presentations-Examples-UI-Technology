@@ -1,0 +1,56 @@
+{
+	"packages":[
+			{
+				"pkgName":"Pick Product 1",
+				"pkgId":"590",
+				"assocProducts":[
+					{
+						"prodName":"ATM Telco Fil",
+						"prodId":"850"
+					},
+					{
+						"prodName":"Frm Relay Telco Fill",
+						"prodId":"854"
+					},
+					{
+						"prodName":"Frm Relay Telco CS",
+						"prodId":"853"
+					},
+					{
+						"prodName":"DIA - Dedtcd Inet CS",
+						"prodId":"859"
+					}
+				]
+			},{
+			"pkgName":"Pick Product 2",
+			"pkgId":"592",
+			"assocProducts":[
+				{
+					"prodName":"ATM Telco Fil",
+					"prodId":"850"
+				},
+				{
+					"prodName":"Frm Relay Telco Fill",
+					"prodId":"854"
+				},
+				{
+					"prodName":"Frm Relay Telco CS",
+					"prodId":"853"
+				}
+			]
+			},{
+			"pkgName":"Pick Product 3",
+			"pkgId":"593",
+			"assocProducts":[
+				{
+					"prodName":"ATM Telco Fil",
+					"prodId":"850"
+				},
+				{
+					"prodName":"Frm Relay Telco Fill",
+					"prodId":"854"
+				}
+			]
+			}
+	]
+}

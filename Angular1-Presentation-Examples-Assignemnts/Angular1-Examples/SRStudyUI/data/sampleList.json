@@ -1,0 +1,392 @@
+[
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Pewaukee, WI",
+		"employeeName": "VAN NOSTRAND, DOLORES",
+		"analyst": "Michelle",
+		"status": "sdsd",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Pontiac, MI",
+		"employeeName": "UPSHUR, JERRILYN",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Brecksville, OH",
+		"employeeName": "GRANDE, MICHELLE  A",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "BILODEAU, MARY LYNN",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "BUIKA, DAWN  M",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Brecksville, OH",
+		"employeeName": "DENT, RONEATHEA  G",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Chicago, IL",
+		"employeeName": "TROBL, LILLIAN  R",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Brecksville, OH",
+		"employeeName": "LAGARDE, FRANK  G",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Brecksville, OH",
+		"employeeName": "MAYER, MADONNA  R",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "VOGRINC, CHERYL  A",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Chicago, IL",
+		"employeeName": "FAZIO, MARK  S",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Saginaw, MI",
+		"employeeName": "SPANNAGEL, MELISSA",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Pewaukee, WI",
+		"employeeName": "MCCORMACK, WILLIAM  A",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Chicago, IL",
+		"employeeName": "MARQUEZ, MILDRED",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Pontiac, MI",
+		"employeeName": "GOODGAME, KATHY  M",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Saginaw, MI",
+		"employeeName": "ASTBURY, KRISTINE",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Pewaukee, WI",
+		"employeeName": "BARKER, JAMERIA",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Pontiac, MI",
+		"employeeName": "HASLEY, CHARMANE",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Detroit, MI",
+		"employeeName": "CLARK, YOLANDA  L",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Pewaukee, WI",
+		"employeeName": "WILLIAMS, YOLANDA",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Detroit, MI",
+		"employeeName": "JOHNSON, DONNA  R",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "PREUSS, RAYMOND  W",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Pontiac, MI",
+		"employeeName": "HANSON, CAROL  A",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Pontiac, MI",
+		"employeeName": "LOGAN-MCVAY, NINA  M",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "BLAND, KARLOS  P",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "THOMAS, JACQUELINE  Q",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "STOCKINGER, KIMBERLY  A",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Detroit, MI",
+		"employeeName": "MCCARY, SHANNON",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "HUTTER, MARK  R",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "LABELLE, DEAN  C",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Pontiac, MI",
+		"employeeName": "GOLEMBIESKI, JACQUELINE",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Pewaukee, WI",
+		"employeeName": "SEDLET, MARA  S",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "GEBHARDT, KRIS  L",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Detroit, MI",
+		"employeeName": "LEVERETT, PHYLLIS  S",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "MOY, KARI  A",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "GBL - Waukesha, WI",
+		"employeeName": "FALLS, KRISTIN  M",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Saginaw, MI",
+		"employeeName": "WILLIAMS, TRACEY",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Saginaw, MI",
+		"employeeName": "DOLBY, LAURA",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	},
+	{
+		"company": "AIT",
+		"stratum": "Business",
+		"office": "MWB - Pewaukee, WI",
+		"employeeName": "WADE, DIANE",
+		"analyst": "Michelle",
+		"status": "Flagged",
+		"sampleDate": "02/01/2016",
+		"dateToMaster": "01/01/2016"
+	}
+]

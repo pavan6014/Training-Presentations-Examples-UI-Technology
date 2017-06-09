@@ -1,0 +1,114 @@
+<div class="maintenance-items anchor-list">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="glyphicon glyphicon-wrench"></span> Maintenance</h1>      
+            </div>
+		</div>
+	</section>
+	<div class="container container-custom">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<div class="panel panel-default">
+				  <div class="panel-heading">User Administration</div>
+				  <div class="panel-body">
+					<ul>
+					   <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="">Update Analyst Profile and Access</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="">Update Security Access</a></li>
+					</ul>	
+				  </div>
+			</div>
+			<div class="panel panel-default">
+				  <div class="panel-heading">Active Administrator</div>
+				  <div class="panel-body">
+					<ul><li>
+						<p class="maintenance-items-p">Analyst ID: 11</p>
+						<input type="button" class="btn pull-right btn-primary" value="Reset" ng-click="resetActiveAdmin()"/>	
+					</li></ul>
+				  </div>
+			</div>
+			
+			<div class="panel panel-default">
+				  <div class="panel-heading">DBA Message</div>
+				  <div class="panel-body">
+				  <form name="dbaMsgForm" class="simple-form">
+					<div class="row" ng-repeat="message in dbaMessagesList">
+						
+						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<div class="form-group">
+							  <input type="checkbox" class="margin-top-10" id="{{$index}}" ng-model="dbaMessagesList[$index].selected" ng-change="selMsgs(); selectCheckbox(dbaMessagesList[$index].selected)">
+							</div>
+						</div>
+						<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+							<div class="form-group">
+								<input type="text" class="form-control" name="message{{$index}}" id="message{{$index}}"  ng-model="message.message"  placeholder="Message Text" ng-disabled = "!dbaMessagesList[$index].selected" uib-tooltip="Message text is required" tooltip-enable="dbaMsgForm.message{{$index}}.$invalid"  tooltip-is-open="dbaMsgForm.message{{$index}}.$invalid && (dbaMsgForm.message{{$index}}.$touched || submitted)" tooltip-trigger="mouseenter" ng-required="true">
+							</div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<input type="text" custom-datepicker ng-model="dbaMessagesList[$index].expiryDate" id="date" name="date" ng-disabled="!dbaMessagesList[$index].selected" uib-tooltip="Date is required" tooltip-enable="dbaMsgForm.date.$invalid && (dbaMsgForm.date.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true"/>						
+							
+						</div>
+					</form>
+					</div>
+					<div  ng-show="errorMsg">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<p class="alert alert-danger">{{errorMsg}}</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<button type="submit" id="btnNew" class="btn btn-md btn-primary" ng-click="addNewMsg();"><span class="glyphicon glyphicon-new-window button-icon"></span>Add</button>
+							<!-- <button type="submit" id="btnEdit" class="btn btn-md btn-primary" ng-click="editMsg()"><span class="glyphicon glyphicon-edit button-icon"></span>Edit</button> -->
+							<button type="submit" id="btnDelete" class="btn btn-md btn-primary" ng-click="test();" ng-controller="ModalDemoCtrl"><span class="glyphicon glyphicon-remove button-icon"></span>Delete</button>
+							<button type="submit" id="btnSave" class="btn btn-md btn-primary" ng-click="editMsg();" ><span class="glyphicon glyphicon-floppy-saved button-icon"></span>Update</button>
+						</div>
+					</div>
+				  </div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<div class="panel panel-default">
+				  <div class="panel-heading">Product Administration</div>
+				  <div class="panel-body">
+					<ul>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#/update-products" class="nav_link">Update Products Table</a> <button type="button" class="btn btn-primary" value="Products|Products by Companies" ng-click="releaseToAnalyst($event)">Release to Analyst</button></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="">Update Workstation Product Lists</a> <button type="button" class="btn btn-primary" value="Product Groups|Product by Groups" ng-click="releaseToAnalyst($event)">Release to Analyst</button></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#/product-packages" class="nav_link">Update Packages</a></li>
+					</ul>	
+				  </div>
+			</div>
+			<div class="panel panel-default">
+				  <div class="panel-heading">Stratum Administration</div>
+				  <div class="panel-body">
+					<ul>
+					    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#/stratum-info">Update Stratum Info</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="">Update Area Codes</a> <button type="button" class="btn btn-primary" value="Areacodes" ng-click="releaseToAnalyst($event)">Release to Analyst</button></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="">Delete Company</a></li>
+					</ul>
+				  </div>
+			</div>
+			<div class="panel panel-default">
+				  <div class="panel-heading">Configure Administration</div>
+				  <div class="panel-body">
+					<ul>
+					    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#/list-of-values" class="nav_link">Manage List of Values</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="">Toggle Application Online/Offline</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="">Delete Company</a></li>
+					</ul>
+				  </div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/ng-template" id="confirmationDeletePopUP.html">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Confirmation</h3>
+        </div>
+        <div class="modal-body">
+            <p class="maintenance-items-p">Are you sure you want to delete the DBA message.</p>
+        </div>
+		   <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">Delete</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+</script>	

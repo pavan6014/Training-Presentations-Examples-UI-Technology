@@ -1,0 +1,17 @@
+.hidden-section{display:none;}
+h4 {margin:0;}
+
+
+/* Jquery tab concept pure code styles here */
+ul.tab-main-list{background:#eee;margin: 0;}
+.tabitem{color: #333333;font-weight: bold;background-color: #e4e4e4;border-top-right-radius: 10px;border-top-left-radius: 10px;padding:10px;display:inline-block;border:1px solid #e4e4e4;}
+.tabactive {color: #ffffff;font-weight: bold;background-color: #92CFCF;outline: none;border-top-right-radius: 10px;border-top-left-radius: 10px;padding:10px;}
+.tabexpand{padding:10px;}
+
+.main-courosal {padding-left: 730px;padding-top: 70px;}
+.banner-img{background: url(../images/banner.png);height: 350px;width: auto;}
+.jshowoff-slidelinks a { background:url("../images/greenbut.png"); background-repeat:no-repeat;margin: 0 2px 0 3px;padding: 0 2px; }
+p.jshowoff-controls { display:none; }
+p.jshowoff-slidelinks  a{ text-decoration:none; }
+p.jshowoff-slidelinks {padding: 15px 0 0 890px;}
+.jshowoff-slidelinks a.jshowoff-1-active { background:url("../images/whitebutton.png") no-repeat;}

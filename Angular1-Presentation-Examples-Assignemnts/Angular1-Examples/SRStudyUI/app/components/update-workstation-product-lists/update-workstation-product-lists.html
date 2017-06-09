@@ -1,0 +1,176 @@
+<div>
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="fa fa-bar-chart"></span> Update Timings screen and Product lists</h1>      
+            </div>
+		</div>
+	</section>
+	<div class="container-fluid container-custom">
+		<section class="row">		
+			<form class="form-horizontal" role="form" name="workStationProductListForm" novalidate>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<div class="form-group">
+						<label class="control-label col-xs-3 col-sm-3 col-md-3 col-lg-3" for="stratumInfo">Stratum</label>
+							<div class="col-sm-9 col-md-9 col-lg-9">
+								<select id="stratumInfo" class="form-control" data-ng-model="stratumName" data-ng-options="company.Stratum for company in stratumInfo" data-ng-change="populatedProductGroups()">
+									<option value="">All</option>																	
+								</select>
+							</div>
+					</div>
+				</div>	
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<div class="form-group">
+					<label class="control-label col-sm-3 col-md-3 col-lg-3" for="companyName">Company</label>
+					<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">											
+						<input type="text" class="form-control" data-ng-value="stratumName.Company"/>							
+					</div>
+				</div>
+				</div>				
+				
+			</form>			
+		</section>
+		<section class="row">
+			<div class="form-group">				
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<button class="btn btn-md btn-primary" data-ng-click="duplicateButtonAction()">Duplicate</button>				
+					<button class="btn btn-md btn-primary" data-ng-click="groupButtonAction()">Groups</button>				
+					<button class="btn btn-md btn-primary" data-ng-click="productGroupAction()">Product Groups</button>				
+					<button class="btn btn-md btn-primary" data-ng-click="productLink()">Product table link</button>
+				</div>
+			</div>
+		</section>	
+		<section class="row">
+			<div class="form-group margin-top-20 margin-bot-20" data-ng-show="duplicateDropdownVisible">				
+				<div class="col-sm-3 col-md-3 col-lg-3">
+					<select id="duplicateDropdown" class="form-control" data-ng-model="duplicateDropdownName">
+						<option value="">Select</option>																
+					</select>
+				</div>
+				<button class="btn btn-md btn-primary">Pick</button>
+						
+			</div>		
+		</section>
+		<section class="row">
+			<div class="margin-top-20 margin-bot-20">
+				<label class="control-label col-sm-3">Groups</label>
+				<button class="btn btn-md btn-primary" data-ng-click="submitChanges()">Submit</button>
+			</div>
+		</section>	
+		<section class="row margin-bot-15">
+			<div class="form-group" data-ng-show="groupDropdownVisible">
+				<label class="control-label col-sm-1 col-md-1 col-lg-1" for="groupInfo">Gr#</label>
+				<div class="col-sm-2 col-md-2 col-lg-2">
+					<select id="groupInfo" class="form-control" data-ng-model="selectedGroupName" data-ng-options="groupName for groupName in productGroups" >
+							<option value="">Select</option>																
+					</select>
+				</div>
+				
+				<div class="col-sm-2 col-md-2 col-lg-2">
+					<input type="text" class="form-control" >
+				</div>
+				<div class="col-sm-2 col-md-2 col-lg-2">
+					<input type="text" class="form-control" >
+				</div>							
+			</div>		
+		</section>			
+		<section>
+		<div class="row product_activity_collection bg_tables" >
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 show-grid1" >
+				<div class="row" style="margin: 0;margin-right: -10px;">
+					<div class="col-xs-3 col-md-3 col_a_p_list">
+						<div data-ng-repeat="productAndActivityObj in productAndActivityCommonList.colOneCommonData" class="product_activity_list">
+							<span class="p_a_header">{{productAndActivityObj.listHeader}}</span>
+							<ul class="list-unstyled">
+								<li class="common_a_p_li" data-ng-repeat="productAndActivity in productAndActivityObj.listData">{{productAndActivity}}</li>
+							</ul>
+						</div>
+						<div data-ng-repeat="productAndActivityObj in productAndActivityList.colOneData" class="product_activity_list">
+							<span class="p_a_header">{{productAndActivityObj.listHeader}}</span>
+							<ul class="list-unstyled">
+								<li data-ng-repeat="productAndActivity in productAndActivityObj.listData">{{productAndActivity}}</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-3 col-md-3 col_a_p_list">
+						<div data-ng-repeat="productAndActivityObj in productAndActivityList.colTwoData" class="product_activity_list">
+							<span class="p_a_header">{{productAndActivityObj.listHeader}}</span>
+							<ul class="list-unstyled">
+								<li data-ng-repeat="productAndActivity in productAndActivityObj.listData">{{productAndActivity}}</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-3 col-md-3 col_a_p_list">
+						<div data-ng-repeat="productAndActivityObj in productAndActivityList.colThreeData" class="product_activity_list">
+							<span class="p_a_header">{{productAndActivityObj.listHeader}}</span>
+							<ul class="list-unstyled">
+								<li data-ng-repeat="productAndActivity in productAndActivityObj.listData">{{productAndActivity}}</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-3 col-md-3 col_a_p_list">
+						<div data-ng-repeat="productAndActivityObj in productAndActivityList.colFourData" class="product_activity_list">
+							<span class="p_a_header">{{productAndActivityObj.listHeader}}</span>
+							<ul class="list-unstyled">
+								<li data-ng-repeat="productAndActivity in productAndActivityObj.listData">{{productAndActivity}}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 show-grid2" >
+				<div class="row" style="margin: 0;margin-left: -10px;">
+					<div class="col-md-12" style="margin-bottom:5px;">
+						<div class="table-responsive table_selected_product_activity">          
+							<table class="table table-condensed table-hover" data-ng-show="groupDropdownVisible">
+								<thead>
+									<tr>									
+										<th class="th_product_activity">Product/Activity</th>
+										<th class="th_p_a_version">Order</th>
+										<th>Active</th>									
+										<th>Valid for current company</th>									
+									</tr>
+								</thead>
+								<tbody data-ng-repeat="x in allProductAndActivityListWithHeader" data-ng-if="x.key == selectedGroupName">						
+									<tr data-ng-repeat="y in x.value" ng-class="{'selected_groupEntry' : (selectedGroupEntryIndex == $index)}" data-ng-click="selectGroupEntry($index)">								
+										<td>
+										<select ng-init="groupNameModel = y" id="groupName" class="form-control" data-ng-model="groupNameModel" data-ng-options="y for y in x.value" data-ng-change="selectGroupEntryName(groupNameModel, $index)">
+											<option value="" hidden />														
+										</select>
+										<td>1</td>	
+										<td>Active</td>	
+										<td>Yes</td>										
+									</tr>								
+								</tbody>
+							</table>
+							<table class="table tabel-condensed" data-ng-hide="groupDropdownVisible">
+								<thead>
+									<tr>
+										<th class="th_product_activity">Group#</th>
+										<th class="th_p_a_version">Group</th>
+										<th>Column</th>									
+										<th>Order</th>									
+									</tr>
+								</thead>
+								<tbody>							
+									<tr data-ng-repeat="groupName1 in productGroups">									
+										<td>{{groupName1}}</td>									
+										<td>1</td>	
+										<td>Active</td>	
+										<td>Yes</td>										
+									</tr>								
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			</div>
+		</section>
+		
+			
+		
+	</div>
+</div>

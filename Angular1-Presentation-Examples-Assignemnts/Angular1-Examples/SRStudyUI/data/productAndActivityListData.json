@@ -1,0 +1,67 @@
+{
+	"colOneData": [
+		{	
+			"listType": "product",
+			"listHeader": "Access",
+			"listData": [{"listName" : "Access Ln Con CS", "desc": "Access Ln Con CS Description"},{"listName" : "Access Ln Con Ofr", "desc": "List Description"},{"listName" : "Access Ln Con Fill", "desc": "Access Ln Con Fill Description"},{"listName" : "CA Lifeline Service", "desc": "CA Lifeline Service Description"},{"listName" : "Lifeline Svc CS", "desc": "Lifeline Svc CS Description"},{"listName" : "Repair", "desc": "Repair Description"}]
+		},
+		{	
+			"listType": "product",
+			"listHeader": "Packages",
+			"listData": [{"listName" : "Pkg/Bundle - Con CS", "desc" : "Pkg/Bundle - Con CS Description"},{"listName" : "Pkg/Bundle - Con Ofr", "desc":"Pkg/Bundle - Con Ofr Description"},{"listName":"Pkg/Bundle - Con Fill","desc":"Pkg/Bundle - Con Fill Description"}]
+		},
+		{	
+			"listType": "product",
+			"listHeader": "Service Options",
+			"listData": [{"listName": "ATT LD/Local Toll CS", "desc": "ATT LD/Local Toll CS Description"},{"listName": "ATT LD/Local Toll Ofr", "desc": "ATT LD/Local Toll Ofr Description"},{"listName":"ATT LD/Local Toll Fill","desc":"ATT LD/Local Toll Fill Description"},{"listName":"Block Service CS","desc":"Block Service CS Description"},{"listName":"Listings CS","desc":"Listings CS Description"},{"listName":"Vertical Services CS","desc":"Vertical Services CS Description"},{"listName":"Vertical Services Ofr","desc":"Vertical Services Ofr Description"}]
+		}
+	],
+	"colTwoData": [
+		{	
+			"listType": "product",
+			"listHeader": "Internet (non UV)",
+			"listData":[{"listName": "Inet Dial-up CS", "desc": "Inet Dial-up CS Description"},{"listName": "Inet Wireless Modem CS", "desc": "Inet Wireless Modem CS Description"},{"listName": "Inet Wireless Modem Ofr", "desc": "Inet Wireless Modem Ofr Description"},{"listName": "Inet Wireless Modem Fill", "desc": "Inet Wireless Modem Fill Description"},{"listName": "Inet DSL Direct dry CS", "desc": "Inet  DSL Direct dry CS Description"},{"listName": "Inet DSL Direct dry Ofr", "desc": "Inet DSL Direct dry Ofr Description"}]
+		},
+		{	
+			"listType": "product",
+			"listHeader": "Other Services",
+			"listData":[{"listName": "ATT WLS Devices CS", "desc": "ATT WLS Devices Cs Description"},{"listName": "ATT WLS Devices Ofr", "desc": "ATT WLS Devices Ofr Description"},{"listName": "ATT WLS Devices Fill", "desc": "ATT WLS Devices Fill Description"},{"listName": "Digital Life CS", "desc": "Digital Life CS Description"},{"listName": "Digital Life Ofr", "desc": "Digital Life Ofr Description"},{"listName": "Digital Life Fill", "desc": "Digital Life Fill Description"}]
+		},
+		{	
+			"listType": "product",
+			"listHeader": "U-verse",
+			"listData":[{"listName": "U-verse Package CS", "desc": "U-verse Package CS Description"},{"listName": "UV Support Plus CS", "desc": "UV Support Plus CS Description"},{"listName": "UV Support Plus Ofr", "desc": "UV Support Plus Ofr Description"},{"listName": "UV Support Plus Fill", "desc": "UV Support Plus Fill Description"},{"listName": "IPDSL Packages CS", "desc": "IPDSL Packages CS Description"}]
+		},
+		{	
+			"listType": "product",
+			"listHeader": "Inside Wire",
+			"listData":[{"listName": "IW and Jacks Install Ofr", "desc": "IW and Jacks Install Ofr Description"},{"listName": "IW and Jacks Install CS Fill", "desc": "IW and Jacks Install CS Fill Description"},{"listName": "IW Maintenance Plan CS", "desc": "IW Maintenance Plan CS Description"},{"listName": "IW Maintenance Plan Ofr", "desc": "IW Maintenance Plan Ofr Description"},{"listName": "IW Maintenance Plan Fill", "desc": "IW Maintenance Plan Fill Description"}]
+		},
+		{	
+			"listType": "product",
+			"listHeader": "Unknown",
+			"listData":[{"listName": "Unknown 1", "desc": "Unknown 1 Description"},{"listName": "Unknown 2", "desc": "Unknown 2 Description"},{"listName": "Unknown 3", "desc": "Unknown 3 Description"}]
+		}
+	],
+	"colThreeData": [
+		{	
+			"listType": "product",
+			"listHeader": "Quad, Triple, Dble Play",
+			
+			"listData":[{"listName": "Double Play CS", "desc": "Double Play CS Description"},{"listName": "Double Play Ofr", "desc": "Double Play Ofr Description"},{"listName": "Double Play Fill", "desc": "Double Play Fill Description"},{"listName": "Triple Play CS", "desc": "Triple Play CS Description"},{"listName": "Triple Play Ofr", "desc": "Triple Play Ofr Description"},{"listName": "Triple Play Fill", "desc": "Triple Play Fill Description"},{"listName": "Quad Play CS", "desc": "Quad Play CS Description"},{"listName": "Quad Play Ofr", "desc": "Quad Play Ofr Description"},{"listName": "Quad Play Fill", "desc": "Quad Play Fill Description"},{"listName": "ATT Wireless cell CS", "desc": "ATT Wireless cell CS Description"},{"listName": "ATT Wireless cell Ofr", "desc": "ATT Wireless cell Ofr Description"},{"listName": "ATT Wireless cell Fill", "desc": "ATT Wireless cell Fill Description"},{"listName": "IPDSL Inet CS", "desc": "IPDSL Inet CS Description"},{"listName": "IPDSL Inet Ofr", "desc": "IPDSL Inet Ofr Description"},{"listName": "IPDSL Inet Fill", "desc": "IPDSL Inet Fill Description"},{"listName": "UV Data (Inet) CS", "desc": "UV Data (Inet) CS Description"},{"listName": "UV Data (Inet) Ofr", "desc": "UV Data (Inet) Ofr Description"},{"listName": "UV Data (Inet) Fill", "desc": "UV Data (Inet) Fill Description"},{"listName": "UV GigaPower CS", "desc": "UV GigaPower CS Description"},{"listName": "UV GigaPower Ofr", "desc": "UV GigaPower Ofr Description"},{"listName": "UV GigaPower Fill", "desc": "UV GigaPower Fill Description"}]
+		},
+		{	
+			"listType": "product",
+			"listHeader": "Order Fulfillment",
+			"listData":[{"listName": "Confirm & Recap Order", "desc": "Confirm & Recap Order Description"},{"listName": "Due Dates", "desc": "Due Dates Description"},{"listName": "Final Bill/Disc", "desc": "Final Bill/Disc Description"},{"listName": "Typing Orders", "desc": "Typing Orders Description"}]
+		}
+	],
+	"colFourData": [
+		{	
+			"listType": "product",
+			"listHeader": "Billing",
+			"listData":[{"listName": "ATT eBill", "desc": "ATT eBill Description"},{"listName": "ATT Wireless Billing", "desc": "ATT Wireless Billing Description"},{"listName": "ATT Wireless devices Billing", "desc": "ATT Wireless devices Billing Description"},{"listName": "Billing Related Other", "desc": "Billing Related Other Description"},{"listName": "CA Lifeline Billing", "desc": "CA Lifeline Billing Description"},{"listName": "Past Due Collections", "desc": "Past Due Collections Description"},{"listName": "Payment Arrangements", "desc": "Payment Arrangements Description"},{"listName": "DTV Billing", "desc": "DTV Billing Description"},{"listName": "DTV Past Due", "desc": "DTV Past Due Description"},{"listName": "DTV Payment Arrg", "desc": "DTV Payment Arrg Description"},{"listName": "Inet Past Due", "desc": "Inet Past Due Description"},{"listName": "U-verse Past Due", "desc": "U-verse Past Due Description"}]
+			
+		}
+	]
+}

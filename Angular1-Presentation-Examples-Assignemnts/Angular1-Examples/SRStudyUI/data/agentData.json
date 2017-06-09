@@ -1,0 +1,355 @@
+{
+	"agentList": [
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Pewaukee, WI",
+			"employeeName": "VAN NOSTRAND, DOLORES",
+			"count": 1,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Pontiac, MI",
+			"employeeName": "UPSHUR, JERRILYN",
+			"count": 1,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Brecksville, OH",
+			"employeeName": "GRANDE, MICHELLE  A",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "BILODEAU, MARY LYNN",
+			"count": 1,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "BUIKA, DAWN  M",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Brecksville, OH",
+			"employeeName": "DENT, RONEATHEA  G",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Chicago, IL",
+			"employeeName": "TROBL, LILLIAN  R",
+			"count": 0,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Brecksville, OH",
+			"employeeName": "LAGARDE, FRANK  G",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Brecksville, OH",
+			"employeeName": "MAYER, MADONNA  R",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "VOGRINC, CHERYL  A",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Chicago, IL",
+			"employeeName": "FAZIO, MARK  S",
+			"count": 1,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Saginaw, MI",
+			"employeeName": "SPANNAGEL, MELISSA",
+			"count": 1,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Pewaukee, WI",
+			"employeeName": "MCCORMACK, WILLIAM  A",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Chicago, IL",
+			"employeeName": "MARQUEZ, MILDRED",
+			"count": 0,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Pontiac, MI",
+			"employeeName": "GOODGAME, KATHY  M",
+			"count": 0,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Saginaw, MI",
+			"employeeName": "ASTBURY, KRISTINE",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Pewaukee, WI",
+			"employeeName": "BARKER, JAMERIA",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Pontiac, MI",
+			"employeeName": "HASLEY, CHARMANE",
+			"count": 0,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Detroit, MI",
+			"employeeName": "CLARK, YOLANDA  L",
+			"count": 0,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Pewaukee, WI",
+			"employeeName": "WILLIAMS, YOLANDA",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Detroit, MI",
+			"employeeName": "JOHNSON, DONNA  R",
+			"count": 0,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "PREUSS, RAYMOND  W",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Pontiac, MI",
+			"employeeName": "HANSON, CAROL  A",
+			"count": 0,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Pontiac, MI",
+			"employeeName": "LOGAN-MCVAY, NINA  M",
+			"count": 0,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "BLAND, KARLOS  P",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "THOMAS, JACQUELINE  Q",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "STOCKINGER, KIMBERLY  A",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Detroit, MI",
+			"employeeName": "MCCARY, SHANNON",
+			"count": 1,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "HUTTER, MARK  R",
+			"count": 1,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "LABELLE, DEAN  C",
+			"count": 1,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Pontiac, MI",
+			"employeeName": "GOLEMBIESKI, JACQUELINE",
+			"count": 0,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Pewaukee, WI",
+			"employeeName": "SEDLET, MARA  S",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "GEBHARDT, KRIS  L",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Detroit, MI",
+			"employeeName": "LEVERETT, PHYLLIS  S",
+			"count": 0,
+			"recordingSource": "Verint - BusBkOfc",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "MOY, KARI  A",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "GBL - Waukesha, WI",
+			"employeeName": "FALLS, KRISTIN  M",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Saginaw, MI",
+			"employeeName": "WILLIAMS, TRACEY",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Saginaw, MI",
+			"employeeName": "DOLBY, LAURA",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		},
+		{
+			"company": "AIT",
+			"stratum": "Business",
+			"office": "MWB - Pewaukee, WI",
+			"employeeName": "WADE, DIANE",
+			"count": 0,
+			"recordingSource": "Verint - Business",
+			"supervisor": ""
+		}
+	]
+}

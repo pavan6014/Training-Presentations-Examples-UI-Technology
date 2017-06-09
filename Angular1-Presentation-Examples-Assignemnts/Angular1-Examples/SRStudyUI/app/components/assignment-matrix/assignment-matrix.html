@@ -1,0 +1,57 @@
+<div>
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="fa fa-bar-chart"></span> Assignment Matrix</h1>      
+            </div>
+		</div>
+	</section>
+
+	<div class="container container-custom">	
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="table-responsive table_selection_agent">          
+					<table class="table table-bordered table-condensed table-matrix table-hover">
+						<thead>
+							<tr>
+								<th>2016 SRS Call Assignments</th>
+								<th colspan={{company.stratums.length}} ng-repeat="company in assignments.companies">{{company.companyName}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>   
+								<td>Febuary</td>  
+								<td ng-repeat = "stratum in sortedData">
+										{{stratum.stratumName}}
+								</td>
+								<td>Total</td>
+								<td>Max</td>
+									
+							</tr>
+							<tr ng-repeat = 'analyst in assignments.analysts'>
+								<td>{{analyst.analystName}}</td>
+								<td ng-repeat = 'target in analyst.target track by $index'>
+									<input type="text" ng-model="analyst.target[$index]" style="width:35px" ng-class="{greyBackground:target==-1}"/>
+								</td>
+								<td>{{getTotal(analyst.target)}}</td>
+								<td>{{analyst.max}}</td>	
+							</tr>
+							<tr>
+								<td>Total</td>  
+								<td ng-repeat = "stratum in sortedData"><!--this is pending for now -->
+										{{getColumnTotal(assignments.analysts,$index)}}
+								</td>
+							</tr>
+							<tr>   
+								<td>Statistcian min</td>  
+								<td ng-repeat = "stratum in sortedData">
+										{{stratum.statMin}}
+								</td>								
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>

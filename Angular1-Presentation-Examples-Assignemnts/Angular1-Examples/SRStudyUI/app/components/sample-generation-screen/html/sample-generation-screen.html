@@ -1,0 +1,143 @@
+<section class="sample_generation_section" ng-controller="sampleGenerationController">
+	<div class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+				<h1><span class="fa fa-bar-chart"></span> Results - Sample Generation</h1>
+			</div>
+		</div>
+	</div>
+	<div class="container container-custom">
+		<div class="row">
+			<div class="col-md-6">
+				<section class="row">
+					<div class="subsection-container">	
+						<div class="subsection-header">
+							<p>Stratum Information</p>
+							<a class="btn pull-right btn-primary margin10 nounderline" href="#/stratum-info">Launch</a>
+							<a class="btn pull-right btn-primary margin10 nounderline" ng-click="getStratumInfoReport()">Report</a>
+						</div>
+					</div>
+				</section>
+			
+				<section class="row">
+					<div class="subsection-container">		
+						<div class="subsection-header">
+							<ul>
+								<li><span class="pad10">Annual Sample Sizes</span></li>
+								<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><span class="pad10">Generate annual monthly sample sizes</span>
+										 <a class="btn pull-right btn-primary margin10 nounderline" ng-model="reportType" ng-click="getMonthlySamples('annual-report')">Run</a> </li>
+								<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><span class="pad10">Generate partial monthly sample sizes</span>
+										<a class="btn pull-right btn-primary margin10 nounderline" ng-model="reportType" ng-click="getMonthlySamples('partial-report')">Run</a> </li>
+								<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><span class="pad10">Monthly Sample sizes report</span>
+										<a class="btn pull-right btn-primary margin10 nounderline" ng-model="reportType" ng-click="getMonthlySamples('monthly-report')">Launch</a> </li>
+								<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><span class="pad10">Analysts Targets</span>
+										<a class="btn pull-right btn-primary margin10 nounderline" href="">Launch</a> </li>
+								<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><span class="pad10">Browse Monthly Sample Sizes</span>
+										<a class="btn pull-right btn-primary margin10 nounderline" ng-click="sampleGenerationService()" >Launch</a></li>
+							</ul>
+						</div>				
+					</div>
+				</section>
+				
+			<section class="row">
+				<div class="subsection-container">		
+					<div class="subsection-header">
+						<p>Define Universe Extract</p>
+						<a class="btn pull-right btn-primary margin10" href="#/universe-extract">Launch</a>
+					</div>				
+				</div>
+			</section>
+			
+			<section class="row">
+				<div class="subsection-container">		
+					<div class="subsection-header">
+							<p>Manage Company Sample Job Key</p>
+							<a class="btn pull-right btn-primary margin10" href="#/job-key-table">Launch</a>
+					</div>				
+				</div>
+			</section>
+			
+			<section class="row">
+				<div class="subsection-container">		
+					<div class="subsection-header">
+						<p>Manage Stratum Definitions</p>
+						<a class="btn pull-right btn-primary margin10" href="#/stratum-definition">Launch</a>
+						<a class="btn pull-right btn-primary margin10" href="#/stratum-definition-report">Report</a>
+					</div>			
+				</div>
+			</section>
+		
+			<section class="row">
+				<div class="subsection-container">		
+					<div class="subsection-header">
+						<p>Manage Assignment Matrix</p>
+						<a class="btn pull-right btn-primary margin10" href="#/assignment-matrix">Launch</a>
+					</div>				
+				</div>
+			</section>
+			
+			<section class="row">
+				<div class="subsection-container">		
+					<div class="subsection-header">
+							<p>Display Assignment Percentages</p>
+							<a class="btn pull-right btn-primary margin10" href="">Launch</a>
+					</div>				
+				</div>
+			</section>
+			
+			<section class="row">
+				<div class="subsection-container">		
+					<div class="subsection-header">
+							<p>Assign Workload by Company</p>
+							<a class="btn pull-right btn-primary margin10" href="#/sample-workload">Launch</a>
+							<a class="btn pull-right btn-primary margin10" href="">Report</a>
+					</div>				
+				</div>
+			</section>
+			
+			<section class="row">
+				<div class="subsection-container">		
+					<div class="subsection-header">
+							<p>Release Workload to Analysts</p>
+							<a class="btn pull-right btn-primary margin10" href="">Run</a>
+					</div>				
+				</div>
+			</section>
+		</div>
+		<div class="col-md-6">
+			<div class="rightSection">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<label for="currentMonth">Current Sample Month: </label><span id="currentMonth">04/01/2016</span>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<label for="elinkFileDate">Elink File Date: </label><span id="elinkFileDate">03/01/2020</span>
+				</div>
+				<div sticky-nav class="table-responsive table_selection_agent">
+					<table class="table table-condensed table-hover table-head-fixed">
+						<thead>
+						  <tr>
+							<th style="width:5%;"></th>
+							<th style="width:19%;">Company</th>
+							<th style="width:19%;">Last Date Generated</th>
+							<th style="width:19%;">Last Date Released</th>
+							<th style="width:19%;">Status</th>
+							<th style="width:19%;">Stratum Definition</th>
+						  </tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat = "statusItem in sampleStatusList">
+							<td style="width:5%;"><input type="radio" ng-model="companySel" name="companySel" value="{{statusItem.company}}" ng-click="selectCompany($index)"/></td>
+							<td style="width:19%;">{{statusItem.company}}</td>
+							<td style="width:19%;">{{statusItem.lastDteGenerated}}</td>
+							<td style="width:19%;">{{statusItem.lastDateReleased}}</td>
+							<td style="width:19%;">{{statusItem.status}}</td>
+							<td style="width:19%;">{{statusItem.stratumDefinition}}</td>
+						</tr>
+						</tbody>
+					 </table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>

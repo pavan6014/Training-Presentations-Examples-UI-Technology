@@ -1,0 +1,179 @@
+<div class="audit-reports">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="glyphicon glyphicon-book"></span> Analyst Sample Reports</h1>      
+            </div>
+		</div>
+	</section>
+	<div class="container container-custom">
+		<form class="form-horizontal" role="form" name="auditReportsForm" novalidate>
+			<section class="row">					
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-5 col-lg-5"  for="sampleMonth">Sample Month</label>
+							<div class="col-sm-7 col-md-7 col-lg-7">
+								<input type="text" custom-datepicker name="sampleMonth" ng-model="analystSample.sampleMonth" id="sample-month" uib-tooltip="Sample Month is required" tooltip-enable="auditReportsForm.sampleMonth.$invalid && (auditReportsForm.sampleMonth.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true">
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-5 col-lg-5"  for="company">Company</label>
+							<div class="col-sm-7 col-md-7 col-lg-7">
+								<select id="sampleCompany" class="form-control" name="company" data-ng-model="analystSample.sampledCompany" data-ng-options="company for company in sampleCompanyList" uib-tooltip="Company is required" tooltip-enable="auditReportsForm.company.$invalid && (auditReportsForm.company.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true">
+									<option value="">All</option>
+									<!-- <option data-ng-repeat="company in sampleCompanyList">{{company}}</option>
+									<option data-ng-selected="sampledCompany == all" data-ng-value="all">ALL</option> -->
+								</select>
+							</div>
+						</div>
+					</div>
+			</section>
+			<section class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label col-sm-5 col-md-5 col-lg-5"  for="begMonth">Beginning Month</label>
+						<div class="col-sm-7 col-md-7 col-lg-7">
+							<input type="text" custom-datepicker name="begMonth" ng-model="analystSample.begMonth" id="beg-month" uib-tooltip="Beginning Month is required" tooltip-enable="auditReportsForm.begMonth.$invalid && (auditReportsForm.begMonth.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true">
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label  class="control-label col-sm-5 col-md-5 col-lg-5"  for="endMonth">Ending Month</label>
+						<div class="col-sm-7 col-md-7 col-lg-7">
+							<input type="text" custom-datepicker ng-model="analystSample.endMonth" id="end-month" name="endMonth" uib-tooltip="Ending Month is required" tooltip-enable="auditReportsForm.endMonth.$invalid && (auditReportsForm.endMonth.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true">
+						</div>
+					</div>
+				</div>
+			</section>
+		
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10 ">
+				<p name="errorMsg" ng-model="errorMsg" ng-show="analystSample.begMonth > analystSample.endMonth" class="alert alert-danger">The beginning month must be earlier than Ending month.</p> 
+			</div>
+		</div>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Sample Status by Company</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('sample-status-by-company')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Sample Status by Office [1a]</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('sample-status-by-office')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Sample Status by Analyst[1b]</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('sample-status-by-analyst')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Sample Status Report(2)</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('sample-status-report')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Samples with Errors or Flags(2b)</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('samples-with-errors-or-flags')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Samples with Notes[3]</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('samples-with-notes')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Result Tracking 4</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('result-tracking')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Individual and Team Results</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('individual-team-results')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Update Stratum Objectives</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('update-stratum-objectives')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Stratum Result Report</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('stratum-result-report')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Analyst Metrics Report</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('analyst-metrics-report')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Analyst Progress Report</p>
+						<button class="btn pull-right btn-primary margin10" type="submit" ng-click="getAnalystSampleReports('analyst-progress-report')">Launch</button>
+					</div>
+				</div>			
+			</div>
+		</section>
+	</form>
+	</div>
+</div>

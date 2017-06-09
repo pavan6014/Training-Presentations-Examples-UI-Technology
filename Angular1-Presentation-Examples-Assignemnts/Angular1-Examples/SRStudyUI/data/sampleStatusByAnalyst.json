@@ -1,0 +1,184 @@
+{
+    "lists": [
+	{
+		"analyst": "Pamlvy",
+		"office": [
+			{
+				"officeName": "Office 1",
+				"stratum": "Stratum 1",
+				"employee": "Employee 1"
+			},
+			{
+				"officeName": "Office 2",
+				"stratum": "Stratum 2",
+				"employee": "Employee 2"
+			},
+			{
+				"officeName": "Office 3",
+				"stratum": "Stratum 3",
+				"employee": "Employee 3"
+			}	
+		]
+	},
+	{
+		"analyst": "Pamlvy 2",
+		"office": [
+			{
+				"officeName": "Office 1",
+				"stratum": "Stratum 1",
+				"employee": "Employee 1"
+			},
+			{
+				"officeName": "Office 2",
+				"stratum": "Stratum 2",
+				"employee": "Employee 2"
+			},
+			{
+				"officeName": "Office 3",
+				"stratum": "Stratum 3",
+				"employee": "Employee 3"
+			}	
+		]
+	},
+	{
+		"analyst": "Pamlvy 3",
+		"office": [
+			{
+				"officeName": "Office 1",
+				"stratum": "Stratum 1",
+				"employee": "Employee 1"
+			},
+			{
+				"officeName": "Office 2",
+				"stratum": "Stratum 2",
+				"employee": "Employee 2"
+			},
+			{
+				"officeName": "Office 3",
+				"stratum": "Stratum 3",
+				"employee": "Employee 3"
+			}	
+		]
+	},
+	{
+		"analyst": "Pamlvy 4",
+		"office": [
+			{
+				"officeName": "Office 1",
+				"stratum": "Stratum 1",
+				"employee": "Employee 1"
+			},
+			{
+				"officeName": "Office 2",
+				"stratum": "Stratum 2",
+				"employee": "Employee 2"
+			},
+			{
+				"officeName": "Office 3",
+				"stratum": "Stratum 3",
+				"employee": "Employee 3"
+			}	
+		]
+	},
+	{
+		"analyst": "Pamlvy 5",
+		"office": [
+			{
+				"officeName": "Office 1",
+				"stratum": "Stratum 1",
+				"employee": "Employee 1"
+			},
+			{
+				"officeName": "Office 2",
+				"stratum": "Stratum 2",
+				"employee": "Employee 2"
+			},
+			{
+				"officeName": "Office 3",
+				"stratum": "Stratum 3",
+				"employee": "Employee 3"
+			}	
+		]
+	},
+	{
+		"analyst": "Pamlvy 6",
+		"office": [
+			{
+				"officeName": "Office 1",
+				"stratum": "Stratum 1",
+				"employee": "Employee 1"
+			},
+			{
+				"officeName": "Office 2",
+				"stratum": "Stratum 2",
+				"employee": "Employee 2"
+			},
+			{
+				"officeName": "Office 3",
+				"stratum": "Stratum 3",
+				"employee": "Employee 3"
+			}	
+		]
+	},
+	{
+		"analyst": "Pamlvy 7",
+		"office": [
+			{
+				"officeName": "Office 1",
+				"stratum": "Stratum 1",
+				"employee": "Employee 1"
+			},
+			{
+				"officeName": "Office 2",
+				"stratum": "Stratum 2",
+				"employee": "Employee 2"
+			},
+			{
+				"officeName": "Office 3",
+				"stratum": "Stratum 3",
+				"employee": "Employee 3"
+			}	
+		]
+	},
+	{
+		"analyst": "Pamlvy 8",
+		"office": [
+			{
+				"officeName": "Office 1",
+				"stratum": "Stratum 1",
+				"employee": "Employee 1"
+			},
+			{
+				"officeName": "Office 2",
+				"stratum": "Stratum 2",
+				"employee": "Employee 2"
+			},
+			{
+				"officeName": "Office 3",
+				"stratum": "Stratum 3",
+				"employee": "Employee 3"
+			}	
+		]
+	},
+	{
+		"analyst": "Pamlvy 9",
+		"office": [
+			{
+				"officeName": "Office 1",
+				"stratum": "Stratum 1",
+				"employee": "Employee 1"
+			},
+			{
+				"officeName": "Office 2",
+				"stratum": "Stratum 2",
+				"employee": "Employee 2"
+			},
+			{
+				"officeName": "Office 3",
+				"stratum": "Stratum 3",
+				"employee": "Employee 3"
+			}	
+		]
+	}
+  ]
+}

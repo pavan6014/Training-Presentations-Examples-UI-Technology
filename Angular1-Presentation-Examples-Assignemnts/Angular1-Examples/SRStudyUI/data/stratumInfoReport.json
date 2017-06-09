@@ -1,0 +1,36 @@
+{	
+	"company": "ATT - Midwest",
+	"sampleMonth": "March, 2016",
+	"stratumInfo":[
+		{
+			"pDSDate":"2/20/2016",
+			"company": "AIT",
+			"stratum": "Business",
+			"marketSegment": "Business",
+			"headCount": "403",
+			"available": "403",
+			"sampleSize":"756",
+			"targetValids":"252"
+		},
+		{
+			"pDSDate":"2/20/2016",
+			"company": "AIT",
+			"stratum": "Business",
+			"marketSegment": "Business",
+			"headCount": "403",
+			"available": "403",
+			"sampleSize":"756",
+			"targetValids":"252"
+		},
+		{
+			"pDSDate":"2/20/2016",
+			"company": "AIT",
+			"stratum": "Business",
+			"marketSegment": "Business",
+			"headCount": "403",
+			"available": "403",
+			"sampleSize":"756",
+			"targetValids":"252"
+		}
+	]
+}

@@ -1,0 +1,387 @@
+<section class="update-products anchor-list">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+			   <h1><span class=""></span>Update Products</h1>      
+			</div>
+		</div>
+	</section>
+	
+	<div class="container-custom">
+		<form class="form-horizontal" role="form" name="updateProductsForm" novalidate>
+		<div>
+			<div class="row listPage-Row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toolbar_subsections">
+					<div class="toolbar_section">
+						<div class="col-sm-4 col-md-4">
+							<div class="btn-toolbar" ng-controller="ModalDemoCtrl">
+								<button ng-controller="ModalDemoCtrl" type="button" id="btnNew" class="btn btn-md btn-primary" ng-click="popupModalController({},addNewProduct,'addProductModal')"><span class="glyphicon glyphicon-new-window button-icon" ></span>New</button>
+								<button type="submit" id="btnEdit" class="btn btn-md btn-primary" ng-click="editUpdateProduct()" data-ng-disabled="isProductInActive"><span class="glyphicon glyphicon-edit button-icon"></span> Update</button>
+								<button type="button" id="btnCompany" class="btn btn-md btn-primary" data-ng-disabled="isProductInActive" ng-click="showUpdateCompanyModal()"><span class=" button-icon"></span>Companies</button>
+								
+							</div>
+						</div>
+						<div class="linked-pages-list col-sm-4 col-md-4">
+							<div class="well well-lg">
+							<a href="#/product-packages">Product Packages</a>
+							</div>
+						</div>
+						<div class="filters-list col-sm-3 col-md-3">
+							<div class="well well-lg">
+							<form name="activeInactiveForm">
+								<fieldset>
+								  <legend class="lg_value">Active/InActive</legend>
+									<div class="radio">
+										<label><input type="radio" for="active" name="productFilter" data-ng-change="applyfilter(false)" data-ng-model="radioFilter" id="radioActive" value="N" />Active</label>
+									</div>
+									<div class="radio">
+										<label><input type="radio" for="inactive" name="productFilter" data-ng-change="applyfilter(true)" data-ng-model="radioFilter" id="radioInActive" value="Y" />InActive</label>
+									</div>
+									<div class="radio">
+										<label><input type="radio" for="both" name="productFilter" data-ng-change="applyfilter(undefined)" data-ng-model="radioFilter" id="radioBoth" value="both" />Both</label>
+									</div>
+								</fieldset>
+						   </form>						
+							</div>
+						</div>
+						<div class="col-sm-1 col-md-1 export-list">
+							<div class="btn-toolbar">
+								<button type="button" id="btnNew" class="btn btn-md btn-primary" ng-click="exportProductData()"><span class="glyphicon glyphicon-new-window button-icon"></span>Export</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10 ">
+			<p ng-show="isProductInActive && !editCheckbox" class="alert alert-danger">Please select active checkbox.</p>
+			<p ng-show="isProductInActive && selectedFilter !=false && editCheckbox" class="alert alert-danger">This is an inactive product. You can only update companies on active products.</p>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="table-responsive table_selection_agent">
+				<toaster-container></toaster-container>
+					<table class="table table-condensed table-hover">
+						<thead>
+							<tr class="table_list_header">
+								<th>select</th>
+								<th ng-click="sort('productNumber')">Product Number <span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'productNumber'),'glyphicon-chevron-up':reverse && (sortKey == 'productNumber'),'glyphicon-chevron-down':!reverse && (sortKey == 'productNumber')}"></span></th>
+								<th ng-click="sort('productName')">Product Name <span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'productName'),'glyphicon-chevron-up':reverse && (sortKey == 'productName'),'glyphicon-chevron-down':!reverse && (sortKey == 'productName')}"></span></th>
+								<th class="min-width-100">Single Button</th>
+								<th class="min-width-100">Types</th>
+								<th class="min-width-100">Description</th>
+								<th>Billing</th>
+								<th class="min-width-100">Res/Bus</th>
+								<th class="min-width-100">Quantity</th>
+								<th class="min-width-100">Dispositions For N C TF and R</th>
+								<th class="min-width-100">Dispositions For D</th>
+								<th class="min-width-100">Dispositions For Inq</th>
+								<th class="min-width-100">Enter Product Description</th>
+								<th>Inactive</th>
+								<th>Archive Dates</th>
+								
+			
+							</tr>
+						</thead>
+						<tbody class="bg_tables">
+						
+						 <tr class="table_list_row" pagination-id="productListId" dir-paginate="product in productsList | filter:{inactive: selectedFilter} |orderBy:sortKey:reverse |itemsPerPage:5" >					
+						 <td> <!-- change name to name="editEnable" with webservice -->
+								<input type="checkbox" name="editEnable{{$index}}"  ng-model="product.editEnable"  ng-change="selectProduct(product); updateSelection(product.productNumber)">
+								
+							</td>
+							<td>{{product.productNumber}}</td>   
+							<td>{{product.productName}}</td>
+							<td> 
+								<select class="form-control" name="singleButton{{$index}}" ng-options="singleButton for singleButton in dropDownDetails.singleButtonNumber" data-ng-model="product.singleButtonNumber" ng-disabled="!product.editEnable" placement="bottom" uib-tooltip="Please enter single Button." tooltip-enable="updateProductsForm.singleButton{{index}}.$invalid && (updateProductsForm.singleButton.$touched || submitted)" tooltip-trigger="mouseenter" ng-required="product.editEnable">
+									<option value="">select</option>
+								</select>
+							</td>
+							<td>
+								<select id="productType" class="form-control" name="productType{{$index}}" ng-options="regulatoryType for regulatoryType in dropDownDetails.regulatoryType" data-ng-model="product.regulatoryType" ng-disabled="!product.editEnable" placement="bottom" uib-tooltip="Please enter Product Type." tooltip-enable="updateProductsForm.type{{$index}}.$invalid && (updateProductsForm.type{{$index}}.$touched || submitted)" tooltip-trigger="mouseenter" ng-required="product.editEnable">
+									<option value="">select</option>
+								</select>
+							</td>
+							<td> 
+								<select id="productDesc" class="form-control" name="productDesc{{$index}}" ng-options="regulatoryDesc for regulatoryDesc in dropDownDetails.regulatoryDesc" data-ng-model="product.regulatoryDesc" ng-disabled="!product.editEnable" placement="bottom" uib-tooltip="Please enter Product Description." tooltip-enable="updateProductsForm.productDesc{{$index}}.$invalid && (updateProductsForm.productDesc{{$index}}.$touched || submitted)" tooltip-trigger="mouseenter" ng-required="product.editEnable">
+									<option value="">Select</option>
+								</select>
+							</td>
+							<td>
+								 <input type="checkbox" ng-model="product.billing" name="billing{{$index}}" ng-disabled="!product.editEnable"/>
+							</td>
+							
+							<td>
+								<select class="form-control" data-ng-model="product.resBusFlag" ng-options="resBusFlag for resBusFlag in dropDownDetails.resBusFlag"  ng-disabled="!product.editEnable">
+									<option value="">select</option>
+								</select>
+							</td>							
+							
+							<td>
+								<select class="form-control" data-ng-model="product.quanTityFlag" ng-options="quanTityFlag for quanTityFlag in dropDownDetails.quanTityFlag" ng-disabled="!product.editEnable">
+									<option value="">select</option>
+							
+								</select>
+							</td>
+							<td>
+								<select class="form-control" data-ng-model="product.validType"  ng-disabled="!product.editEnable">
+									<option value="">select</option>
+									<option ng-repeat="validTypeObj in validTypeList" value={{validTypeObj.validType}}>{{validTypeObj.validType}}</option>
+								</select>										
+							</td>
+							<td> 
+								<select class="form-control" data-ng-model="product.validTypeD" ng-disabled="!product.editEnable">
+									<option value="">select</option>
+									<option ng-repeat="validTypeDObj in validTypeDList" value={{validTypeDObj.validTypeD}}>{{validTypeDObj.validTypeD}}</option>
+								</select>
+							</td>
+							<td>
+								<select class="form-control" data-ng-model="product.validTypeInq"  ng-disabled="!product.editEnable">
+									<option value="" selected="true">select</option>
+									<option ng-repeat="validTypeInqObj in validTypeInqList" value={{validTypeInqObj.validTypeInq}}>{{validTypeInqObj.validTypeInq}}</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="form-control" name="enterProductDescription" ng-model="product.help"  ng-disabled="!product.editEnable" placement="bottom" uib-tooltip="Please enter Product Description." tooltip-enable="updateProductsForm.enterProductDescription{{$index}}.$invalid && (updateProductsForm.enterProductDescription{{$index}}.$touched || submitted)" tooltip-trigger="mouseenter" ng-required="product.editEnable"/>
+							</td>
+							<td>
+								<input type="checkbox" ng-model="product.inactive" ng-disabled="!product.editEnable"/>
+							</td>
+							<td>
+							  <!--  <input type="text" class="form-control" name="archiveDate" ng-model="product.archiveDate"  ng-disabled="!product.editEnable" placement="bottom" uib-tooltip="Please enter archive date." tooltip-enable="updateProductsForm.archiveDate{{$index}}.$invalid && (updateProductsForm.archiveDate{{$index}}.$touched || submitted)" tooltip-trigger="mouseenter" ng-required="product.editEnable"/> -->
+							   <input type="text" class="form-control" name="archiveDate" ng-model="product.archiveDate"  ng-disabled="!product.editEnable" placement="bottom" />
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<dir-pagination-controls
+						max-size="5"
+						direction-links="true"
+						boundary-links="true"
+						pagination-id="productListId" class="margin-bot-20">
+				</dir-pagination-controls>
+			</div>
+	</div>
+	</form>	
+	</div>	
+	
+	
+	
+	
+	<!-- Update Product Companies Modal -->
+	<div id="updateCompanyModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Update Product Companies</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" role="form" name="updateCompanyForm">
+						
+					    <div class="form-group">
+						    <label class="control-label col-sm-4" for="productNumber">Product Number: {{selectedProduct.productNumber}}</label>
+						</div>
+						<div class="form-group">
+						    <label class="control-label col-sm-4" for="productName">Product Name: {{selectedProduct.productName}}</label>
+						</div>
+						<div class="form-group" style="padding-left: 1%;">
+							<button class="btn btn-primary update_save_btn" type="button" ng-click="ok()">Save</button>
+						</div>
+						<!-- {{companyList | json}} -->
+						<div class="table-responsive table_selection_agent">
+					      <table class="table table-condensed table-hover table-head-fixed">
+						    <thead>
+							  <tr class="table_list_header">
+								<th>Company</th>
+								<th>Valid for Company</th>
+								<th>Valid for Customer Company</th>
+							  </tr>
+						    </thead>
+							<tbody>
+								<tr class="table_list_row" data-ng-repeat="company in companyList">
+									<td>{{company.companyName}}</td>
+									<td><input type="checkbox" ng-model="company.isValidForComp" ng-change="validForComp"/></td>
+									<td><input type="checkbox" ng-model="company.isValidForCustComp" ng-change="validForCustComp"/></td>
+								</tr>
+							</tbody>
+					      </table>
+				        </div>	
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+<script type="text/ng-template" id="addProductModal.html">
+        <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h4 class="modal-title">Add New Product</h4>
+        </div>
+		<form class="form-horizontal" role="form" name="AddNewProduct" strategy="focusedAndDirtyOrSubmitted" focus-error="true" xt-form novalidate>
+                <div class="modal-body">
+					<div class="col-sm-12">
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="productNumber">Product Number:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+								  <input type="number" class="form-control" name="productNumber" value="" ng-model="newProductList.productNumber" xt-validation-tooltip placement="bottom" msg-required="Please enter Product Number." required>
+							  </div>  
+							</div>
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="productName">Product Name:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+								  <input type="text" class="form-control" value="" ng-model="newProductList.productName" xt-validation-tooltip placement="bottom" msg-required="Please enter Product Name."  required>
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="singleButton">Single Button:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+							  
+							   <select class="form-control" name="singleButton{{$index}}" ng-options="singleButton for singleButton in dropDownDetails.singleButtonNumber" data-ng-model="product.singleButtonNumber" placement="bottom" ng-required="product.editEnable" msg-required="Please enter Single Button."  required>
+									<option value="">select</option>
+								</select>
+								 <!--  <input type="text" class="form-control" value="" ng-model="newProductList.singleButtonNumber" xt-validation-tooltip placement="bottom" msg-required="Please enter Single Button."  required> -->
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="type">Type:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+							  <select id="productType" class="form-control" name="productType{{$index}}" ng-options="regulatoryType for regulatoryType in dropDownDetails.regulatoryType" data-ng-model="product.regulatoryType"  placement="bottom" uib-tooltip="Please enter Product Type."  ng-required="product.editEnable" msg-required="Please enter Type." required>
+									<option value="">select</option>
+								</select>
+								 <!--  <input type="text" class="form-control" value="" ng-model="newProductList.regulatoryType" xt-validation-tooltip placement="bottom" msg-required="Please enter Type." required> -->
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="description">Description:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+							  <select id="productDesc" class="form-control" name="productDesc{{$index}}" ng-options="regulatoryDesc for regulatoryDesc in dropDownDetails.regulatoryDesc" data-ng-model="product.regulatoryDesc" placement="bottom" ng-required="product.editEnable" msg-required="Please enter Description."  required>
+									<option value="">Select</option>
+								</select>
+								  <!-- <input type="text" class="form-control" value="" ng-model="newProductList.regulatoryDesc" xt-validation-tooltip placement="bottom" msg-required="Please enter Description."  required> -->
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="resOrBus">Res/Bus:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+							  <select class="form-control" data-ng-model="product.resBusFlag" ng-options="resBusFlag for resBusFlag in dropDownDetails.resBusFlag"  msg-required="Please enter Res/Bus"  required>
+									<option value="">select</option>
+								</select>
+								  <!-- <input type="text" class="form-control" value="" ng-model="newProductList.resBusFlag" xt-validation-tooltip placement="bottom" msg-required="Please enter Res/Bus"  required> -->
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="quantity">Quantity:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+							  <select class="form-control" data-ng-model="product.quanTityFlag" ng-options="quanTityFlag for quanTityFlag in dropDownDetails.quanTityFlag" msg-required="Please enter quantity." required>
+									<option value="">select</option>
+								</select>
+								  <!-- <input type="text" class="form-control" value="" ng-model="newProductList.quanTityFlag" xt-validation-tooltip placement="bottom" msg-required="Please enter quantity." required> -->
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="dispositionsForNCTFandR">Dispositions for N C TF and R:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+							  <select class="form-control" data-ng-model="product.validType"  >
+									<option value="">select</option>
+									<option ng-repeat="validTypeObj in validTypeList" value={{validTypeObj.validType}}>{{validTypeObj.validType}}</option>
+								</select>
+							  
+								 <!--  <input type="text" class="form-control" value="" ng-model="newProductList.validType" xt-validation-tooltip placement="bottom" msg-required="Please enter Dispositions for N C TF and R." required> -->
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="dispositionsForD">Dispositions for D:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+							  <select class="form-control" data-ng-model="product.validTypeD" ng-options="validTypeDObj.validTypeD for validTypeDObj in validTypeDList" msg-required="Please enter Dispositions for D." required>
+									<option value="">select</option>
+								</select>
+							  
+								 <!--  <input type="text" class="form-control" value="" ng-model="newProductList.validTypeD" xt-validation-tooltip placement="bottom" msg-required="Please enter Dispositions for D." required> -->
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="dispositionsForInq">Dispositions for Inq:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+							  <select class="form-control" data-ng-model="product.validTypeInq" ng-options="validTypeInqObj.validTypeInq for validTypeInqObj in validTypeInqList" msg-required="Please enter Dispositions for Inq." required>
+									<option value="" selected="true">select</option>
+								</select>
+								  <!-- <input type="text" class="form-control" value="" ng-model="newProductList.validTypeInq" xt-validation-tooltip placement="bottom" msg-required="Please enter Dispositions for Inq." required> -->
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="control-label col-sm-4 col-md-4 col-lg-4" for="enterProductDescription">Enter Description:<span class="asterisk">*</span></label>
+							  <div class="col-sm-7 col-md-7 col-lg-7">
+								  <input type="text" class="form-control" value="" ng-model="newProductList.help" xt-validation-tooltip placement="bottom" msg-required="Please enter Description." required>
+							  </div>
+							</div>
+							
+					</div>
+				</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" type="submit" ng-disabled="AddNewProduct.$invalid || AddNewProduct_1.$invalid" ng-click="ok()">Save</button>
+				<button class="btn btn-warning" type="button" data-dismiss="modal" ng-click="cancel()">Cancel</button>
+			</div>
+		</form>			
+    </script>
+
+
+
+<!--<script type="text/ng-template" id="updateProductCompany.html">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Update Product Companies</h3>
+        </div>
+        <div class="modal-body">
+            <div class="col-sm-12">
+				<form class="form-horizontal" role="form">
+						<div class="form-group">
+						  <label class="control-label col-sm-4" for="productNumber">Product Number:</label>
+						</div>
+						<div class="form-group">
+						  <label class="control-label col-sm-4" for="productName">Product Name:</label>
+						</div>
+						<div class="form-group ">
+							<button class="btn btn-primary update_save_btn" type="button" ng-click="ok()">Save</button>
+						</div>
+						
+						<div class="table-responsive table_selection_agent">
+					     <table class="table table-condensed table-hover table-head-fixed">
+						<thead>
+						  <tr>
+							<th>Company</th>
+							<th>Valid for Company</th>
+							<th>Valid for Customer Company</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td>
+							</td>
+							<td><input type="checkbox" /></td>
+							<td><input type="checkbox" /></td>
+							
+						  </tr>
+						   <tr>
+							<td></td>
+							<td><input type="checkbox" /></td>
+							<td><input type="checkbox" /></td>
+						  </tr>
+						  <tr>
+							<td></td>
+							<td><input type="checkbox" /></td>
+							<td><input type="checkbox" /></td>
+						  </tr>
+						</tbody>
+					  </table>
+				    </div>
+				</form>
+			</div>
+        </div>
+</script>-->
+
+
+		
+

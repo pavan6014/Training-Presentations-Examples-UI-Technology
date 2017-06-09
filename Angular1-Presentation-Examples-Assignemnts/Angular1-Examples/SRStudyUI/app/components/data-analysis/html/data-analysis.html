@@ -1,0 +1,146 @@
+<div class="official-results">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="fa fa-bar-chart"></span> Data Analysis</h1>      
+            </div>
+		</div>
+	</section>
+	<div class="container container-custom">
+		<form class="form-horizontal" name="dataAnalysisForm" role="form" novalidate>
+		<!-- <span ng-show="checkError && (dataAnalysisForm.pickDesc.$invalid  || dataAnalysisForm.pickProduct.$invalid)" class="inactive_Error">Must Select Pick Product and Pick Description for this Report !!!</span> -->
+			<section class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-5 col-lg-5" for="company">Company</label>
+							<div class="col-sm-7 col-md-7 col-lg-7">
+								<select id="sampleCompany" class="form-control" name="sampleCompany" data-ng-model="sampledCompany" data-ng-options="company for company in sampleCompanyList" tooltip-enable="dataAnalysisForm.sampleCompany.$invalid && (dataAnalysisForm.sampleCompany.$touched || submitted)"  tooltip-trigger="mouseenter" required>
+									<option value="">Select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-5 col-lg-5" for="start-month">Beginning Month</label>
+							<div class="col-sm-7 col-md-7 col-lg-7">
+								<input type="date" custom-datepicker ng-model="begMonth" name="begMonth" id="beg-month" uib-tooltip="Beginning month is required" tooltip-enable="dataAnalysisForm.begMonth.$invalid && (dataAnalysisForm.begMonth.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true">
+							</div>
+						</div>
+					</div>					
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<div class="form-group">
+							<label class="control-label col-sm-5 col-md-5 col-lg-5" for="end-month">Ending Month</label>
+							<div class="col-sm-7 col-md-7 col-lg-7">
+								<input type="date" custom-datepicker ng-model="endMonth" name="endMonth" id="end-month" uib-tooltip="End month is required" tooltip-enable="dataAnalysisForm.endMonth.$invalid && (dataAnalysisForm.endMonth.$touched || submitted)"  tooltip-trigger="mouseenter" ng-required="true">
+							</div>
+						</div>
+					</div>
+			</section>
+			<section class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<div class="form-group"> 
+											
+						<label class="control-label col-sm-5 col-md-5 col-lg-5" for="description">Pick Description</label>
+						<div class="col-sm-7 col-md-7 col-lg-7">
+							<select id="description" class="form-control" name="pickDesc" ng-model="pickDesc" id="pickDesc" ng-options="pickDesc for pickDesc in samplePickDescList" uib-tooltip="Please Enter Pick Description" tooltip-enable="dataAnalysisForm.pickDesc.$invalid && (dataAnalysisForm.pickDesc.$touched || submitted)"  tooltip-trigger="mouseenter" required>
+								<option value="">Select</option>
+							</select>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">	
+					<div class="form-group">
+						<label class="control-label col-sm-5 col-md-5 col-lg-5" for="product">Pick Product</label>
+						<div class="col-sm-7 col-md-7 col-lg-7">
+							<select id="product" class="form-control" name="pickProduct" ng-model="pickProduct" id="pickProduct" ng-options="pickProduct for pickProduct in samplePickProductList" uib-tooltip="Please enter Pick Product" tooltip-enable="dataAnalysisForm.pickProduct.$invalid && (dataAnalysisForm.pickProduct.$touched || submitted)"  tooltip-trigger="mouseenter" required>
+								<option value="">Select</option>								
+							</select>
+						</div>
+					</div>
+				</div>
+			</section>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10 ">
+				<p name="errorMsg" ng-model="errorMsg" ng-show="begMonth > endMonth" class="alert alert-danger">The begining month must be earlier than Ending month.</p> 
+				<!-- <p name="monthErrorMsg" ng-model="monthErrorMsg" ng-show="checkMandatoryError && (dataAnalysisForm.begMonth.$invalid  || dataAnalysisForm.endMonth.$invalid)" class="alert alert-danger">Must Select  Beginning and Ending Months for this Report !!!</p>
+				<p name="requiredErrorMsg" ng-model="requiredErrorMsg" ng-show="checkError && (dataAnalysisForm.pickProduct.$error.required  || dataAnalysisForm.pickDesc.$error.required || dataAnalysisForm.begMonth.$invalid  || dataAnalysisForm.endMonth.$invalid)" class="alert alert-danger">Please select Beginning Month, End Month, Pick Product and Pick Description for this Report !!!</p> -->
+			</div>
+		</div>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">		
+				<div class="subsection-container">
+					<div class="subsection-header">
+							<p>Original data by Disp [1]</p>
+							<input class="btn pull-right btn-primary margin10" type="submit" ng-click = "getDataAnalysisReport('original-data-by-disp-report')"></input>
+					</div>
+				</div>				
+			</div>
+		</section>
+		
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Original data by Order Type [2]</p>
+						<input class="btn pull-right btn-primary margin10" type="submit" ng-click = "getDataAnalysisReport('original-data-by-order-type')"></input>
+					</div>
+				</div>		
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">		
+				<div class="subsection-container">	
+					<div class="subsection-header">
+						<p>Statistician Data</p>
+						<div class="export-list">							
+								<input class="btn pull-right btn-primary margin10" type="submit" value="Launch" ng-click = "exportSatisfactionData()"></input>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Order Typing that can't be allocated [5]</p>
+						<input class="btn pull-right btn-primary margin10" type="submit" value="Launch" ng-click = "getDataAnalysisReport('')"></input>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Products secs > 300 [6]</p>
+						<input class="btn pull-right btn-primary margin10" type="submit" value="Launch" ng-click = "getDataAnalysisReport('product-secs-report')"></input>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Geographic Analysis Reports</p>
+						<input class="btn pull-right btn-primary margin10" type="submit" value="Launch" ng-click = "getDataAnalysisReport('')"></input>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+					<div class="subsection-header">
+						<p>Navigator Extracts</p>
+						<input class="btn pull-right btn-primary margin10" type="submit" value="Launch" ng-click = "getDataAnalysisReport('navigator-extracts')"></input>
+					</div>
+				</div>			
+			</div>
+		</section>
+	</div>
+	</form>
+</div>

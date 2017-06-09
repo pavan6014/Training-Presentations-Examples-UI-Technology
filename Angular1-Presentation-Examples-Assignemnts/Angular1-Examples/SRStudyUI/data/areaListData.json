@@ -1,0 +1,1269 @@
+[{
+	"areacode": "912",
+	"state": "GA",
+	"company": "SE"
+}, {
+	"areacode": "913",
+	"state": "KS",
+	"company": "SW"
+}, {
+	"areacode": "914",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "915",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "916",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "917",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "918",
+	"state": "OK",
+	"company": "SW"
+}, {
+	"areacode": "919",
+	"state": "NC",
+	"company": "SE"
+}, {
+	"areacode": "920",
+	"state": "WI",
+	"company": "MW"
+}, {
+	"areacode": "925",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "928",
+	"state": "AZ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "930",
+	"state": "IN",
+	"company": "MW"
+}, {
+	"areacode": "931",
+	"state": "TN",
+	"company": "SE"
+}, {
+	"areacode": "936",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "937",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "938",
+	"state": "AL",
+	"company": "SE"
+}, {
+	"areacode": "940",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "941",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "947",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "949",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "951",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "952",
+	"state": "MN",
+	"company": "Out21ATT"
+}, {
+	"areacode": "954",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "956",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "959",
+	"state": "CT",
+	"company": "East"
+}, {
+	"areacode": "970",
+	"state": "CO",
+	"company": "Out21ATT"
+}, {
+	"areacode": "971",
+	"state": "OR",
+	"company": "Out21ATT"
+}, {
+	"areacode": "972",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "973",
+	"state": "NJ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "978",
+	"state": "MA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "979",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "980",
+	"state": "NC",
+	"company": "SE"
+}, {
+	"areacode": "984",
+	"state": "NC",
+	"company": "SE"
+}, {
+	"areacode": "985",
+	"state": "LA",
+	"company": "SE"
+}, {
+	"areacode": "989",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "CKTMW",
+	"state": "MW",
+	"company": "MW Circuit"
+}, {
+	"areacode": "CKTSE",
+	"state": "SE",
+	"company": "SE Circuit"
+}, {
+	"areacode": "CKTSW",
+	"state": "SW",
+	"company": "SW Circuit"
+}, {
+	"areacode": "CKTW",
+	"state": "West",
+	"company": "West Circt"
+}, {
+	"areacode": "WBAN",
+	"state": "Cell",
+	"company": "ATTWireles"
+}, {
+	"areacode": "714",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "718",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "731",
+	"state": "TN",
+	"company": "SE"
+}, {
+	"areacode": "740",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "760",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "765",
+	"state": "IN",
+	"company": "MW"
+}, {
+	"areacode": "773",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "781",
+	"state": "MA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "805",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "810",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "815",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "828",
+	"state": "NC",
+	"company": "SE"
+}, {
+	"areacode": "843",
+	"state": "SC",
+	"company": "SE"
+}, {
+	"areacode": "850",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "858",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "863",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "866",
+	"state": "MD",
+	"company": "Out21ATT"
+}, {
+	"areacode": "907",
+	"state": "AK",
+	"company": "Out21ATT"
+}, {
+	"areacode": "067",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "085",
+	"state": "WI",
+	"company": "MW"
+}, {
+	"areacode": "091",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "203",
+	"state": "CT",
+	"company": "Out21ATT"
+}, {
+	"areacode": "215",
+	"state": "PA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "229",
+	"state": "GA",
+	"company": "SE"
+}, {
+	"areacode": "251",
+	"state": "AL",
+	"company": "SE"
+}, {
+	"areacode": "262",
+	"state": "WI",
+	"company": "MW"
+}, {
+	"areacode": "301",
+	"state": "MD",
+	"company": "Out21ATT"
+}, {
+	"areacode": "312",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "319",
+	"state": "IA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "339",
+	"state": "MA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "402",
+	"state": "NE",
+	"company": "Out21ATT"
+}, {
+	"areacode": "414",
+	"state": "WI",
+	"company": "MW"
+}, {
+	"areacode": "425",
+	"state": "WA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "479",
+	"state": "AR",
+	"company": "SW"
+}, {
+	"areacode": "504",
+	"state": "LA",
+	"company": "SE"
+}, {
+	"areacode": "512",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "520",
+	"state": "AZ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "563",
+	"state": "IA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "601",
+	"state": "MS",
+	"company": "SE"
+}, {
+	"areacode": "608",
+	"state": "WI",
+	"company": "MW"
+}, {
+	"areacode": "616",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "626",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "641",
+	"state": "IA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "682",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "707",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "716",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "747",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "769",
+	"state": "MS",
+	"company": "SE"
+}, {
+	"areacode": "785",
+	"state": "KS",
+	"company": "SW"
+}, {
+	"areacode": "806",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "817",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "847",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "862",
+	"state": "NJ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "909",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "068",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "086",
+	"state": "CT",
+	"company": "Out21ATT"
+}, {
+	"areacode": "202",
+	"state": "DC",
+	"company": "Out21ATT"
+}, {
+	"areacode": "210",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "217",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "228",
+	"state": "MS",
+	"company": "SE"
+}, {
+	"areacode": "248",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "260",
+	"state": "IN",
+	"company": "MW"
+}, {
+	"areacode": "276",
+	"state": "VA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "307",
+	"state": "WY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "317",
+	"state": "IN",
+	"company": "MW"
+}, {
+	"areacode": "325",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "340",
+	"state": "VI",
+	"company": "Out21ATT"
+}, {
+	"areacode": "364",
+	"state": "KY",
+	"company": "SE"
+}, {
+	"areacode": "406",
+	"state": "MT",
+	"company": "Out21ATT"
+}, {
+	"areacode": "413",
+	"state": "MA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "435",
+	"state": "UT",
+	"company": "Out21ATT"
+}, {
+	"areacode": "484",
+	"state": "PA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "507",
+	"state": "MN",
+	"company": "Out21ATT"
+}, {
+	"areacode": "516",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "541",
+	"state": "OR",
+	"company": "Out21ATT"
+}, {
+	"areacode": "571",
+	"state": "VA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "602",
+	"state": "AZ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "609",
+	"state": "NJ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "620",
+	"state": "KS",
+	"company": "SW"
+}, {
+	"areacode": "631",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "669",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "703",
+	"state": "VA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "719",
+	"state": "CO",
+	"company": "Out21ATT"
+}, {
+	"areacode": "732",
+	"state": "NJ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "774",
+	"state": "MA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "804",
+	"state": "VA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "831",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "848",
+	"state": "NJ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "865",
+	"state": "TN",
+	"company": "SE"
+}, {
+	"areacode": "908",
+	"state": "NJ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "000",
+	"state": "Othr",
+	"company": "Telco"
+}, {
+	"areacode": "063",
+	"state": "OK",
+	"company": "SW"
+}, {
+	"areacode": "064",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "081",
+	"state": "IL",
+	"company": "MW"
+}, {
+	"areacode": "082",
+	"state": "IN",
+	"company": "MW"
+}, {
+	"areacode": "083",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "084",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "087",
+	"state": "AR",
+	"company": "SW"
+}, {
+	"areacode": "088",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "089",
+	"state": "KS",
+	"company": "SW"
+}, {
+	"areacode": "090",
+	"state": "MO",
+	"company": "SW"
+}, {
+	"areacode": "0ATT",
+	"state": "29",
+	"company": "Out21ATT"
+}, {
+	"areacode": "116",
+	"state": "NV",
+	"company": "W"
+}, {
+	"areacode": "166",
+	"state": "NV",
+	"company": "W"
+}, {
+	"areacode": "201",
+	"state": "NJ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "205",
+	"state": "AL",
+	"company": "SE"
+}, {
+	"areacode": "206",
+	"state": "WA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "207",
+	"state": "ME",
+	"company": "Out21ATT"
+}, {
+	"areacode": "208",
+	"state": "ID",
+	"company": "Out21ATT"
+}, {
+	"areacode": "209",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "212",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "213",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "214",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "216",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "218",
+	"state": "MN",
+	"company": "Out21ATT"
+}, {
+	"areacode": "219",
+	"state": "IN",
+	"company": "MW"
+}, {
+	"areacode": "220",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "224",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "225",
+	"state": "LA",
+	"company": "SE"
+}, {
+	"areacode": "231",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "234",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "239",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "240",
+	"state": "MD",
+	"company": "Out21ATT"
+}, {
+	"areacode": "252",
+	"state": "NC",
+	"company": "SE"
+}, {
+	"areacode": "253",
+	"state": "WA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "254",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "256",
+	"state": "AL",
+	"company": "SE"
+}, {
+	"areacode": "267",
+	"state": "PA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "269",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "270",
+	"state": "KY",
+	"company": "SE"
+}, {
+	"areacode": "281",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "302",
+	"state": "DE",
+	"company": "Out21ATT"
+}, {
+	"areacode": "303",
+	"state": "CO",
+	"company": "Out21ATT"
+}, {
+	"areacode": "304",
+	"state": "WV",
+	"company": "Out21ATT"
+}, {
+	"areacode": "305",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "308",
+	"state": "NE",
+	"company": "Out21ATT"
+}, {
+	"areacode": "309",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "310",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "313",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "314",
+	"state": "MO",
+	"company": "SW"
+}, {
+	"areacode": "315",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "316",
+	"state": "KS",
+	"company": "SW"
+}, {
+	"areacode": "318",
+	"state": "LA",
+	"company": "SE"
+}, {
+	"areacode": "320",
+	"state": "MN",
+	"company": "Out21ATT"
+}, {
+	"areacode": "321",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "323",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "330",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "331",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "334",
+	"state": "AL",
+	"company": "SE"
+}, {
+	"areacode": "336",
+	"state": "NC",
+	"company": "SE"
+}, {
+	"areacode": "337",
+	"state": "LA",
+	"company": "SE"
+}, {
+	"areacode": "347",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "351",
+	"state": "MA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "352",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "360",
+	"state": "WA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "361",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "386",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "401",
+	"state": "RI",
+	"company": "Out21ATT"
+}, {
+	"areacode": "404",
+	"state": "GA",
+	"company": "SE"
+}, {
+	"areacode": "405",
+	"state": "OK",
+	"company": "SW"
+}, {
+	"areacode": "407",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "408",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "409",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "410",
+	"state": "MD",
+	"company": "Out21ATT"
+}, {
+	"areacode": "412",
+	"state": "PA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "415",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "417",
+	"state": "MO",
+	"company": "SW"
+}, {
+	"areacode": "419",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "423",
+	"state": "TN",
+	"company": "SE"
+}, {
+	"areacode": "424",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "430",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "432",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "434",
+	"state": "VA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "440",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "443",
+	"state": "MD",
+	"company": "Out21ATT"
+}, {
+	"areacode": "469",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "475",
+	"state": "CT",
+	"company": "Out21ATT"
+}, {
+	"areacode": "478",
+	"state": "GA",
+	"company": "SE"
+}, {
+	"areacode": "480",
+	"state": "AZ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "501",
+	"state": "AR",
+	"company": "SW"
+}, {
+	"areacode": "502",
+	"state": "KY",
+	"company": "SE"
+}, {
+	"areacode": "503",
+	"state": "OR",
+	"company": "Out21ATT"
+}, {
+	"areacode": "505",
+	"state": "NM",
+	"company": "Out21ATT"
+}, {
+	"areacode": "508",
+	"state": "MA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "509",
+	"state": "WA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "510",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "513",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "515",
+	"state": "IA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "517",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "518",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "530",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "534",
+	"state": "WI",
+	"company": "MW"
+}, {
+	"areacode": "539",
+	"state": "OK",
+	"company": "SW"
+}, {
+	"areacode": "540",
+	"state": "VA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "551",
+	"state": "NJ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "559",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "561",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "562",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "567",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "570",
+	"state": "PA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "573",
+	"state": "MO",
+	"company": "SW"
+}, {
+	"areacode": "574",
+	"state": "IN",
+	"company": "MW"
+}, {
+	"areacode": "575",
+	"state": "NM",
+	"company": "Out21ATT"
+}, {
+	"areacode": "580",
+	"state": "OK",
+	"company": "SW"
+}, {
+	"areacode": "585",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "586",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "603",
+	"state": "NH",
+	"company": "Out21ATT"
+}, {
+	"areacode": "605",
+	"state": "SD",
+	"company": "Out21ATT"
+}, {
+	"areacode": "606",
+	"state": "KY",
+	"company": "SE"
+}, {
+	"areacode": "607",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "610",
+	"state": "PA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "612",
+	"state": "MN",
+	"company": "Out21ATT"
+}, {
+	"areacode": "614",
+	"state": "OH",
+	"company": "MW"
+}, {
+	"areacode": "615",
+	"state": "TN",
+	"company": "SE"
+}, {
+	"areacode": "617",
+	"state": "MA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "618",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "619",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "623",
+	"state": "AZ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "628",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "630",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "636",
+	"state": "MO",
+	"company": "SW"
+}, {
+	"areacode": "646",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "650",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "651",
+	"state": "MN",
+	"company": "Out21ATT"
+}, {
+	"areacode": "657",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "660",
+	"state": "MO",
+	"company": "SW"
+}, {
+	"areacode": "661",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "662",
+	"state": "MS",
+	"company": "SE"
+}, {
+	"areacode": "678",
+	"state": "GA",
+	"company": "SE"
+}, {
+	"areacode": "701",
+	"state": "ND",
+	"company": "Out21ATT"
+}, {
+	"areacode": "702",
+	"state": "NV",
+	"company": "W"
+}, {
+	"areacode": "704",
+	"state": "NC",
+	"company": "SE"
+}, {
+	"areacode": "706",
+	"state": "GA",
+	"company": "SE"
+}, {
+	"areacode": "708",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "712",
+	"state": "IA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "713",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "715",
+	"state": "WI",
+	"company": "MW"
+}, {
+	"areacode": "717",
+	"state": "PA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "720",
+	"state": "CO",
+	"company": "Out21ATT"
+}, {
+	"areacode": "724",
+	"state": "PA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "725",
+	"state": "NV",
+	"company": "W"
+}, {
+	"areacode": "727",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "734",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "737",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "754",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "757",
+	"state": "VA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "762",
+	"state": "GA",
+	"company": "SE"
+}, {
+	"areacode": "763",
+	"state": "MN",
+	"company": "Out21ATT"
+}, {
+	"areacode": "770",
+	"state": "GA",
+	"company": "SE"
+}, {
+	"areacode": "772",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "775",
+	"state": "NV",
+	"company": "W"
+}, {
+	"areacode": "779",
+	"state": "IL ",
+	"company": "MW"
+}, {
+	"areacode": "786",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "801",
+	"state": "UT",
+	"company": "Out21ATT"
+}, {
+	"areacode": "802",
+	"state": "VT",
+	"company": "Out21ATT"
+}, {
+	"areacode": "803",
+	"state": "SC",
+	"company": "SE"
+}, {
+	"areacode": "808",
+	"state": "HI",
+	"company": "Out21ATT"
+}, {
+	"areacode": "812",
+	"state": "IN",
+	"company": "MW"
+}, {
+	"areacode": "813",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "814",
+	"state": "PA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "816",
+	"state": "MO",
+	"company": "SW"
+}, {
+	"areacode": "818",
+	"state": "CA",
+	"company": "W"
+}, {
+	"areacode": "830",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "832",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "845",
+	"state": "NY",
+	"company": "Out21ATT"
+}, {
+	"areacode": "856",
+	"state": "NJ",
+	"company": "Out21ATT"
+}, {
+	"areacode": "857",
+	"state": "MA",
+	"company": "Out21ATT"
+}, {
+	"areacode": "859",
+	"state": "KY",
+	"company": "SE"
+}, {
+	"areacode": "860",
+	"state": "CT",
+	"company": "Out21ATT"
+}, {
+	"areacode": "864",
+	"state": "SC",
+	"company": "SE"
+}, {
+	"areacode": "870",
+	"state": "AR",
+	"company": "SW"
+}, {
+	"areacode": "872",
+	"state": "IL",
+	"company": "MW"
+}, {
+	"areacode": "901",
+	"state": "TN",
+	"company": "SE"
+}, {
+	"areacode": "903",
+	"state": "TX",
+	"company": "SW"
+}, {
+	"areacode": "904",
+	"state": "FL",
+	"company": "SE"
+}, {
+	"areacode": "906",
+	"state": "MI",
+	"company": "MW"
+}, {
+	"areacode": "910",
+	"state": "NC",
+	"company": "SE"
+}]

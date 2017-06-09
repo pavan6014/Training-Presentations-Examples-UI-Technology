@@ -1,0 +1,30 @@
+[
+  {
+    "stratum": "Excluded",
+    "remarks": "01-05-16 SG Alt Channels  K+M and West Corp",
+    "language": " ",
+    "newArc": " ",
+    "oldArc": " ",
+    "office": "None",
+    "recordingType": "None",
+    "stratumDefCompId": {
+      "company": "Vendor",
+      "arc": "V0GV80000",
+      "jobTitleCode": "*"
+    }
+  },
+  {
+    "stratum": "Excluded",
+    "remarks": "01-06-14  temp use of PB RCs for vendors (Bowman)",
+    "language": " ",
+    "newArc": " ",
+    "oldArc": " ",
+    "office": "None",
+    "recordingType": "None",
+    "stratumDefCompId": {
+      "company": "Vendor",
+      "arc": "V0HD",
+      "jobTitleCode": "*"
+    }
+  }
+]

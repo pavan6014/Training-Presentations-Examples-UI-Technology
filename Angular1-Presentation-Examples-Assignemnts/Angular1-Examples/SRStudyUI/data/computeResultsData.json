@@ -1,0 +1,44 @@
+{
+	"analystsResults":{
+		"months":[
+			"04/01/2016","05/01/2016","06/01/2016","04/02/2016","04/03/2016","04/04/2016","04/05/2016","04/06/2016"	
+		]
+	
+	},
+		
+	"computedResults":[
+		{
+			"months":"04/01/2016",
+			"locked":false
+		},
+		{
+			"months":"03/01/2016",
+			"locked":true
+		},
+		{
+			"months":"02/01/2016",
+			"locked":true
+		},
+		{
+			"months":"02/01/2016",
+			"locked":true
+		},
+		{
+			"months":"02/01/2016",
+			"locked":true
+		},
+		{
+			"months":"02/01/2016",
+			"locked":true
+		},
+		{
+			"months":"02/01/2016",
+			"locked":true
+		},
+		{
+			"months":"01/01/2016",
+			"locked":true
+		}
+	
+	]
+}

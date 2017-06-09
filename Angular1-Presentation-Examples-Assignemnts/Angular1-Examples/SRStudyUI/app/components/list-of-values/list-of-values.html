@@ -1,0 +1,232 @@
+<section class="results_section">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+			   <h1><span class="fa fa-group"></span> List Of Values</h1>      
+			</div>
+		</div>
+	</section>
+	
+	<div class="container-custom">
+	<form name="listOfValuesForm" role="form">
+		<div class="row listPage-Row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toolbar_subsections">
+				<div class="toolbar_section">
+					<div class="col-sm-12 col-md-12">
+						<div class="margin-bot-20 margin-top-20">
+							<button type="button" id="btnNewList" class="btn btn-md btn-primary" ng-click="popupModalController({},add,'newListOfValues')" ng-controller="ModalDemoCtrl"><span class="glyphicon glyphicon-new-window button-icon"></span>Add</button>
+							<button type="button" id="btnEdit" class="btn btn-md btn-primary" ng-click="edittbdata()" ng-disabled="listOfValuesForm.$invalid"><span class="glyphicon glyphicon-edit button-icon"></span>Update</button>
+							<button type="button" id="btnDelete" class="btn btn-md btn-primary" ng-disabled="listOfValuesForm.$invalid || rowSelected == 0" ng-click="popupModalController({},deletetbdata,'confirmationDeletePopUP')" ng-controller="ModalDemoCtrl"><span class="glyphicon glyphicon-remove button-icon"></span>Delete</button>
+							<!--<button type="button" id="btnButton1" class="btn btn-md btn-primary"><span class="glyphicon glyphicon-check button-icon"></span>Retrive</button>-->
+							<button type="button" id="btnButton1" class="btn btn-md btn-primary pull-right" ng-click="exporttbdata()"><span class="glyphicon glyphicon-new-window button-icon"></span>Export</button>
+						</div>
+						<!-- <div ng-show="listOfValuesForm.$invalid">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10 ">
+								<p class="alert alert-danger">Invalid values to update</p>
+						</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div  ng-show="errorMsg">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<p class="alert alert-danger">{{errorMsg}}</p>
+			</div>
+		</div>
+		
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="table-responsive">
+				<toaster-container></toaster-container>
+				<table class="table table-condensed table-hover">
+					<colgroup>
+					        <col style="width:2%">
+							<col style="width:7%">
+							<col style="width:7%">
+							<col style="width:7%">
+							<col style="width:7%">
+							<col style="width:7%">
+							<col style="width:7%">
+							<col style="width:7%">
+							<col style="width:7%">
+							<col style="width:7%">
+							<col style="width:7%">
+							<col style="width:12%">	
+							<col style="width:7%">	
+							<col style="width:12%">						
+						
+					</colgroup>
+					<thead>
+					<tr class="table_list_header">
+						<th></th>
+						<th ng-repeat="tbheader in tbheaders">{{tbheader.headerName}}</th>
+					</tr>
+					</thead>
+					<tbody class="bg_tables">
+					<tr class="table_list_row" pagination-id="listValues" dir-paginate="data in tbdata |itemsPerPage:5">
+						<td>
+							<input type="checkbox" ng-model="data.editEnable" ng-change="selectCheckbox(data.editEnable)"/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="lookupName{{$index}}" ng-init="data.oldlookupName=''" ng-focus="data.oldlookupName = data.lookupName" ng-disabled="!data.editEnable" ng-model="data.lookupName" tooltip-placement="bottom" uib-tooltip="Lookup Name is required" tooltip-enable="listOfValuesForm.lookupName{{$index}}.$invalid && listOfValuesForm.lookupName{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.lookupName{{$index}}.$invalid && listOfValuesForm.lookupName{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="lookupValue{{$index}}" ng-disabled="!data.editEnable" ng-model="data.lookupValue" tooltip-placement="bottom" uib-tooltip="Lookup Value is required" tooltip-enable="listOfValuesForm.lookupValue{{$index}}.$invalid && listOfValuesForm.lookupValue{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.lookupValue{{$index}}.$invalid && listOfValuesForm.lookupValue{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="displayValue{{$index}}" ng-disabled="!data.editEnable" ng-model="data.displayValue" tooltip-placement="bottom" uib-tooltip="Display Value is required" tooltip-enable="listOfValuesForm.displayValue{{$index}}.$invalid && listOfValuesForm.displayValue{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.displayValue{{$index}}.$invalid && listOfValuesForm.displayValue{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="number" class="form-control" name="value1{{$index}}" ng-disabled="!data.editEnable" ng-model="data.value1" tooltip-placement="bottom" uib-tooltip="Please enter only number" tooltip-enable="listOfValuesForm.value1{{$index}}.$invalid && listOfValuesForm.value1{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.value1{{$index}}.$invalid && listOfValuesForm.value1{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="number" class="form-control" name="value2{{$index}}" ng-disabled="!data.editEnable" ng-model="data.value2" tooltip-placement="bottom" uib-tooltip="Please enter only number" tooltip-enable="listOfValuesForm.value2{{$index}}.$invalid && listOfValuesForm.value2{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.value2{{$index}}.$invalid && listOfValuesForm.value2{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="number" class="form-control" name="value3{{$index}}" ng-disabled="!data.editEnable" ng-model="data.value3" tooltip-placement="bottom" uib-tooltip="Please enter only number" tooltip-enable="listOfValuesForm.value3{{$index}}.$invalid && listOfValuesForm.value3{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.value3{{$index}}.$invalid && listOfValuesForm.value3{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="number" class="form-control" name="value4{{$index}}" ng-disabled="!data.editEnable" ng-model="data.value4" tooltip-placement="bottom" uib-tooltip="Please enter only number" tooltip-enable="listOfValuesForm.value4{{$index}}.$invalid && listOfValuesForm.value4{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.value4{{$index}}.$invalid && listOfValuesForm.value4{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="number" class="form-control" name="value5{{$index}}" ng-disabled="!data.editEnable" ng-model="data.value5" tooltip-placement="bottom" uib-tooltip="Please enter only number" tooltip-enable="listOfValuesForm.value5{{$index}}.$invalid && listOfValuesForm.value5{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.value5{{$index}}.$invalid && listOfValuesForm.value5{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="activeFlag{{$index}}" ng-disabled="!data.editEnable" ng-model="data.activeFlag" tooltip-placement="bottom" uib-tooltip="Active Flag is required" tooltip-enable="listOfValuesForm.activeFlag{{$index}}.$invalid && listOfValuesForm.activeFlag{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.activeFlag{{$index}}.$invalid && listOfValuesForm.activeFlag{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="createdBy{{$index}}" ng-disabled="true" ng-model="data.createdBy" tooltip-placement="bottom" uib-tooltip="Created By is required" tooltip-enable="listOfValuesForm.createdBy{{$index}}.$invalid && listOfValuesForm.createdBy{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.createdBy{{$index}}.$invalid && listOfValuesForm.createdBy{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" custom-datepicker name="createdDate{{$index}}" ng-disabled="true" ng-model="data.createdDate" tooltip-placement="bottom" uib-tooltip="Created Date is required" tooltip-enable="listOfValuesForm.createdDate{{$index}}.$invalid && listOfValuesForm.createdDate{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.createdDate{{$index}}.$invalid && listOfValuesForm.createdDate{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="modifiedBy{{$index}}" ng-disabled="!data.editEnable" ng-model="data.modifiedBy" tooltip-placement="bottom" uib-tooltip="Modified By is required" tooltip-enable="listOfValuesForm.modifiedBy{{$index}}.$invalid && listOfValuesForm.modifiedBy{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.modifiedBy{{$index}}.$invalid && listOfValuesForm.modifiedBy{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" custom-datepicker name="modifiedDate{{$index}}" ng-disabled="!data.editEnable" ng-model="data.modifiedDate" tooltip-placement="bottom" uib-tooltip="Modified Date is required" tooltip-enable="listOfValuesForm.modifiedDate{{$index}}.$invalid && listOfValuesForm.modifiedDate{{$index}}.$dirty" tooltip-is-open="listOfValuesForm.modifiedDate{{$index}}.$invalid && listOfValuesForm.modifiedDate{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<dir-pagination-controls
+							max-size="5"
+							direction-links="true"
+							boundary-links="true"
+							pagination-id="listValues" class="margin-bot-20">
+			</dir-pagination-controls>
+		</div>
+		</form>
+	</div>
+</section>
+
+
+<script type="text/ng-template" id="newListOfValues.html">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Add List Of Values </h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" role="form" name="newListOfValuesForm" strategy="focusedAndDirtyOrSubmitted" focus-error="true" xt-form novalidate>
+			<div class="col-sm-12">
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="lookupName">Lookup Name<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" class="form-control" name="lookupName" ng-model="newRec.lookupName" tooltip-placement="bottom" uib-tooltip="Lookup Name is required" tooltip-enable="newListOfValuesForm.lookupName.$invalid && newListOfValuesForm.lookupName.$dirty" tooltip-is-open="newListOfValuesForm.lookupName.$invalid && newListOfValuesForm.lookupName.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="lookupValue">Lookup Value<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" class="form-control" name="lookupValue" ng-model="newRec.lookupValue" tooltip-placement="bottom" uib-tooltip="Lookup Value is required" tooltip-enable="newListOfValuesForm.lookupValue.$invalid && newListOfValuesForm.lookupValue.$dirty" tooltip-is-open="newListOfValuesForm.lookupValue.$invalid && newListOfValuesForm.lookupValue.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="lookupValue">Display Value<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" class="form-control" name="displayValue" ng-model="newRec.displayValue" tooltip-placement="bottom" uib-tooltip="Display Value is required" tooltip-enable="newListOfValuesForm.displayValue.$invalid && newListOfValuesForm.displayValue.$dirty" tooltip-is-open="newListOfValuesForm.displayValue.$invalid && newListOfValuesForm.displayValue.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="lookupValue">Value 1<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="number" class="form-control" name="value1" ng-model="newRec.value1" tooltip-placement="bottom" uib-tooltip="Please enter only number" tooltip-enable="newListOfValuesForm.value1.$invalid && newListOfValuesForm.value1.$dirty" tooltip-is-open="newListOfValuesForm.value1.$invalid && newListOfValuesForm.value1.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="lookupValue">Value 2<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="number" class="form-control" name="value2" ng-model="newRec.value2" tooltip-placement="bottom" uib-tooltip="Please enter only number" tooltip-enable="newListOfValuesForm.value2.$invalid && newListOfValuesForm.value2.$dirty" tooltip-is-open="newListOfValuesForm.value2.$invalid && newListOfValuesForm.value2.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="lookupValue">Value 3<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="number" class="form-control" name="value3" ng-model="newRec.value3" tooltip-placement="bottom" uib-tooltip="Please enter only number" tooltip-enable="newListOfValuesForm.value3.$invalid && newListOfValuesForm.value3.$dirty" tooltip-is-open="newListOfValuesForm.value3.$invalid && newListOfValuesForm.value3.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="lookupValue">Value 4<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="number" class="form-control" name="value4" ng-model="newRec.value4" tooltip-placement="bottom" uib-tooltip="Please enter only number" tooltip-enable="newListOfValuesForm.value4.$invalid && newListOfValuesForm.value4.$dirty" tooltip-is-open="newListOfValuesForm.value4.$invalid && newListOfValuesForm.value4.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="lookupValue">Value 5<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="number" class="form-control" name="value5" ng-model="newRec.value5" tooltip-placement="bottom" uib-tooltip="Please enter only number" tooltip-enable="newListOfValuesForm.value5.$invalid && newListOfValuesForm.value5.$dirty" tooltip-is-open="newListOfValuesForm.value5.$invalid && newListOfValuesForm.value5.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="activeFlag">Active Flag<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" class="form-control" name="activeFlag" ng-model="newRec.activeFlag" tooltip-placement="bottom" uib-tooltip="Active Flag is required" tooltip-enable="newListOfValuesForm.activeFlag.$invalid && newListOfValuesForm.activeFlag.$dirty" tooltip-is-open="newListOfValuesForm.activeFlag.$invalid && newListOfValuesForm.activeFlag.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="createdBy">Created By<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" class="form-control" name="createdBy" ng-model="newRec.createdBy" tooltip-placement="bottom" uib-tooltip="Created By is required" tooltip-enable="newListOfValuesForm.createdBy.$invalid && newListOfValuesForm.createdBy.$dirty" tooltip-is-open="newListOfValuesForm.createdBy.$invalid && newListOfValuesForm.createdBy.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="createdDate">Created Date<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" custom-datepicker name="createdDate" ng-model="newRec.createdDate" tooltip-placement="bottom" uib-tooltip="Created Date is required" tooltip-enable="newListOfValuesForm.createdDate.$invalid && newListOfValuesForm.createdDate.$dirty && newListOfValuesForm.createdDate.$touched" tooltip-is-open="newListOfValuesForm.createdDate.$invalid && newListOfValuesForm.createdDate.$dirty && newListOfValuesForm.createdDate.$touched" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="modifiedBy">Modified By<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" class="form-control" name="modifiedBy" ng-model="newRec.modifiedBy" tooltip-placement="bottom" uib-tooltip="Modified By is required" tooltip-enable="newListOfValuesForm.modifiedBy.$invalid && newListOfValuesForm.modifiedBy.$dirty" tooltip-is-open="newListOfValuesForm.modifiedBy.$invalid && newListOfValuesForm.modifiedBy.$dirty" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="modifiedDate">Modified Date<span class="asterisk">*</span></label>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" custom-datepicker name="modifiedDate" ng-model="newRec.modifiedDate" tooltip-placement="bottom" uib-tooltip="Created Date is required" tooltip-enable="newListOfValuesForm.modifiedDate.$invalid && newListOfValuesForm.modifiedDate.$dirty && newListOfValuesForm.modifiedDate.$touched" tooltip-is-open="newListOfValuesForm.modifiedDate.$invalid && newListOfValuesForm.modifiedDate.$dirty && newListOfValuesForm.modifiedDate.$touched" tooltip-trigger="focus" required/>
+					</div>  
+				</div>
+			</div>
+			</form>
+        </div>
+		   <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()" ng-disabled="newListOfValuesForm.$invalid">Save</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+</script>
+
+<script type="text/ng-template" id="confirmationDeletePopUP.html">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Confirmation</h3>
+        </div>
+        <div class="modal-body">
+            <p>Are you sure you want to delete the selected list of values.</p>
+        </div>
+		   <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">Delete</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+</script>

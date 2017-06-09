@@ -1,0 +1,468 @@
+{  
+   "transaction":"retrieveULTS1Report",
+   "status":"success",
+   "data":{  
+      "company":"ATT - Midwest",
+      "sampleMonthRequested":"1/1/2016",
+      "auditFrom":{  
+         "date":"1/14/2016",
+         "refId":"52141546",
+         "id":"52"
+      },
+      "auditTo":{  
+         "date":"1/20/2016",
+         "refId":"52201738",
+         "id":"52"
+      },
+      "ultsDetails":[  
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"No Data",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Service",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Disclosure",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         },
+         {  
+            "region":"W",
+            "product":"CA Lifeline Billing",
+            "orderType":"CR",
+            "disposition":"Inquiry",
+            "occurrences":"4",
+            "seconds":"254"
+         }
+      ]
+   }
+}

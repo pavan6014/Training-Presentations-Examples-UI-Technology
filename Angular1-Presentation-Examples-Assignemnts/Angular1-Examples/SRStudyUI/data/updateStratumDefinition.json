@@ -1,0 +1,112 @@
+{
+    "stratumDefinition": [
+        {
+            "company": "AIT",
+            "POSRC": "LY8LTL106",
+            "city": "",
+            "cllc": "24118",
+            "emps": "1",
+            "stratum": "Excluded",
+            "language": ""
+    },
+        {
+            "company": "AIT",
+            "POSRC": "LYDE14000",
+            "city": "",
+            "cllc": "23815",
+            "emps": "12",
+            "stratum": "Excluded",
+            "language": ""
+        },
+        {
+            "company": "AIT",
+            "POSRC": "LYDY20421",
+            "city": "",
+            "cllc": "54147",
+            "emps": "11",
+            "stratum": "Cons Retention",
+            "language": ""
+        },
+        {
+            "company": "AIT",
+            "POSRC": "LYDY20422",
+            "city": "",
+            "cllc": "54147",
+            "emps": "35",
+            "stratum": "Cons Retention",
+            "language": ""
+        },
+        {
+            "company": "AIT",
+            "POSRC": "LYDY20424",
+            "city": "",
+            "cllc": "54147",
+            "emps": "78",
+            "stratum": "Cons Retention",
+            "language": ""
+        },
+        {
+            "company": "AIT",
+            "POSRC": "LYDY20425",
+            "city": "",
+            "cllc": "54147",
+            "emps": "46",
+            "stratum": "Cons Retention",
+            "language": ""
+        },
+        {
+            "company": "AIT",
+            "POSRC": "LY8LTL106",
+            "city": "",
+            "cllc": "24118",
+            "emps": "1",
+            "stratum": "Excluded",
+            "language": ""
+    },
+        {
+            "company": "AIT",
+            "POSRC": "LYDE14000",
+            "city": "",
+            "cllc": "23815",
+            "emps": "12",
+            "stratum": "Excluded",
+            "language": ""
+        },
+        {
+            "company": "AIT",
+            "POSRC": "LYDY20421",
+            "city": "",
+            "cllc": "54147",
+            "emps": "11",
+            "stratum": "Cons Retention",
+            "language": ""
+        },
+        {
+            "company": "AIT",
+            "POSRC": "LYDY20422",
+            "city": "",
+            "cllc": "54147",
+            "emps": "35",
+            "stratum": "Cons Retention",
+            "language": ""
+        },
+        {
+            "company": "AIT",
+            "POSRC": "LYDY20424",
+            "city": "",
+            "cllc": "54147",
+            "emps": "78",
+            "stratum": "Cons Retention",
+            "language": ""
+        },
+        {
+            "company": "AIT",
+            "POSRC": "LYDY20425",
+            "city": "",
+            "cllc": "54147",
+            "emps": "46",
+            "stratum": "Cons Retention",
+            "language": ""
+        }
+    ]
+}

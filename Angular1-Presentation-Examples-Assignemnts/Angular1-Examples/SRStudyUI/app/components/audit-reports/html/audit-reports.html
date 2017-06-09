@@ -1,0 +1,231 @@
+<div class="audit-reports">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="fa fa-bar-chart"></span> Audit Reports</h1>      
+            </div>
+		</div>
+	</section>
+	<div class="container container-custom">
+		<form class="form-horizontal" role="form" name="auditReportsForm" novalidate>
+		<section class="row">		
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label class="control-label col-sm-4 col-md-4 col-lg-4" for="company">Company</label>
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<select id="company" class="form-control" ng-model="company" name="company" data-ng-options="company for company in sampleCompanyList" uib-tooltip="Company required" tooltip-enable="auditReportsForm.company.$invalid && (auditReportsForm.company.$touched || submitted)"  tooltip-trigger="mouseenter" required>
+								<option value="">Select</option>								
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label class="control-label col-sm-5 col-md-5 col-lg-5" for="start-month">Beginning Month</label>
+						<div class="col-sm-7 col-md-7 col-lg-7">
+							 <input type="date" custom-datepicker ng-model="begMonth" id="beg-month" name="begMonth" uib-tooltip="Begin Month required" tooltip-enable="auditReportsForm.begMonth.$invalid && (auditReportsForm.begMonth.$touched || submitted)" tooltip-trigger="mouseenter" ng-required="true">
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label class="control-label col-sm-4 col-md-4 col-lg-4" for="end-month">Ending Month</label>
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<input type="text" custom-datepicker ng-model="endMonth" id="end-month" name="endMonth" uib-tooltip="Ending Month required" tooltip-enable="auditReportsForm.endMonth.$invalid && (auditReportsForm.endMonth.$touched || submitted)" tooltip-trigger="mouseenter" ng-required="true">
+						</div>
+					</div>
+				</div>
+			
+		</section>
+		<section class="row">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">	
+				<div class="table-responsive table_selection_agent">
+					<table class="table table-condensed table-hover table-head-fixed">
+						<thead>
+						  <tr>
+							<th>Analyst Name</th>
+							<th>ID</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td>Ann Marie Ferguson</td>
+							<td>40</td>
+						  </tr>
+						  <tr>
+							<td>Bryan Grither</td>
+							<td>23</td>
+							
+						  </tr>
+						  <tr>
+							<td>Chelsea Quirk</td>
+							<td>52</td>
+							
+						  </tr>
+						  <tr>
+							<td>Cliff Link</td>
+							<td>21</td>
+							
+						  </tr>
+						  <tr>
+							<td>Cory Bruce</td>
+							<td>15</td>
+							
+						  </tr>
+						  <tr>
+							<td>Dalisa Scott</td>
+							<td>17</td>
+							
+						  </tr>
+						  <tr>
+							<td>Dan Wills</td>
+							<td>22</td>
+							
+						  </tr>
+						  <tr>
+							<td>Dave Turner</td>
+							<td>24</td>
+							
+						  </tr>
+						  <tr>
+							<td>Debbie Weber</td>
+							<td>90</td>
+							
+						  </tr>
+						</tbody>
+					 </table>
+				</div>
+				<div class="table-responsive table_selection_agent">
+					<table class="table table-condensed table-hover table-head-fixed">
+						<thead>
+						  <tr>
+							<th>Sample Date</th>
+							<th>Employee Name</th>
+							<th>Ref. #</th>
+							<th>Analyst ID</th>
+							<th>Analyst Name</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td>1/14/2016</td>
+							<td>BARTZ, SERENA L - GBL-1</td>
+							<td>52142001</td>
+							<td>52</td>
+							<td>Chelsea Quirk</td>
+						  </tr>
+						  <tr>
+							<td>1/14/2016</td>
+							<td>VIRDEN, DAVID C - GBL-1</td>
+							<td>52142001</td>
+							<td>52</td>
+							<td>Chelsea Quirk</td>
+							
+						  </tr>
+						  <tr>
+							<td>1/20/2016</td>
+							<td>GORECKL, LUANN J - GBL-1</td>
+							<td>52200846</td>
+							<td>52</td>
+							<td>Chelsea Quirk</td>
+						  </tr>
+						   <tr>
+							<td>1/14/2016</td>
+							<td>BARTZ, SERENA L - GBL-1</td>
+							<td>52142001</td>
+							<td>52</td>
+							<td>Chelsea Quirk</td>
+						  </tr>
+						  <tr>
+							<td>1/14/2016</td>
+							<td>VIRDEN, DAVID C - GBL-1</td>
+							<td>52142001</td>
+							<td>52</td>
+							<td>Chelsea Quirk</td>
+						  </tr>
+						  <tr>
+							<td>1/20/2016</td>
+							<td>GORECKL, LUANN J - GBL-1</td>
+							<td>52200846</td>
+							<td>52</td>
+							<td>Chelsea Quirk</td>
+						  </tr>
+						</tbody>
+					 </table>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<div class="table-responsive table_selection_agent">
+					<table class="table table-condensed table-hover table-head-fixed right-table">
+						<thead>
+						  <tr>
+							<th>Product ID</th>
+							<th>Name</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td>174</td>
+							<td>Billing Misc Co</td>
+						  </tr>
+						  <tr>
+							<td>200</td>
+							<td>NCPT</td>
+							
+						  </tr>
+						  <tr>
+							<td>203</td>
+							<td>Typing Orders</td>
+							
+						  </tr>
+						  <tr>
+							<td>205</td>
+							<td>Other Common</td>
+							
+						  </tr>
+						  <tr>
+							<td>206</td>
+							<td>Misdirected</td>
+							
+						  </tr>
+						 	  <tr>
+							<td>174</td>
+							<td>Billing Misc Co</td>
+						  </tr>
+						  <tr>
+							<td>200</td>
+							<td>NCPT</td>
+							
+						  </tr>
+						  <tr>
+							<td>203</td>
+							<td>Typing Orders</td>
+							
+						  </tr>
+						  <tr>
+							<td>205</td>
+							<td>Other Common</td>
+							
+						  </tr>
+						  <tr>
+							<td>206</td>
+							<td>Misdirected</td>
+							
+						  </tr>
+						</tbody>
+					 </table>
+				</div>
+			</div>				
+		</section>
+		<section class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="align-center">
+				<input type="submit" class="btn btn-primary margin10" value="Audit Report - Details by Employee" ng-click="getReports('employee')"/>	
+				<input type="submit" class="btn btn-primary margin10" value="Audit Report - Details by Product" ng-click="getReports('products')"/>	
+				<input type="button" class="btn btn-primary margin10" value="Audit Report - Fallout" ng-click="getReports('fallout')"/>	
+			</div>
+		</div>
+		</section>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container relative-pos hidden-print">
+	<input type="submit" class="btn btn-primary print-cutom-btn absolute-pos" ng-click="print()" value="Print">
+</div>
+
+<div class="container" ng-class="{hideSettingMargin:$index>1}" ng-repeat="rowDet in monthlySampleDet" data-ng-if="$index%rowCountPdfPage == 0">
+	<div class="row extraPadding pageBreak margin-bot-20" ng-class="{'visible-print-block':$index>1}"> 
+		<div class="col-xs-12">
+			<div class="mainHeading text-center">Service Representative Study - Design Documentation</div> 
+			<div class="mainHeading text-center">Monthly Sample Sizes</div> 
+			<div class="subHeading text-center">&copy Copyright 2012 AT&T Intellectual Property. All rights reserved</div>
+		</div>
+		<div class="row margin-bot-20">
+			<div class="col-xs-3 text-right">
+				<div style="position:relative;">
+					<img src="assets/img/att_logo_background.png" class="logo-img-print hidden-print"/>
+					<img src="assets/img/att_logo.png" class="logo-img-print visible-print-block"/>
+				</div>
+			</div> 
+		
+		</div>
+	</div>
+	
+	 <div class="row">
+		<div class="tableContainer"> 				
+			<table class="tablePrint">
+				<thead class="tableHeaderBorder">
+					<tr ng-class="{hideSettingVisibility:$index>1}">
+						<th>Company</th>
+						<th>Stratum</th>
+						<th>Month</th>
+						<th>Sample Size</th>
+					</tr>
+				</thead>
+				
+				<tbody>      
+					<tr data-ng-repeat="stratumDet in monthlySampleDet.slice($parent.$index,$parent.$index+rowCountPdfPage)">
+						<td>{{stratumDet.company}}</td>
+						<td>{{stratumDet.stratumName}}</td> 
+						<td>{{stratumDet.month}}</td>
+						<td>{{stratumDet.sampleSize}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="footer text-center" ng-class="{'visible-print-block':($index+rowCountPdfPage)/rowCountPdfPage<(monthlySampleDet.length/rowCountPdfPage)}">
+		<div class="mainHeading">AT&T Proprietary (Restricted)</div>
+		<div class="subHeading">Only for use by authorized individuals or any above-designated team(s)<br>
+		within the AT&T companies and not for general distribution</div>
+	</div>	
+</div>

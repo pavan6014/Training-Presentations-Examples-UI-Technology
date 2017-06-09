@@ -1,0 +1,105 @@
+<section class="results_section">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+			   <h1><span class="fa fa-group"></span> Stratum Definitions Table</h1>      
+			</div>
+		</div>
+	</section>
+	
+	<div class="container-custom">
+	<form name="stratumInfoForm" role="form">
+		<div class="row listPage-Row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toolbar_subsections">
+				<div class="toolbar_section">
+					<div class="col-sm-12 col-md-12">
+						<div class="margin-bot-20 margin-top-20">
+							<!--<button ng-controller="ModalDemoCtrl" type="button" id="btnNew" class="btn btn-md btn-primary"  ng-click="popupModalController({},add,'addStratumRecordPU')"><span class="glyphicon glyphicon-new-window button-icon"></span>New</button>
+							<button type="submit" id="btnEdit" class="btn btn-md btn-primary"  ng-click="editStratumData()" ng-disabled="stratumInfoForm.$invalid"><span class="glyphicon glyphicon-edit button-icon"></span>Edit</button>
+							<button type="button" id="btnDelete" class="btn btn-md btn-primary" ng-disabled="stratumInfoForm.$invalid || rowSelected == 0" ng-click="popupModalController({},delStratumData,'confirmationDeletePopUP')" ng-controller="ModalDemoCtrl"><span class="glyphicon glyphicon-remove button-icon" ng-click="delStratumData()"></span>Delete</button>
+							-->
+							<a id="btnNew" href="#/stratum-definition-report" class="btn btn-md btn-primary"><span class="glyphicon glyphicon-new-window button-icon"></span>Go to Stratum Definitions Table</a>
+							<button type="button" id="btnNew" ng-click="exportUniverseTableData()" class="btn btn-md btn-primary"><span class="glyphicon glyphicon-new-window button-icon"></span>Browse the Universe table</button>
+							<button type="button" id="btnNew" ng-click="exportToPdf()" class="btn btn-md btn-primary pull-right"><span class="glyphicon glyphicon-new-window button-icon"></span>Export</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div ng-show="errorMsg">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<p class="alert alert-danger">{{errorMsg}}</p>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="table-responsive">
+			<toaster-container></toaster-container>
+				<table class="table table-condensed table-hover">
+					<colgroup>
+						<!--<col style="width:2%">-->
+						<col style="width:11%">
+						<col style="width:11%">
+						<col style="width:13%">
+						<col style="width:11%">
+						<col style="width:11%">
+						<col style="width:11%">
+						<col style="width:11%">
+					</colgroup>
+					<thead>
+					<tr class="table_list_header">
+						<!--<th></th>-->
+						<th ng-click="sort('company')">Company <span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'company'),'glyphicon-chevron-up':reverse && (sortKey == 'company'),'glyphicon-chevron-down':!reverse && (sortKey == 'company')}"></span></th>
+						<th ng-click="sort('pds_rc')">PSD RC <span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'pds_rc'),'glyphicon-chevron-up':reverse && (sortKey == 'pds_rc'),'glyphicon-chevron-down':!reverse && (sortKey == 'pds_rc')}"></span></th>
+						<th ng-click="sort('city')">City <span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'city'),'glyphicon-chevron-up':reverse && (sortKey == 'city'),'glyphicon-chevron-down':!reverse && (sortKey == 'city')}"></span></th>
+						<th ng-click="sort('cllc')">CLLC<span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'cllc'),'glyphicon-chevron-up':reverse && (sortKey == 'cllc'),'glyphicon-chevron-down':!reverse && (sortKey == 'cllc')}"></span></th>
+						<th ng-click="sort('emps')">Emps<span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'emps'),'glyphicon-chevron-up':reverse && (sortKey == 'emps'),'glyphicon-chevron-down':!reverse && (sortKey == 'emps')}"></span></th>
+						<th ng-click="sort('stratum')">Stratum<span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'stratum'),'glyphicon-chevron-up':reverse && (sortKey == 'stratum'),'glyphicon-chevron-down':!reverse && (sortKey == 'stratum')}"></span></th>
+						<th ng-click="sort('language')">Language<span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'language'),'glyphicon-chevron-up':reverse && (sortKey == 'language'),'glyphicon-chevron-down':!reverse && (sortKey == 'language')}"></span></th>
+						<th ng-click="sort('modified_date')">Modified Date<span class="glyphicon sort-icon" ng-class="{'glyphicon-sort':reverse == undefined || (sortKey != 'modified_date'),'glyphicon-chevron-up':reverse && (sortKey == 'modified_date'),'glyphicon-chevron-down':!reverse && (sortKey == 'modified_date')}"></span></th>
+					</tr>
+					</thead>
+					<tbody class="bg_tables"> 
+					<tr class="table_list_row" pagination-id="stratumInfoId" dir-paginate="stratumItem in stratumInfoList |orderBy:sortKey:reverse |itemsPerPage:5">
+						<!--<td>
+							<input type="checkbox" ng-model="stratumItem.editEnable" ng-change="selectCheckbox(stratumItem.editEnable)" />
+						</td>-->
+					
+						<td> 
+							<input type="text" class="form-control" name="company{{$index}}" ng-model="stratumItem.company"   ng-disabled="!stratumItem.editEnable" maxlength="10" tooltip-placement="bottom" uib-tooltip="Company is required" tooltip-enable="stratumInfoForm.company{{$index}}.$invalid && stratumInfoForm.company{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.company{{$index}}.$invalid && stratumInfoForm.company{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control"  name="stratum{{$index}}" ng-model="stratumItem.pds_rc" ng-disabled="!stratumItem.editEnable"  maxlength="50" tooltip-placement="bottom" uib-tooltip="Stratum is required" tooltip-enable="stratumInfoForm.stratum{{$index}}.$invalid && stratumInfoForm.stratum{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.stratum{{$index}}.$invalid && stratumInfoForm.stratum{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="marketSegment{{$index}}" ng-model="stratumItem.city" ng-disabled="!stratumItem.editEnable"  maxlength="50" tooltip-placement="bottom" uib-tooltip="Market Segment is required" tooltip-enable="stratumInfoForm.marketSegment{{$index}}.$invalid && stratumInfoForm.marketSegment{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.marketSegment{{$index}}.$invalid && stratumInfoForm.marketSegment{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control"  name="annualSampleSize{{$index}}" ng-model="stratumItem.cllc" ng-disabled="!stratumItem.editEnable" maxlength="50" tooltip-placement="bottom" uib-tooltip="Please Enter Annual Sample Size in Number" tooltip-enable="stratumInfoForm.annualSampleSize{{$index}}.$invalid && stratumInfoForm.annualSampleSize{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.annualSampleSize{{$index}}.$invalid && stratumInfoForm.annualSampleSize{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="targetValids{{$index}}" ng-model="stratumItem.emps" ng-disabled="!stratumItem.editEnable" maxlength="50" tooltip-placement="bottom" uib-tooltip="Please Enter Target Valids in Number" tooltip-enable="stratumInfoForm.targetValids{{$index}}.$invalid && stratumInfoForm.targetValids{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.targetValids{{$index}}.$invalid && stratumInfoForm.targetValids{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control"  name="classification{{$index}}" ng-model="stratumItem.stratum" ng-disabled="!stratumItem.editEnable" maxlength="50" tooltip-placement="bottom" uib-tooltip="Classification is required" tooltip-enable="stratumInfoForm.classification{{$index}}.$invalid && stratumInfoForm.classification{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.classification{{$index}}.$invalid && stratumInfoForm.classification{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td>
+							<input type="text" class="form-control" name="logoname{{$index}}" ng-model="stratumItem.language" ng-disabled="!stratumItem.editEnable" maxlength="50" tooltip-placement="bottom" uib-tooltip="Classification is required" tooltip-enable="stratumInfoForm.logoname{{$index}}.$invalid && stratumInfoForm.logoname{{$index}}.$dirty" tooltip-is-open="stratumInfoForm.logoname{{$index}}.$invalid && stratumInfoForm.logoname{{$index}}.$dirty" tooltip-trigger="focus" required/>
+						</td>
+						<td><input type="text" class="form-control" ng-required="false" name="latestModfiDate{{$index}}" ng-model="stratumItem.modified_date" ng-disabled="true"/></td>
+					
+					</tr>
+					</tbody>
+				</table>
+				
+			</div>
+			<dir-pagination-controls
+								max-size="5"
+								direction-links="true"
+								boundary-links="true"
+								pagination-id="stratumInfoId" class="margin-bot-20">
+			</dir-pagination-controls> 
+		</div>
+		</form>
+	</div>
+</section>

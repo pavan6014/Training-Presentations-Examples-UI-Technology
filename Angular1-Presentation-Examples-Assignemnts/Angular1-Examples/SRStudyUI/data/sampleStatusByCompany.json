@@ -1,0 +1,237 @@
+{
+    "lists": [{
+            "stratum": "Business",
+            "analyst": [
+                {
+                    "name": "Ann Marie Feruguson",
+                    "numberOfCalls": "5"
+				},
+                {
+                    "name": "Chelsea Quirk",
+                    "numberOfCalls": "17"
+				},
+                {
+                    "name": "Cory Bruce",
+                    "numberOfCalls": "9"
+				},
+                {
+                    "name": "Debbie Weber",
+                    "numberOfCalls": "15"
+				},
+                {
+                    "name": "Laura Stevension",
+                    "numberOfCalls": "25"
+				},
+                {
+                    "name": "Pam Ivy",
+                    "numberOfCalls": "15"
+				}
+			]
+	},
+	
+	{
+            "stratum": "New Business",
+            "analyst": [
+                {
+                    "name": "Ann Marie Feruguson",
+                    "numberOfCalls": "5"
+				},
+                {
+                    "name": "Chelsea Quirk",
+                    "numberOfCalls": "17"
+				},
+                {
+                    "name": "Cory Bruce",
+                    "numberOfCalls": "9"
+				},
+                {
+                    "name": "Debbie Weber",
+                    "numberOfCalls": "15"
+				},
+                {
+                    "name": "Laura Stevension",
+                    "numberOfCalls": "25"
+				},
+                {
+                    "name": "Pam Ivy",
+                    "numberOfCalls": "15"
+				}
+			]
+	},
+	{
+            "stratum": "New Business",
+            "analyst": [
+                {
+                    "name": "Ann Marie Feruguson",
+                    "numberOfCalls": "5"
+				},
+                {
+                    "name": "Chelsea Quirk",
+                    "numberOfCalls": "17"
+				},
+                {
+                    "name": "Cory Bruce",
+                    "numberOfCalls": "9"
+				},
+                {
+                    "name": "Debbie Weber",
+                    "numberOfCalls": "15"
+				},
+                {
+                    "name": "Laura Stevension",
+                    "numberOfCalls": "25"
+				},
+                {
+                    "name": "Pam Ivy",
+                    "numberOfCalls": "15"
+				}
+			]
+	},
+	{
+            "stratum": "New Business",
+            "analyst": [
+                {
+                    "name": "Ann Marie Feruguson",
+                    "numberOfCalls": "5"
+				},
+                {
+                    "name": "Chelsea Quirk",
+                    "numberOfCalls": "17"
+				},
+                {
+                    "name": "Cory Bruce",
+                    "numberOfCalls": "9"
+				},
+                {
+                    "name": "Debbie Weber",
+                    "numberOfCalls": "15"
+				},
+                {
+                    "name": "Laura Stevension",
+                    "numberOfCalls": "25"
+				},
+                {
+                    "name": "Pam Ivy",
+                    "numberOfCalls": "15"
+				}
+			]
+	},
+	{
+            "stratum": "New Business",
+            "analyst": [
+                {
+                    "name": "Ann Marie Feruguson",
+                    "numberOfCalls": "5"
+				},
+                {
+                    "name": "Chelsea Quirk",
+                    "numberOfCalls": "17"
+				},
+                {
+                    "name": "Cory Bruce",
+                    "numberOfCalls": "9"
+				},
+                {
+                    "name": "Debbie Weber",
+                    "numberOfCalls": "15"
+				},
+                {
+                    "name": "Laura Stevension",
+                    "numberOfCalls": "25"
+				},
+                {
+                    "name": "Pam Ivy",
+                    "numberOfCalls": "15"
+				}
+			]
+	},
+	{
+            "stratum": "New Business",
+            "analyst": [
+                {
+                    "name": "Ann Marie Feruguson",
+                    "numberOfCalls": "5"
+				},
+                {
+                    "name": "Chelsea Quirk",
+                    "numberOfCalls": "17"
+				},
+                {
+                    "name": "Cory Bruce",
+                    "numberOfCalls": "9"
+				},
+                {
+                    "name": "Debbie Weber",
+                    "numberOfCalls": "15"
+				},
+                {
+                    "name": "Laura Stevension",
+                    "numberOfCalls": "25"
+				},
+                {
+                    "name": "Pam Ivy",
+                    "numberOfCalls": "15"
+				}
+			]
+	},
+	{
+            "stratum": "New Business",
+            "analyst": [
+                {
+                    "name": "Ann Marie Feruguson",
+                    "numberOfCalls": "5"
+				},
+                {
+                    "name": "Chelsea Quirk",
+                    "numberOfCalls": "17"
+				},
+                {
+                    "name": "Cory Bruce",
+                    "numberOfCalls": "9"
+				},
+                {
+                    "name": "Debbie Weber",
+                    "numberOfCalls": "15"
+				},
+                {
+                    "name": "Laura Stevension",
+                    "numberOfCalls": "25"
+				},
+                {
+                    "name": "Pam Ivy",
+                    "numberOfCalls": "15"
+				}
+			]
+	},
+	{
+            "stratum": "New Business",
+            "analyst": [
+                {
+                    "name": "Ann Marie Feruguson",
+                    "numberOfCalls": "5"
+				},
+                {
+                    "name": "Chelsea Quirk",
+                    "numberOfCalls": "17"
+				},
+                {
+                    "name": "Cory Bruce",
+                    "numberOfCalls": "9"
+				},
+                {
+                    "name": "Debbie Weber",
+                    "numberOfCalls": "15"
+				},
+                {
+                    "name": "Laura Stevension",
+                    "numberOfCalls": "25"
+				},
+                {
+                    "name": "Pam Ivy",
+                    "numberOfCalls": "15"
+				}
+			]
+	}
+
+	]
+}

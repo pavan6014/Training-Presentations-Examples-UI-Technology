@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Examples</title>
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="libs/jquery-ui/css/jquery-ui.css"/>
+	<link rel="stylesheet" type="text/css" href="libs/jcarousel/css/jcarousel.basic.css"/>
+	<!-- <link rel="stylesheet" type="text/css" href="libs/jquery-model/css/jquery.modal.css"/> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+<div class="container">
+
+	<div class="panel panel-default">
+		<h4 class="panel-heading" style="margin-top:0;">Write 5 to 6 paragraphs and one button in html. When user Click on button hide all paragraphs</h4>
+		<section class="panel-body hidden-section">
+			<p>First Paragraph</p>
+			<p>First Paragraph</p>
+			<p>First Paragraph</p>
+			<p>First Paragraph</p>
+			<p>First Paragraph</p>
+			<p>First Paragraph</p>
+			<p>First Paragraph</p>
+			<button type="button" id="buttton-one"class="btn btn-primary">Button</button>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Implement hide and show concept in jquery</h4>
+		<section class="panel-body hidden-section">
+			<p class="panel-2-p">If you click on the "Hide" button, I will disappear.</p>
+			
+			<button id="hide">Hide</button>
+			<button id="show">Show</button>
+			
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Implement the accordion using jquery</h4>
+		<section class="panel-body hidden-section">
+			<div class="accordian">
+				<h4>Heading One</h4>
+				<p>Paragraph One</p>
+				<h4>Heading Two</h4>
+				<p>Paragraph Two</p>
+			</div>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Add different background colors to the table odd and even rows using jquery</h4>
+		<section class="panel-body hidden-section">
+			<table class="table table-bordered">
+				<thead>
+				  <tr>
+					<th>Firstname</th>
+					<th>Lastname</th>
+					<th>Email</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>John</td>
+					<td>Doe</td>
+					<td>john@example.com</td>
+				  </tr>
+				  <tr>
+					<td>Mary</td>
+					<td>Moe</td>
+					<td>mary@example.com</td>
+				  </tr>
+				  <tr>
+					<td>July</td>
+					<td>Dooley</td>
+					<td>july@example.com</td>
+				  </tr>
+				  <tr>
+					<td>July</td>
+					<td>Dooley</td>
+					<td>july@example.com</td>
+				  </tr>
+				</tbody>
+			</table>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Create table in html and add background colors to the odd and even rows using jquery</h4>
+		<section class="panel-body hidden-section">
+			<p>This is a paragraph.</p>
+			<p>This is another paragraph.</p>
+
+			<ol>
+			  <li>List item 1</li>
+			  <li>List item 2</li>
+			  <li>List item 3</li>
+			</ol>
+
+			<button id="btn1">Prepend</button>
+			<button id="btn2">Append</button>
+			<button id="btn3">After</button>
+			<button id="btn4">Before</button>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Write 5 to 6 paragraphs in html and use jquery selectors ADD different classes to the first paragraph, last paragraph and for the 5th paragraph add inline css.</h4>
+		<section class="panel-body hidden-section">
+			<div class="sudo-classes">
+				<p>This is a paragraph.</p>
+				<p>This is another paragraph.</p>
+				<p>This is another paragraph.</p>
+				<p>This is another paragraph.</p>
+				<p>This is another paragraph.</p>
+				<p>This is another paragraph.</p>
+				<p>This is another paragraph.</p>
+			</div>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Click on button animate DIV position from one location to other location.</h4>
+		<section class="panel-body hidden-section">
+			<button type="button" id="animation">Start Animation</button>
+			<p class="animate-txt" style="position:relative;">Click on button and see the animation effect</p>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Jquery tab concept pure code</h4>
+		<section class="panel-body hidden-section">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="" style="border:1px solid #e4e4e4;">
+						<ul class="tab-main-list">
+							<a href="javaScript:void(0);"><li id="content1" class="tabitem tabactive">All</li></a>
+							<a href="javaScript:void(0);"><li id="content2" class="tabitem">Technology</li></a>
+							<a href="javaScript:void(0);"><li id="content3" class="tabitem">Education</li></a>
+							<a href="javaScript:void(0);"><li id="content4" class="tabitem">Research</li></a>
+							<a href="javaScript:void(0);"><li id="content5" class="tabitem">Advocacy</li></a>
+						</ul>
+						
+						<div class="tabexpand content1">All related content</div>
+						<div class="tabexpand content2" style="display:none;">Technology Content</div>
+						<div class="tabexpand content3" style="display:none;">Education Content</div>
+						<div class="tabexpand content4" style="display:none;">Research Content</div>
+						<div class="tabexpand content5" style="display:none;">Advocacy Content</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Tab concept Using Jquery UI</h4>
+		<section class="panel-body hidden-section">
+			<div id="accordion">
+				  <h3>Section 1</h3>
+				  <div><p>Section 1 Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, </p></div>
+				  <h3>Section 2</h3>
+				  <div><p>Section 2 Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, </p></div>
+				  <h3>Section 3</h3>
+				  <div><p>Section 3 Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, </p></div>					  
+			</div>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Model window popup using "jQuery Modal" Plugin</h4>
+		<section class="panel-body hidden-section">
+			<!-- Modal HTML embedded directly into document -->
+			  <div id="ex1" style="display:none;">
+				<p>Thanks for clicking.  That felt good.  <a href="#" rel="modal:close">Close</a> or press ESC</p>
+			  </div>
+
+			  <!-- Link to open the modal -->
+			  <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Model window popup using "Bootstrap" Plugin</h4>
+		<section class="panel-body hidden-section">
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+			<!-- Modal -->
+			<div id="myModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Modal Header</h4>
+				  </div>
+				  <div class="modal-body">
+					<p>Some text in the modal.</p>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				  </div>
+				</div>
+
+			  </div>
+			</div>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Image courosal using "JSHOWOFF" plugin</h4>
+		<section class="panel-body hidden-section">
+			<div class="banner-img">
+				<div id="imageflow" class="main-courosal">
+					<img id="img1" src="images/img1.png" />
+					<img id="img2" src="images/img2.png" />
+					<img id="img3" src="images/img4.png" />
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<div class="panel panel-default">
+		<h4 class="panel-heading">Responsive Carousel using "jcarousel" plugin</h4>
+		<section class="panel-body hidden-section">
+			<div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li><img src="images/banner.png" alt="Image 1"></li>
+                        <li><img src="images/banner.png" alt="Image 2"></li>
+                        <li><img src="images/banner.png" alt="Image 3"></li>
+                        <li><img src="images/banner.png" alt="Image 4"></li>
+                        <li><img src="images/banner.png" alt="Image 5"></li>
+                        <li><img src="images/banner.png" alt="Image 6"></li>
+                    </ul>
+                </div>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+                <p class="jcarousel-pagination"></p>
+            </div>
+		</section>
+	</div>
+	
+	
+</div>	
+	
+<script type="text/javascript" src="libs/jquery/jquery.js"></script>
+<script type="text/javascript" src="libs/jquery-ui/js/jquery-ui.js"></script>
+<!-- <script type="text/javascript" src="libs/jShowOff/js/jquery.jshowoff.min.js"></script> -->
+
+<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="libs/jquery-model/js/jquery.modal.min.js" charset="utf-8"></script> -->
+<script type="text/javascript" src="libs/jcarousel/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="libs/jcarousel/js/jcarousel.basic.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<section class="results_section">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+			   <h1><span class="fa fa-group"></span> Update Design Universe Extract Table</h1>      
+			</div>
+		</div>
+	</section>
+	
+	<div class="container-custom">
+		<form name="universeTblForm" role="form" novalidate>
+			<div class="row listPage-Row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toolbar_subsections">
+					<div class="toolbar_section">
+						<div class="col-sm-12 col-md-12">
+							<div class="margin-bot-20 margin-top-20">
+								<button ng-controller="ModalDemoCtrl" type="button" id="btnNewList" class="btn btn-md btn-primary" ng-click="popupModalController({},add,'addCompanyPopUp')"><span class="glyphicon glyphicon-new-window button-icon"></span>Add</button>
+								<button type="button" id="btnDelete" class="btn btn-md btn-primary" ng-disabled="universeTblForm.$invalid || rowSelected == 0" ng-click="popupModalController({},deletetbdata,'confirmationDeletePopUP')" ng-controller="ModalDemoCtrl"><span class="glyphicon glyphicon-remove button-icon"></span>Delete</button>
+								<button type="submit" id="btnEdit" class="btn btn-md btn-primary" ng-click="edittbdata()" ng-disabled="universeTblForm.$invalid"><span class="glyphicon glyphicon-edit button-icon"></span>Update</button>
+								<button type="button" id="btnButton1" class="btn btn-md btn-primary pull-right" ng-click="exporttbdata()"><span class="glyphicon glyphicon-new-window button-icon"></span>Export</button>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div  ng-show="errorMsg">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<p class="alert alert-danger">{{errorMsg}}</p>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="table-responsive">
+					<toaster-container></toaster-container>
+					<table class="table table-condensed table-hover">
+						<colgroup>
+							<col style="width:2%">
+							<col style="width:10%">
+							<col style="width:*">
+							<col style="width:12%">
+						 </colgroup>
+						<thead>
+							<tr class="table_list_header">
+								<th></th>
+								<th ng-repeat="tbheader in tbheaders">{{tbheader}}</th>
+							</tr>
+						</thead>
+						<tbody class="bg_tables">
+						
+								<tr class="table_list_row" pagination-id="universeExtractId" dir-paginate="data in tbdata |itemsPerPage:5">
+									
+									<td> 
+										<input type="checkbox" ng-model="data.editEnable" class="width-auto" ng-change="selectCheckbox(data.editEnable)" />
+									</td>
+									<td>  
+										<input type="text" class="form-control" name="company{{$index}}" ng-model="data.company" maxlength="10" ng-disabled="!data.editEnable" uib-tooltip="Company is required" tooltip-enable="universeTblForm.company{{$index}}.$invalid && universeTblForm.company{{$index}}.$dirty" tooltip-is-open="universeTblForm.company{{$index}}.$invalid && universeTblForm.company{{$index}}.$dirty" tooltip-trigger="focus"
+											tooltip-placement="bottom" required>
+									</td>
+									<td>
+										<input type="text" class="form-control"  name="extractCode{{$index}}" ng-model="data.extractCode" maxlength="500" ng-disabled="!data.editEnable" uib-tooltip="Extract Code is required" tooltip-enable="universeTblForm.extractCode{{$index}}.$invalid && universeTblForm.extractCode{{$index}}.$dirty" tooltip-is-open="universeTblForm.extractCode{{$index}}.$invalid && universeTblForm.extractCode{{$index}}.$dirty" tooltip-trigger="focus"
+											tooltip-placement="bottom" required>
+									</td>
+									<td>
+										<input type="text" class="form-control" name="lifelineCompany{{$index}}" ng-model="data.lifelineCompany" pattern="(1|0)" ng-disabled="!data.editEnable" uib-tooltip="Please Enter 1 for True or 0 for False" tooltip-enable="universeTblForm.lifelineCompany{{$index}}.$invalid && universeTblForm.lifelineCompany{{$index}}.$dirty" tooltip-is-open="universeTblForm.lifelineCompany{{$index}}.$invalid && universeTblForm.lifelineCompany{{$index}}.$dirty" tooltip-trigger="focus"
+											tooltip-placement="bottom" required>
+									</td>		
+								
+								</tr>
+							
+						</tbody>
+					</table>
+				</div>
+				<dir-pagination-controls
+								max-size="5"
+								direction-links="true"
+								boundary-links="true"
+								pagination-id="universeExtractId" class="margin-bot-20">
+				</dir-pagination-controls> 
+			</div>
+		</form>	
+	</div>
+</section>
+
+
+<script type="text/ng-template" id="addCompanyPopUp.html">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Add List Of Companies </h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" role="form" name="universeExtractForm">
+				<div class="form-group">
+					<label class="control-label col-sm-4" for="company">Company<span class="asterisk">*</span></label>
+					<div class="col-sm-7 col-md-6 col-lg-6">
+						<input type="text" class="form-control" name="company" ng-model="newRec.company" maxlength="10" tooltip-placement="bottom" uib-tooltip="Company is required"  ng-class="{'has-error': universeExtractForm.company.$invalid}" tooltip-enable="universeExtractForm.company.$invalid && universeExtractForm.company.$dirty" tooltip-is-open="universeExtractForm.company.$invalid && universeExtractForm.company.$dirty" tooltip-trigger="focus" required>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-4" for="extractCode">Extract Code<span class="asterisk">*</span></label>
+					<div class="col-sm-7 col-md-6 col-lg-6">
+						<input type="text" class="form-control" ng-model="newRec.extractCode" name="extractCode" maxlength="500" uib-tooltip="Extract Code is required" ng-class="{'has-error': universeExtractForm.extractCode.$invalid" tooltip-enable="universeExtractForm.extractCode.$invalid && universeExtractForm.extractCode.$dirty" tooltip-is-open="universeExtractForm.extractCode.$invalid && universeExtractForm.extractCode.$dirty" tooltip-trigger="focus"
+							   required>
+					</div>  
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-4" for="lifelineCompany">Life Line Company<span class="asterisk">*</span></label>
+					<div class="col-sm-7 col-md-6 col-lg-6">
+						<input type="text" class="form-control" name="lifelineCompany" ng-model="newRec.lifelineCompany" pattern="(1|0)" uib-tooltip="Please Enter 1 for True or 0 for False" ng-class="{'has-error': universeExtractForm.lifelineCompany.$invalid}" tooltip-enable="universeExtractForm.lifelineCompany.$invalid && universeExtractForm.lifelineCompany.$dirty" tooltip-is-open="universeExtractForm.lifelineCompany.$invalid && universeExtractForm.lifelineCompany.$dirty" tooltip-trigger="focus"
+							 required>
+					</div>  
+				</div>
+			</form>
+        </div>
+		<div class="modal-footer">
+            <button class="btn btn-primary" type="submit" ng-click="ok()" ng-disabled="universeExtractForm.$invalid">Save</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>	
+</script>
+
+<script type="text/ng-template" id="confirmationDeletePopUP.html">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">×</button>
+            <h3 class="modal-title">Confirmation</h3>
+        </div>
+        <div class="modal-body">
+            <p>Are you sure you want to delete the selected universe extract table.</p>
+        </div>
+		   <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">Delete</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+</script>

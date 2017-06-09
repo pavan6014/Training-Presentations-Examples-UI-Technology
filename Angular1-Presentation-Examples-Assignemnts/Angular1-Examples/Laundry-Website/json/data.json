@@ -1,0 +1,55 @@
+[
+
+{"item":"Shirt","wash":10,"iron":10,"x":20,"y":20,"z":30},
+
+{"item":"Pant","wash":10,"iron":10,"x":20,"y":20,"z":30},
+
+{"item":"Kurtha","wash":10,"iron":10,"x":20,"y":20,"z":30},
+
+{"item":"Salwar","wash":10,"iron":10,"x":20,"y":20,"z":30},
+
+{"item":"Dothi or Lungi","wash":10,"iron":10,"x":20,"y":20,"z":30},
+
+{"item":"Towel","wash":10,"iron":"-","x":"-","y":"-","z":"-"},
+
+{"item":"Track Pant","wash":10,"iron":"-","x":20,"y":"-","z":"-"},
+
+{"item":"Nighty","wash":10,"iron":10,"x":20,"y":20,"z":30},
+
+{"item":"Chunni","wash":6,"iron":6,"x":12,"y":12,"z":18},
+
+{"item":"Leggin or Pant","wash":6,"iron":6,"x":12,"y":"-","z":"-"},
+
+{"item":"Blouse","wash":6,"iron":6,"x":12,"y":"-","z":"-"},
+
+{"item":"Petti Coat","wash":6,"iron":6,"x":12,"y":"-","z":"-"},
+
+{"item":"Saree","wash":15,"iron":15,"x":30,"y":25,"z":40},
+
+{"item":"Single Bedsheet","wash":15,"iron":15,"x":30,"y":25,"z":35},
+
+{"item":"Double Bedsheet","wash":20,"iron":20,"x":40,"y":30,"z":40},
+
+{"item":"Tea Shirt","wash":9,"iron":6,"x":15,"y":"-","z":"-"},
+
+{"item":"Short","wash":9,"iron":6,"x":15,"y":"-","z":"-"},
+
+{"item":"Kurtain Normal","wash":30,"iron":"-","x":"-","y":"-","z":"-"},
+
+{"item":"Kurtain Heavy","wash":50,"iron":"-","x":"-","y":"-","z":"-"},
+
+{"item":"Kerchief","wash":5,"iron":"-","x":"-","y":"-","z":"-"},
+
+{"item":"Socks","wash":10,"iron":"-","x":"-","y":"-","z":"-"},
+
+{"item":"Napkin","wash":10,"iron":"-","x":"-","y":"-","z":"-"},
+
+{"item":"Table Cover","wash":20,"iron":"-","x":"-","y":"-","z":"-"},
+
+{"item":"Friz Cover","wash":20,"iron":"-","x":"-","y":"-","z":"-"},
+
+{"item":"Normal Doormat","wash":10,"iron":"-","x":"-","y":"-","z":"-"},
+
+{"item":"Heavy Doormat","wash":20,"iron":"-","x":"-","y":"-","z":"-"}
+
+]

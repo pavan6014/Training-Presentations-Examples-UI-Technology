@@ -1,0 +1,28 @@
+1.	Write 5 to 6 paragraphs in html and button and when Click on buton hide all paragraphs
+2.	Implement hide and show concept in jquery
+3.	Implement the accordion using jquery
+4.	Click on anchor link open Model window popup using Jquery 
+5.	Implement Tab concept using jquery
+6.	Carousal using jquery
+7.	Create table in html and add background colors to the odd and even rows using jquery
+8.	Use Jquery Add events (append, prepend, after, before) and create one example
+9.	Write 5 to 6 paragraphs in html and use jquery selectors ADD different classes to the first paragraph, last paragraph and for the 5th paragraph add inline css.
+10.	Click on button animate DIV position from one location to other location.
+11.	Click on button display external URL content in html using jquery load
+12.	Use below methods and show some examples 
+	a.	hasClass(), height(), html(), val(), wrap(), text() 
+13.	Validate Form with below requirement
+	•	Use html 5 input attributes(min, max,pattern,required,type)
+	•	User id : Required and must be lenght of 5-12
+	•	Password: Required and must be lenght of 7-12
+	•	Name: Required only alphabates only
+	•	Telephone Number: Required and only 10 digit numaric 
+	•	Phone number US: Required and validate US phone number
+	•	Web site URL : Required and validate web site url format
+	•	Date: Required and Validate date format
+	•	Credit Card Number: Required and Validate date format
+	•	Address: Optional
+	•	Country : Required and should be select Drop down 
+	•	Email: Required and must be valid email id 
+	•	Sex: Required and Use radio button 
+	•	Language: Required and use checkbox

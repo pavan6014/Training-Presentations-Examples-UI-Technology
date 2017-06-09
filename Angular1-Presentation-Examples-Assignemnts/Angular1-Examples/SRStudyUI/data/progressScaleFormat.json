@@ -1,0 +1,26 @@
+[
+  {
+    "recKey": 1,
+    "lockoutMessage": "The SR Study is offline for maintenance.  Call Ann Marie or Pam Ivy with questions.",
+    "softwareVersionMaster": "6.11",
+    "userguideVersionMaster": "1.00",
+    "dbOnline": 1,
+    "dbaTelnumber": "314-235-2818",
+    "sampleMonth": "2016-01-01",
+    "designMonth": "2016-03-01",
+    "universeLoadedOk": 1,
+    "stratumDesignOk": 1,
+    "sampleGenerationOk": 1,
+    "lastResultsMonth": "2016-04-01",
+    "dateResultsCompleted": "2016-01-04",
+    "adminSoftwareVersion": "8.7",
+    "latestPdsdate": "2016-02-20",
+    "processConflictFlag": 0,
+    "processConflictAdmin": " ",
+    "dataBaseName": "SRSDB",
+    "prodServerName": "MOSTLS1SRSTUA01.itservices.sbc.com\\PD_SRSTUD01",
+    "testServerName": "MOSTLS1SRSTUA02.itservices.sbc.com\\DD_SRSTUD01",
+    "prodElinkFileShare": "\\\\Mostls1cdfile06.ITSERVICES.SBC.COM\\Srs_updates\\ElinkSamplingData",
+    "testElinkFileShare": "\\\\misout7cdfile19.ITSERVICES.SBC.COM\\Itsrstudy\\ElinkSamplingData"
+  }
+]

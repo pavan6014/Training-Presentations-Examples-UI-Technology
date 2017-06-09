@@ -1,0 +1,67 @@
+<section class="results_section">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+			   <h1><span class="fa fa-group"></span> Standard List Page</h1>      
+			</div>
+		</div>
+	</section>
+	
+	<div class="container-custom">
+		<div class="row listPage-Row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toolbar_subsections">
+				<div class="toolbar_section">
+					<div class="col-sm-4 col-md-4">
+						<div class="btn-toolbar">
+							<button type="button" id="btnNew" class="btn btn-md btn-primary"><span class="glyphicon glyphicon-new-window button-icon"></span>New</button>
+							<button type="button" id="btnEdit" class="btn btn-md btn-primary"><span class="glyphicon glyphicon-edit button-icon"></span>Update</button>
+							<button type="button" id="btnDelete" class="btn btn-md btn-primary"><span class="glyphicon glyphicon-remove button-icon"></span>Delete</button>
+							<button type="button" id="btnButton1" class="btn btn-md btn-primary"><span class="glyphicon glyphicon-check button-icon"></span>Button1</button>
+						</div>
+					</div>
+					<div class="linked-pages-list col-sm-4 col-md-4">
+						<div class="well well-lg">Linked Pages</div>
+					</div>
+					<div class="filters-list col-sm-3 col-md-3">
+						<div class="well well-lg">Filters</div>
+					</div>
+					<div class="col-sm-1 col-md-1 export-list">
+						<div class="btn-toolbar">
+							<button type="button" id="btnNew" class="btn btn-md btn-primary"><span class="glyphicon glyphicon-new-window button-icon"></span>Export</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="table-responsive table_selection_agent">
+				<table class="table table-condensed table-hover">
+					<thead>
+					<tr class="table_list_header">
+						<th></th>
+						<th>Link Header</th>
+					</tr>
+					</thead>
+					<tbody class="bg_tables">
+					<tr class="table_list_row">
+						<td>
+							<input type="checkbox" />
+						</td>
+						<td></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="row margin-bot-20" data-ng-show="true">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<button class="btn btn-md btn-primary pull-left" data-ng-click="previousPage()" data-ng-disabled="navigation.currentPage == 1">Prev</button>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<button class="btn btn-md btn-primary pull-right" data-ng-click="nextPage()" data-ng-disabled="navigation.currentPage >= navigation.totalNumOfPage">Next</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

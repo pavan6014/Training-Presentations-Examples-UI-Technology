@@ -1,0 +1,194 @@
+{  
+   "transaction":"retrieveSummaryOfResultsData",
+   "status":"success",
+   "data":{  
+      "company":"ATT - Midwest",
+      "sampleMonthRequested":"1/1/2016",
+      "auditFrom":{  
+         "date":"1/14/2016",
+         "refId":"52141546",
+         "id":"52"
+      },
+      "auditTo":{  
+         "date":"1/20/2016",
+         "refId":"52201738",
+         "id":"52"
+      },
+      "resultsDetails":[  
+         {  
+            "parts":[  
+               {  
+                  "key":"Direct Product Seconds",
+                  "total":"8035",
+                  "value":[  
+                     {  
+                        "productName":"Affiliate",
+                        "productValue":"5035"
+                     },
+                     {  
+                        "productName":"TelcoA",
+                        "productValue":"1000"
+                     },
+                     {  
+                        "productName":"TelcoB",
+                        "productValue":"2000"
+                     }
+                  ]
+               },
+               {  
+                  "key":"Contact Common Seconds",
+                  "total":"8000",
+                  "difference":"0",
+                  "allocatedAtOccLevel":"500",
+                  "allocatedAtSampleLevel":"50",
+                  "value":[  
+                     {  
+                        "productName":"C-All Products",
+                        "productValue":"1000"
+                     },
+                     {  
+                        "productName":"CT ATB Products",
+                        "productValue":"2000"
+                     },
+                     {  
+                        "productName":"CP-Package Products",
+                        "productValue":"3000"
+                     },
+                     {  
+                        "productName":"CSO Commom Products",
+                        "productValue":"0"
+                     }
+                  ]
+               },
+               {  
+                  "key":"Special Processes",
+                  "total":"1000",
+                  "value":[  
+                     {  
+                        "productName":"CS1(split 47)",
+                        "productValue":"1000"
+                     }
+                  ]
+               },
+               {  
+                  "key":"Order Typing",
+                  "total":"1000",
+                  "value":[  
+                     {  
+                        "productName":"Allocated",
+                        "productValue":"1000"
+                     }
+                  ]
+               },
+               {  
+                  "key":"NCPT",
+                  "total":"1000",
+                  "value":[  
+                     {  
+                        "productName":"Allocated",
+                        "productValue":"1000"
+                     }
+                  ]
+               },
+               {  
+                  "key":"Joint Waiting to Serve",
+                  "total":"1000",
+                  "value":[  
+                     {  
+                        "productName":"Allocated",
+                        "productValue":"1000"
+                     }
+                  ]
+               }
+            ]
+         },
+         {  
+            "parts":[  
+               {  
+                  "key":"Direct Product Seconds",
+                  "total":"8035",
+                  "value":[  
+                     {  
+                        "productName":"Affiliate",
+                        "productValue":"5035"
+                     },
+                     {  
+                        "productName":"TelcoA",
+                        "productValue":"1000"
+                     },
+                     {  
+                        "productName":"TelcoB",
+                        "productValue":"2000"
+                     }
+                  ]
+               },
+               {  
+                  "key":"Contact Common Seconds",
+                  "total":"8000",
+                  "difference":"0",
+                  "allocatedAtOccLevel":"500",
+                  "allocatedAtSampleLevel":"50",
+                  "value":[  
+                     {  
+                        "productName":"C-All Products",
+                        "productValue":"1000"
+                     },
+                     {  
+                        "productName":"CT ATB Products",
+                        "productValue":"2000"
+                     },
+                     {  
+                        "productName":"CP-Package Products",
+                        "productValue":"3000"
+                     },
+                     {  
+                        "productName":"CSO Commom Products",
+                        "productValue":"0"
+                     }
+                  ]
+               },
+               {  
+                  "key":"Special Processes",
+                  "total":"1000",
+                  "value":[  
+                     {  
+                        "productName":"CS1(split 47)",
+                        "productValue":"1000"
+                     }
+                  ]
+               },
+               {  
+                  "key":"Order Typing",
+                  "total":"1000",
+                  "value":[  
+                     {  
+                        "productName":"Allocated",
+                        "productValue":"1000"
+                     }
+                  ]
+               },
+               {  
+                  "key":"NCPT",
+                  "total":"1000",
+                  "value":[  
+                     {  
+                        "productName":"Allocated",
+                        "productValue":"1000"
+                     }
+                  ]
+               },
+               {  
+                  "key":"Joint Waiting to Serve",
+                  "total":"1000",
+                  "value":[  
+                     {  
+                        "productName":"Allocated",
+                        "productValue":"1000"
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

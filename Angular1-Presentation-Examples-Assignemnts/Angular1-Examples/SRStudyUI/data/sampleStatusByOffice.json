@@ -1,0 +1,136 @@
+{
+    "lists": [
+	{
+		"office": "GBL -Pontiac, MI",
+		"analyst": [
+			{
+				"analystName": "Laura Stevenson",
+				"stratum":"Business",
+				"employee":"Employee Name"
+			}
+		]
+	},
+	{
+		"office": "GBL -Pontiac, MI",
+		"analyst": [
+			{
+				"analystName": "Laura Stevenson 1",
+				"stratum":"Business 1",
+				"employee":"Employee Name 1"
+			},
+			{
+				"analystName": "Laura Stevenson 2",
+				"stratum":"Business 2",
+				"employee":"Employee Name 2"
+			},
+			{
+				"analystName": "Laura Stevenson 3",
+				"stratum":"Business 3",
+				"employee":"Employee Name 3"
+			}
+		]
+	},
+	{
+		"office": "GBL -Pontiac, MI",
+		"analyst": [
+			{
+				"analystName": "Laura Stevenson 1",
+				"stratum":"Business 1",
+				"employee":"Employee Name 1"
+			},
+			{
+				"analystName": "Laura Stevenson 2",
+				"stratum":"Business 2",
+				"employee":"Employee Name 2"
+			},
+			{
+				"analystName": "Laura Stevenson 3",
+				"stratum":"Business 3",
+				"employee":"Employee Name 3"
+			}
+		]
+	},
+	{
+		"office": "GBL -Pontiac, MI",
+		"analyst": [
+			{
+				"analystName": "Laura Stevenson 1",
+				"stratum":"Business 1",
+				"employee":"Employee Name 1"
+			},
+			{
+				"analystName": "Laura Stevenson 2",
+				"stratum":"Business 2",
+				"employee":"Employee Name 2"
+			},
+			{
+				"analystName": "Laura Stevenson 3",
+				"stratum":"Business 3",
+				"employee":"Employee Name 3"
+			}
+		]
+	},
+	{
+		"office": "GBL -Pontiac, MI",
+		"analyst": [
+			{
+				"analystName": "Laura Stevenson 1",
+				"stratum":"Business 1",
+				"employee":"Employee Name 1"
+			},
+			{
+				"analystName": "Laura Stevenson 2",
+				"stratum":"Business 2",
+				"employee":"Employee Name 2"
+			},
+			{
+				"analystName": "Laura Stevenson 3",
+				"stratum":"Business 3",
+				"employee":"Employee Name 3"
+			}
+		]
+	},
+	{
+		"office": "GBL -Pontiac, MI",
+		"analyst": [
+			{
+				"analystName": "Laura Stevenson 1",
+				"stratum":"Business 1",
+				"employee":"Employee Name 1"
+			},
+			{
+				"analystName": "Laura Stevenson 2",
+				"stratum":"Business 2",
+				"employee":"Employee Name 2"
+			},
+			{
+				"analystName": "Laura Stevenson 3",
+				"stratum":"Business 3",
+				"employee":"Employee Name 3"
+			}
+		]
+	},
+	{
+		"office": "GBL -Pontiac, MI",
+		"analyst": [
+			{
+				"analystName": "Laura Stevenson 1",
+				"stratum":"Business 1",
+				"employee":"Employee Name 1"
+			},
+			{
+				"analystName": "Laura Stevenson 2",
+				"stratum":"Business 2",
+				"employee":"Employee Name 2"
+			},
+			{
+				"analystName": "Laura Stevenson 3",
+				"stratum":"Business 3",
+				"employee":"Employee Name 3"
+			}
+		]
+	}
+	
+
+	]
+}

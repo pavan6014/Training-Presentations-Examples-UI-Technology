@@ -1,0 +1,132 @@
+<div class="results_section">
+	<section class="row pg-title-divider">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+            <h1><span class="fa fa-bar-chart"></span> Results</h1>      
+            </div>
+		</div>
+	</section>
+	<div class="container container-custom">
+	<section class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
+		<div class="subsection-container">	
+			<div class="progress-bar-status"></div>
+            <div class="row">
+				<div class="col-sm-2">
+					<div class="progress-scalebox">
+						<div class="progress-icon" ng-class="{'completed': computeResPrvMonth}"></div>
+						<div class="progress-desc">
+						   <span ng-class="{'step-completed': computeResPrvMonth}"></span>
+						   <p>Compute Results Completed Previous Month</p>
+					   </div>
+					</div>
+				</div>
+			
+				<div class="col-sm-3">
+					 <div class="progress-scalebox">
+						 <div class="progress-icon"  ng-class="{'completed': computeResPrvMonth}"></div>
+						 <div class="progress-desc">
+							 <span ng-class="{'step-completed': computeResPrvMonth}"></span>
+							<p>Sample Generation Can Start Current Month</p>
+							<div><input type="checkbox" ng-checked="computeResPrvMonth"/></div>
+					   </div>
+					</div>
+				</div>
+			
+				<div class="col-sm-3">
+					 <div class="progress-scalebox">
+						 <div class="progress-icon" ng-class="{'completed':sampleGenCurrMonth }"></div>
+						 <div class="progress-desc">
+							 <span ng-class="{'step-completed': sampleGenCurrMonth}"></span>
+							<p>Sample Generation Completed Current Month</p>
+						</div>
+					</div>
+				</div>
+				 <div class="col-sm-2">
+					 <div class="progress-scalebox">
+						 <div class="progress-icon" ng-class="{'completed':sampleGenCurrMonth }"></div>
+						 <div class="progress-desc">
+							<span ng-class="{'step-completed': sampleGenCurrMonth}"></span>
+							 <p>Compute Result Can start Current Month</p>
+							 <div><input type="checkbox" ng-checked="sampleGenCurrMonth"/></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					 <div class="progress-scalebox"> 
+						 <div class="progress-icon" ng-class="{'completed': (progressBarData.dateResultsCompleted|date:'MM') == currentMonth}"></div>
+						 <div class="progress-desc">
+						 <span ng-class="{'step-completed': (progressBarData.dateResultsCompleted|date:'MM') == currentMonth}" ></span>
+							 <p>Compute Results Completed Current Month</p>
+						</div>
+					</div>
+				</div>
+            </div>			
+		</div>
+		</div>
+	</section>
+	
+	<section class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">		
+			<div class="subsection-container">			
+				<div class="subsection-header">
+						<p>Sample Generation</p>
+						<a class="btn pull-right btn-primary margin10" href="#/sample-generation-screen">Launch</a>
+				</div>
+			</div>				
+		</div>
+	</section>
+	
+	<section class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
+			<div class="subsection-container">			
+				<div class="subsection-header">
+					<p>Compute Results</p>
+					<a class="btn pull-right btn-primary margin10" href="#/compute-results">Launch</a>
+				</div>
+			</div>	
+		</div>
+	</section>
+	
+	<section class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
+			<div class="subsection-container">
+				<div class="subsection-header">
+					<p>Official Results</p>
+					<a class="btn pull-right btn-primary margin10" href="#/official-results">Launch</a>
+				</div>	
+			</div>	
+		</div>
+	</section>
+	<section class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
+			<div class="subsection-container">
+				<div class="subsection-header">
+					<p>Data Analysis</p>
+					<a class="btn pull-right btn-primary margin10" href="#/data-analysis">Launch</a>
+				</div>
+			</div>	
+		</div>
+	</section>
+	<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="subsection-container">
+			<div class="subsection-header">
+				<p>Audit Reports</p>
+				<a class="btn pull-right btn-primary margin10" href="#/audit-reports">Launch</a>
+			</div>
+			</div>				
+		</div>
+	</div>
+	<section class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="subsection-container">			
+			<div class="subsection-header">		
+				<p>Analyst Sample Reports</p>
+				<a class="btn pull-right btn-primary margin10" href="#/analyst-sample-reports">Launch</a>
+			</div>	
+			</div>	
+		</div>
+	</section>
+	</div>
+</div>

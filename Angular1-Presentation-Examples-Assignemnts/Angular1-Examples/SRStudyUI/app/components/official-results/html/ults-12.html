@@ -1,0 +1,73 @@
+<div class="container relative-pos hidden-print">
+	<input type="submit" class="btn btn-primary print-cutom-btn absolute-pos" ng-click="print()" value="Print">
+</div>
+
+<div class="container" ng-class="{hideSettingMarginProfileMarket:$index>1}" data-ng-repeat="detail in ultsData.data.ultsDetails" data-ng-if="$index%rowCountPdfPageProfileMarket == 0">
+	<div class="row extraPadding pageBreak" ng-class="{'visible-print-block':$index>1}">
+		<div class="col-xs-12">
+			<div class="head-text text-center">Service Representative Study Results - Official Results 12</div> 					
+			<div class="subHeading text-center">&copy Copyright 2012 AT&T Intellectual Property. All rights reserved</div>
+			<div class="head-text text-center">ULTS 2 Consumer Market - California Customers only</div> 			
+			<div class="head-text text-center">Data from: {{ultsData.data.auditFrom.date}} thru: {{ultsData.data.auditTo.date}}</div> 			
+		</div>
+		<div class="row">
+			<div class="col-xs-3">
+				<div style="position:relative;">
+					<img src="assets/img/att_logo_background.png" class="logo-img-top hidden-print"/>
+					<img src="assets/img/att_logo.png" class="logo-img-top visible-print-block"/>
+				</div>
+			</div> 
+			<div class="col-xs-4 col-md-3 text-right"><b>Company: {{ultsData.data.company}}</b></div>			
+		</div>
+		<div class="row">
+			<div class="head-text"><u>Seconds Include:</u></div> 					
+			<div class="ults-content">CR Regrades = CA Lifeline Srv + CA Lifeline Blng + CA Lifeline Disclosure 
+			+ UVoIP CA Lifeline Srv + UVoIP CA Lifeline Blng + UVoIP CA Lifeline Disclosure
+			with dispositions of all Sale, all No Sale, and Inquiry with Post Sale Care
+			</div>
+			<div class="ults-content">N CA Lifeline Disclosure = CA Lifeline Disclosure + UVoIP CA Lifeline Disclosure 
+			N Processing = CA Lifeline Svc + CA Lifeline Blng + UVoIP CA Lifeline Srv + UVoIP CA Lifeline Blng with dispositions of all Sale, all No Sale, and Inquiry with Post Sale Care
+			</div> 			
+			<div class="ults-content">TF CA Lifeline Disclosure = CA Lifeline Disclosure + UVoIP CA Lifeline Disclosure 
+			TF Processing = CA Lifeline Srv + CA Lifeline Blng + UVoIP CA Lifeline Srv + UVoIP CA Lifeline 
+			Blng with dispositions of TF, all Sale, all No Sale, and Inquiry with Post Sale Care
+			</div> 
+			<div class="ults-content">Note: ( Direct Product Seconds Only)
+			</div> 						
+		</div>
+		<div class="row agent_selection_table_row">
+			<div class="head-text"><u>Transactions Include:</u></div> 					
+			<div class="ults-content">N  or TF Lifeline Disclosure  = Lifeline Disclosure</div>
+			<div class="ults-content">All others  = Lifeline Service with all Sale dispositions</div> 								
+		</div>
+	</div>	
+	<div class="row">
+		<div class="tableContainer"> 				
+			<table class="tablePrint tablePrintProfileMarket">
+				<thead class="tableHeaderBorder">
+					<tr ng-class="{hideSettingVisibility:$index>1}">
+						<th>Customer Region</th>
+						<th>Order Type</th>
+						<th>Product or Activity</th>
+						<th>Transactions</th>
+						<th>Seconds</th>										
+					</tr>
+				</thead>				
+				
+				<tr data-ng-repeat="detail in ultsData.data.ultsDetails.slice($parent.$index,$parent.$index+rowCountPdfPageProfileMarket)" >
+						<td>{{detail.region}}</td>   
+						<td>{{detail.orderType}}</td>
+						<td>{{detail.product}}</td>	
+						<td>{{detail.occurrences}}</td>
+						<td>{{detail.seconds}}</td>											
+					</tr>					
+				</tbody>
+			</table>
+		</div>
+	</div>		
+	<div class="footer text-center" ng-class="{'visible-print-block':($index+rowCountPdfPageProfileMarket)/rowCountPdfPageProfileMarket<(ultsData.data.ultsDetails.length/rowCountPdfPageProfileMarket)}">
+		<div class="mainHeading">AT&T Proprietary (Restricted)</div>
+		<div class="subHeading">Only for use by authorized individuals or any above-designated team(s)<br>
+		within the AT&T companies and not for general distribution</div>
+	</div>	
+</div>
