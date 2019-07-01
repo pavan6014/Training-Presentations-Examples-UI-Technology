@@ -1,0 +1,28 @@
+<form name="licenseTierUpgradeForm" id="licenseTierUpgradeForm" (ngSubmit)="onSubmit()" [formGroup]="licenseEditForm">
+    <div class="form-group">
+        <div class="row">
+            <label class="form-label col-sm-12" for="fileName">
+                {{ 'create:createClusterSelectLicenseMessage.ontapCreds.filename' | i18next }}
+            </label>
+            <div class="col-sm-10" formGroupName="licenseFile">
+                <input type="text" id="fileName" placeholder="{{ 'create:createClusterSelectLicenseMessage.ontapCreds.filenamePlaceHolder' | i18next }}" class="form-control"
+                    formControlName="fileName" name="fileName" />
+            </div>
+            <div class="col-sm-2">
+                <button for="lisence" (click)="fileInput.click()" class="btn btn-outline-primary">Browse</button>
+                <input id="lisence" (change)="onFileChange($event)" type="file" name="licence" #fileInput class="form-control hide" />
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="userName">User Name</label>
+        <input id="userName" formControlName="userName" type="text" placeholder="User Name" name="userName"
+            class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <input id="password" formControlName="password" type="password" placeholder="Password" name="password"
+            class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
