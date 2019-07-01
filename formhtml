@@ -1,3 +1,5 @@
+FORM.HTML
+---------------------------------------------------------------------------------------------------------------------
 <form name="licenseTierUpgradeForm" id="licenseTierUpgradeForm" (ngSubmit)="onSubmit()" [formGroup]="licenseEditForm">
     <div class="form-group">
         <div class="row">
@@ -26,3 +28,30 @@
     </div>
     <button type="submit" class="btn btn-primary">Register</button>
 </form>
+---------------------------------------------
+cOMPONENT.TS
+----------------------------------------------
+onFileChange(event) {
+    console.log(this.licenseEditForm);
+    console.log(this.licenseEditForm.value);
+    this.selectedFile = event.target.files[0];
+    const uploadData = new FormData();
+    uploadData.append('license_file', this.selectedFile , this.selectedFile.name);
+    // uploadData.append('ontap_username', this.licenseEditForm.value.userName);
+    // uploadData.append('ontap_password', this.licenseEditForm.value.password);
+}
+
+onSubmit() {
+    this.tierService.putLicense(uploadData).subscribe((response) => {
+
+    }, (error) => {
+
+    });
+}
+--------------------------------------------------------------------------------------
+Service.ts
+--------------------------------------------------------------------------------------
+path: string = 'api/v3/licensing/licenses/320000062';
+putLicense(params: any) {
+    return this.http.put(this.path, params, {responseType: 'text'});
+}
